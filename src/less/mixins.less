@@ -1,0 +1,42 @@
+
+
+/* border mixins */
+
+.border-color(@color) {
+    border-color: @color;
+}
+.border(@thickness:1px; @color:@color-gray-xlt) {
+    border-style: solid;
+    border-width: @thickness;
+    .border-color(@color);
+}
+.border(@top:1px; @right:1px; @bottom:1px; @left:1px; @color:@color-gray-lt) {
+    border-style: solid;
+    border-top-width: @top;
+    border-right-width: @right;
+    border-bottom-width: @bottom;
+    border-left-width: @left;
+    .border-color(@color);
+}
+.border-top(@thickness:1px; @color:@color-gray-lt) {
+    .border(@thickness;0;0;0;@color);
+}
+.border-right(@thickness:1px; @color:@color-gray-lt) {
+    .border(0;@thickness;0;0;@color);
+}
+.border-bottom(@thickness:1px; @color:@color-gray-lt) {
+    .border(0;0;@thickness;0;@color);
+}
+.border-left(@thickness:1px; @color:@color-gray-lt) {
+    .border(0;0;0;@thickness;@color);
+}
+
+
+
+/* color mixins */
+
+.colorize(@color; @fontColor) {
+    background-color: @color; 
+    border-color: darken(@color, 5%); 
+    color: @fontColor;
+}

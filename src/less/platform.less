@@ -1,0 +1,60 @@
+
+
+@import "variables.less";
+@import "mixins.less";
+@import "colors.less";
+@import "borders.less";
+@import "shadows.less";
+@import "buttons.less";
+@import "header.less";
+@import "mega-menu.less";
+@import "mobile-menu.less";
+@import "pagination.less";
+@import "lists.less";
+@import "callouts.less";
+@import "thumbnails.less";
+@import "cards.less";
+@import "grid-items.less";
+
+
+.input-group-slick {
+    position: relative;
+
+    & > .glyphicon {
+        position: absolute;
+        top: @px-md+@px-xs;
+        color: lighten(@color-gray-md, 5%);
+
+        &:first-child {
+            left: @px-lg;
+        }
+
+        &:last-child {
+            right: @px-lg;
+        }
+
+    }
+
+    & > input.form-control {
+        padding-left: @px-xxxlg;
+        padding-right: @px-xxxlg;
+
+        &:first-child {
+            padding-left: @px-lg;
+        }
+        &:last-child {
+            padding-right: @px-lg;
+        }
+    }
+
+}
+
+
+.righted {
+    text-align: right;
+}
+
+.text-small {
+    font-size: 85%;
+}
+

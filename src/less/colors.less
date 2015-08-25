@@ -1,0 +1,23 @@
+
+/* requires mixins.less */
+
+.text-primary, a.text-primary,a.text-primary:visited   { color: @color-primary; }
+.text-accented, a.text-accented, a.text-accented:visited { color: @color-accent; }
+.text-selected, .text-active, a, a:visited { color: @color-active; }
+.text-gray-dk  { color: @color-gray-dk; }
+.text-gray-md  { color: @color-gray-md; }
+.text-gray-lt  { color: @color-gray-lt; }
+.text-gray-xlt { color: @color-gray-xlt; }
+.text-white    { color: @color-white; }
+
+.primary {           .colorize(@color-primary; #fff); }
+.accented {          .colorize(@color-accent; #fff); }
+.selected, .active { .colorize(@color-active; #fff); }
+.success {           .colorize(@color-success; #333); }
+.info {              .colorize(@color-info; #333); }
+.warning {           .colorize(@color-warning; #333); }
+.danger {            .colorize(@color-danger; #333); }
+.gray-dk {           .colorize(@color-gray-dk; #fff); }
+.gray-md {           .colorize(@color-gray-md; #fff); }
+.gray-lt {           .colorize(@color-gray-lt; #333); }
+.gray-xlt {          .colorize(@color-gray-xlt; #333); }

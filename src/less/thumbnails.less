@@ -1,0 +1,40 @@
+
+.thumbnail {
+
+    &.hoverable {
+        position:relative;
+
+        .about {
+            display: none;
+            position:absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 16px;
+            overflow: auto;
+            overflow-x: hidden;
+            background: #efefef;
+        }
+
+        &:hover .about {
+            display: block;
+        }
+
+        &.hoverable-fade {
+
+            .about {
+                display: block;
+                opacity: 0;
+                transition: .3s linear all;
+                -webkit-transition: .3s linear all;
+                -moz-transition: .3s linear all;
+                -o-transition: .3s linear all;
+            }
+
+            &:hover .about {
+                opacity: 1;
+            }
+        }
+    }
+}

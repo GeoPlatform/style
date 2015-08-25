@@ -1,0 +1,77 @@
+
+.btn-round {
+    border-radius:  @px-xlg;
+    padding-top:    @px-md;
+
+    &.btn-xs {
+        padding-top: 1px;
+    }
+    &.btn-lg {
+        border-radius: @px-xxlg;
+    }
+}
+
+
+.btn {
+
+    &.btn-square {
+        border-radius: 0;
+    }
+
+    &.btn-primary, a&.btn-primary,
+    &.btn-danger, a&.btn-danger,
+    &.btn-info, a&.btn-info,
+    &.btn-success, a&.btn-success,
+    &.btn-warning, a&.btn-warning,
+    &.btn-wild, a&.btn-wild { 
+        .text-white();
+    }
+
+    &.btn-accent, a&.btn-accent {
+        .accented();
+
+        &:hover, &:focus, &.active {
+            background-color: darken(@color-accent, 5%);
+            border-color: darken(@color-accent, 10%);
+            .text-white()
+        }
+    }
+
+    &.btn-wild, a&.btn-wild {
+        background-color: desaturate(@color-wild, 20%);
+        border-color: darken(desaturate(@color-wild, 20%), 5%);
+
+        &:hover, &:focus, &.active {
+            background-color: darken(desaturate(@color-wild, 20%), 5%);
+            border-color: darken(desaturate(@color-wild, 20%), 10%);
+        }
+    }
+
+
+    &.btn-account {
+
+        header .pull-right & {
+            padding: @px-none;
+        }
+
+        & > button, & > .btn {
+            color:              @color-gray-md;
+
+            & > .glyphicon {
+                background-color:   @color-gray-md;
+                padding:            @px-sm;
+                border-radius:      @px-xlg;
+                .text-white();
+            }
+
+        }
+
+    }
+
+
+
+    // //may not be needed if <!DOCTYPE html> is on the page
+    // .glyphicon {
+    //     padding: 3px 0; /* to make icon buttons have same height as text buttons */
+    // }
+}

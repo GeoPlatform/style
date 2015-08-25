@@ -1,0 +1,104 @@
+
+.grid-item {
+
+    position: relative;
+    overflow: hidden;
+    margin:   @px-xlg @px-none;
+
+    .border;
+    .shadowed-bottom-xlt;
+
+    .selector {
+        position: absolute;
+        top:      0;
+        right:    0;
+        z-index:  1;
+    }
+
+    & > .thumbnail {
+        height:       200px;
+        overflow:     hidden;
+        padding:      0;
+        margin:       0;
+        text-align:   center;
+        border-width: 0 0 1px;
+        background:   #f2f2f2;
+        border-radius: 0;
+
+        & img {
+            width: 100%;
+        }
+        & .glyphicon {
+            font-size:  7em;
+            margin-top: 15%;
+        }
+    }
+
+    .details {
+
+        position:   relative;
+        padding:    @px-xlg;
+
+        &.quick {
+
+            height: 230px;
+
+            h5 { 
+                height: 32px; 
+                overflow: hidden; 
+                margin-top: 0;
+            }
+
+            .detail {
+
+                font-size: 85%;
+
+                &.detail-md {
+                    height: 32px;
+                    overflow: hidden;    
+                }
+                &.detail-lg {
+                    height: 50px;
+                    overflow: hidden;
+                }
+            }
+
+            .actions {
+                position: absolute;
+                top:      -16px;
+                right:      8px;
+                z-index:    2;
+
+                .btn {
+                    .shadowed-bottom;
+                }
+            }
+
+            .type {
+                position: absolute;
+                top: -21px;
+                left: 0px;
+                z-index: 1;
+                font-size: 85%;
+                padding: @px-xs @px-sm;
+                border-radius: 0px;
+                .accented();
+            }
+        }
+
+        &.full {
+            display: none;
+        }
+    }
+
+    &:hover {
+        .border-color(@color-accent);
+    }
+
+
+    .form-group label, .form-group .control-label { 
+        margin-bottom: 0; 
+        font-weight: 500;
+    }
+
+}

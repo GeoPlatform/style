@@ -1,0 +1,56 @@
+
+.pagination {
+    width: 100%;
+
+    .info {
+        & > a {
+            color: @color-gray-md;
+            cursor:default;
+
+            &:hover, &:focus {
+                color: @color-gray-md;
+                background: transparent;
+            }
+        }
+    }
+
+    .summary > a, 
+    .summary > a:hover {
+        cursor: default;
+        .text-gray-md();
+    }
+
+    .control {
+
+        & > a {
+            padding: 0 @px-lg;
+
+            & > .form-control {
+                .text-gray-md();
+                padding: 0;
+                height: @px-xlg*2;
+                border: none;
+                background:transparent;
+                box-shadow: none;
+                -webkit-appearance: initial;
+            }
+
+            a:focus, .form-control:focus {
+                border:none;
+                box-shadow: none;
+                text-decoration: none;
+            }
+
+        }
+
+        select {
+            width: 100px;
+        }
+    }
+
+    .separator {
+        width: 5px;
+        height: 1px;
+        float: left;
+    }
+}

@@ -10,10 +10,10 @@
     overflow: auto;
     z-index: 99; //behind header
     
-    -webkit-transition: .6s ease-in-out all;
-       -moz-transition: .6s ease-in-out all;
-         -o-transition: .6s ease-in-out all;
-            transition: .6s ease-in-out all;
+    -webkit-transition: .6s ease-in-out right;
+       -moz-transition: .6s ease-in-out right;
+         -o-transition: .6s ease-in-out right;
+            transition: .6s ease-in-out right;
     
 
     
@@ -63,7 +63,7 @@
 
 }
 
-@media (min-width: 768px) {
+@media (min-width: @screen-sm-min) {
     .mega-menu {
         position: absolute;
         left: @px-xlg;
@@ -71,6 +71,11 @@
         width: auto;
         height: auto;
         margin-top: -50%;
+
+        -webkit-transition-property: margin-top;
+           -moz-transition-property: margin-top;
+             -o-transition-property: margin-top;
+                transition-property: margin-top;
 
         &.mega-menu-fixed {
             position: fixed;
@@ -87,13 +92,14 @@
     }
 }
 
-@media (min-width: 992px) {
+@media (min-width: @screen-md-min) {
     .mega-menu {
-        position: absolute;
-        left: @px-xlg;
-        right: @px-xlg;
-        width: auto;
-        height: auto;
+        margin-top: -35%;
+    }
+}
+
+@media (min-width: @screen-lg-min) {
+    .mega-menu {
         margin-top: -25%;
     }
 }

@@ -1,6 +1,8 @@
 
 header {
 
+    position:relative;
+    z-index:100;
     background-color: #fff;
     margin-bottom: @px-xlg;
     .shadowed-bottom-lt();
@@ -68,44 +70,7 @@ header {
     }
 
 
-    .btn-account {
-
-        & > button, & > .btn {
-            color:      @color-gray-md;
-            padding:    @px-xlg @px-lg;
-            border:     none;
-            text-decoration: none;
-            font-size:          inherit;
-            
-
-            & > .glyphicon {
-                background-color:   @color-gray-md;
-                padding:            @px-sm;
-                border-radius:      @px-xlg;
-                .text-white();
-                vertical-align: bottom;
-            }
-        }
-
-        &:hover > .btn {
-            background-color:   lighten(@color-gray-xlt, 5%);
-            text-decoration:    none;
-        }
-
-        .account-details {
-            color:   @color-gray-md;
-            padding: @px-none @px-xlg;
-
-            .media-heading { 
-                font-weight: 700; 
-            }
-            .glyphicon { 
-                font-size: 6rem; 
-            }
-        }
-
-    }
-
+    
 
 
 
@@ -188,7 +153,7 @@ header {
 
                 & > a {
                     display: block;
-                    padding: @px-xlg+1 @px-lg;
+                    padding: @px-xlg @px-lg;
                 }
 
                 &.active > a {

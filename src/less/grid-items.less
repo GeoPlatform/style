@@ -4,6 +4,7 @@
     position: relative;
     overflow: hidden;
     margin:   @px-xlg @px-none;
+    border-radius: 2px;
 
     .border;
     .shadowed-bottom-xlt;
@@ -41,10 +42,10 @@
 
         &.quick {
 
-            height: 230px;
+            height: 16rem;
 
             h5 { 
-                height: 32px; 
+                height: 2rem;
                 overflow: hidden; 
                 margin-top: 0;
             }
@@ -54,20 +55,20 @@
                 font-size: 85%;
 
                 &.detail-md {
-                    height: 32px;
+                    height: 2rem;
                     overflow: hidden;    
                 }
                 &.detail-lg {
-                    height: 50px;
+                    height: 3.75rem;
                     overflow: hidden;
                 }
             }
 
             .actions {
                 position: absolute;
-                top:      -16px;
-                right:      8px;
-                z-index:    2;
+                top:      -@px-xlg;
+                right:      @px-md;
+                z-index:         2;
 
                 .btn {
                     .shadowed-bottom;

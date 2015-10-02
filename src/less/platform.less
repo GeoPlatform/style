@@ -1,5 +1,28 @@
 
 
+html, body {
+    font-size: 16px;
+}
+
+/*
+ * font size resets 
+ */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700!important;
+}
+h1 { font-size: 2.25rem; }
+h2 { font-size: 1.875rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.125rem; }
+h5 { font-size: 1rem; }
+h6 { font-size: 0.75rem; }
+.btn-group-sm>.btn, .btn-sm {
+    font-size: 0.75rem;
+}
+/* ----- */
+
+
+
 @import "variables.less";
 @import "mixins.less";
 @import "colors.less";
@@ -15,6 +38,26 @@
 @import "thumbnails.less";
 @import "cards.less";
 @import "grid-items.less";
+
+
+
+.pd-xs { padding: @px-xs; }
+.pd-sm { padding: @px-sm; }
+.pd-md { padding: @px-md; }
+.pd-lg { padding: @px-lg; }
+.pd-xlg { padding: @px-xlg; }
+.pd-xxlg { padding: @px-xxlg; }
+.pd-xxxlg { padding: @px-xxxlg; }
+
+.mg-xs { margin: @px-xs; }
+.mg-sm { margin: @px-sm; }
+.mg-md { margin: @px-md; }
+.mg-lg { margin: @px-lg; }
+.mg-xlg { margin: @px-xlg; }
+.mg-xxlg { margin: @px-xxlg; }
+.mg-xxxlg { margin: @px-xxxlg; }
+
+.small-text { font-size: 0.85rem; }
 
 
 .input-group-slick {
@@ -58,3 +101,14 @@
     font-size: 85%;
 }
 
+
+
+
+
+/*
+ * Hack necessary to enable bootstrap dropdown-contained links work on touch devices
+ * http://stackoverflow.com/questions/17579750/drop-down-menu-not-working-on-mobile-devices
+ */
+.dropdown-backdrop{
+    position: static;
+}

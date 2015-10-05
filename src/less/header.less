@@ -9,7 +9,7 @@ header {
 
     h3, h4, h5 {
         margin:       0;
-        padding:      @px-xlg @px-none;
+        padding:      1.125rem @px-none;
         white-space:  nowrap;
         overflow:     hidden;
         .text-gray-dk();
@@ -67,11 +67,15 @@ header {
                 background-color: transparent;
             }
         }
+
+        &.nav-menu-collapsible-left {
+
+            float:left;
+            margin: 0;
+            padding: 0;
+
+        }
     }
-
-
-    
-
 
 
 
@@ -187,6 +191,10 @@ header {
                     }                    
                 }
 
+            }
+
+            &.nav-menu-collapsible-left {
+                float:right;
             }
 
         }

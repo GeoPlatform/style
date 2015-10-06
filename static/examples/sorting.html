@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Sorting</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/platform.css">
+        <style>
+            
+        </style>
+    </head>
+    <body>
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-4 col-sm-6 col-xs-10">
+                    <h6>Order toggle button separate from field selection</h6>
+                </div>
+                <div class="col-md-4 col-md-offset-3 col-sm-6 col-sm-offset-2 col-xs-10">
+                    <h6>Order toggle button attached to field selection</h6>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-10">
+                    <div class="input-group">
+                        <span class="input-group-addon">Sort</span>
+                        <select class="form-control" ng-model="ctrl.options.sortElement" ng-change="ctrl.dirty()">
+                            <option value="" disabled>-- Sort by --</option>
+                            <option value="label">Name</option>
+                            <option value="created">Created</option>
+                            <option value="updated">Updated</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="col-md-1 col-sm-1 col-xs-1">
+                    <button type="button" class="btn btn-default" onclick="$(this).toggleClass('active')">
+                        <span class="glyphicon glyphicon-sort-by-attributes-alt hidden-on-active"></span>
+                        <span class="glyphicon glyphicon-sort-by-attributes visible-on-active"></span>
+                    </button>
+                </div>
+
+                <div class="col-md-4 col-md-offset-2 col-sm-6 col-sm-offset-1 col-xs-10">
+                    
+                    <div class="input-group">
+                        <span class="input-group-addon">Sort</span>
+                        <select class="form-control" ng-model="ctrl.options.sortElement" ng-change="ctrl.dirty()">
+                            <option value="" disabled>-- Sort by --</option>
+                            <option value="label">Name</option>
+                            <option value="created">Created</option>
+                            <option value="updated">Updated</option>
+                        </select>
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" onclick="$(this).toggleClass('active')">
+                                <span class="glyphicon glyphicon-sort-by-attributes-alt hidden-on-active"></span>
+                                <span class="glyphicon glyphicon-sort-by-attributes visible-on-active"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+            
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        
+    </body>
+</html>

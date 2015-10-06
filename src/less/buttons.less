@@ -59,6 +59,23 @@
 }
 
 
+.btn .hidden-on-active {
+    display: initial;
+
+    .active& {
+        display: none;
+    }
+}
+.btn .visible-on-active {
+    display: none;
+
+    .active& {
+        display: initial;
+    }
+}
+
+
+
 .btn-account {
 
     header .pull-right & {

@@ -1,0 +1,205 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Search</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/platform.css">
+        <style>
+            
+        </style>
+    </head>
+    <body>
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <h6>Without buttons</h6>
+                </div>
+                <div class="col-md-6">
+                    <h6>With search button</h6>
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </span>
+                        <input type="text" class="form-control" placeholder="Search items">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </span>
+                        <input type="text" class="form-control" placeholder="Search items">
+                        <span class="input-group-addon" title="Search using specified query">
+                            Search
+                        </span>
+                    </div>
+                </div>
+            </div>
+    
+            <hr/>
+    
+            <div class="row">
+                <div class="col-md-6">
+                    <h6>With clear button</h6>
+                </div>
+                <div class="col-md-6">
+                    <h6>With both clear and search buttons</h6>
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </span>
+                        <input type="text" class="form-control" placeholder="Search items">
+                        <span class="input-group-addon" title="Clear search text">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </span>
+                        <input type="text" class="form-control" placeholder="Search items">
+                        <span class="input-group-addon" title="Clear search text">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-1 righted">
+                    <button class="btn btn-default">Search</button>
+                </div>
+            </div>
+            
+            <hr/>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <h6>With advanced options</h6>
+                </div>
+                <div class="col-md-6">
+                    <h6>With all buttons</h6>
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </span>
+                        <input type="text" class="form-control" placeholder="Search items">
+                        <span class="input-group-addon" title="Clear search text">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-1 righted">
+                    <button class="btn btn-default" onclick="$(this).toggleClass('active');$('#options1').toggleClass('hidden');">
+                        <span class="glyphicon glyphicon-cog"></span>
+                    </button>
+                </div>
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </span>
+                        <input type="text" class="form-control" placeholder="Search items">
+                        <span class="input-group-addon" title="Clear search text">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-2 righted">
+                    <button class="btn btn-default" onclick="$(this).toggleClass('active');$('#options2').toggleClass('hidden');">
+                        <span class="glyphicon glyphicon-cog"></span>
+                    </button>
+                    <button class="btn btn-default">Search</button>
+                </div>
+                <div class="col-md-6">
+                    <div class="hidden" id="options1">
+                        <h5 class="text-accented">Advanced Search Options</h5>
+                        <div class="form-group">
+                            <label for="field1">Field</label>
+                            <input type="text" name="field1" class="form-control" placeholder="Enter a value">
+                        </div>
+                        <div class="form-group">
+                            <label for="field2">Date Field</label>
+                            <div class="input-group">
+                                <input type="text" name="field2" class="form-control" placeholder="Enter a value">
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="hidden" id="options2">
+                        <h5 class="text-accented">Advanced Search Options</h5>
+                        <div class="form-group">
+                            <label for="field1">Field</label>
+                            <input type="text" name="field1" class="form-control" placeholder="Enter a value">
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="field2">From</label>
+                                    <div class="input-group">
+                                        <input type="text" name="field2" class="form-control" placeholder="Enter a value">
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-calendar"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="field3">To</label>
+                                    <div class="input-group">
+                                        <input type="text" name="field3" class="form-control" placeholder="Enter a value">
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-calendar"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row">
+                <div class="col-md-5 col-sm-5">
+                    <h6>"Slick" Input Groups</h6>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5 col-sm-5 col-xs-12">
+                    <div class="input-group-slick">
+                        <span class="glyphicon glyphicon-search"></span>
+                        <input type="text" class="form-control" placeholder="Search items">
+                        <span class="glyphicon glyphicon-remove" title="Clear search text"></span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+            
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+            
+    </body>
+</html>

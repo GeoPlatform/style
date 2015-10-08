@@ -172,8 +172,6 @@
         z-index: 2;
 
         &.btn-round.btn-dots {
-            // padding: .625rem .725rem .375rem .725rem;
-            // border-radius: 3rem;
             width: 2.5rem;
             height: 2.5rem;
             padding-top: 0.3rem;
@@ -188,22 +186,26 @@
         z-index: 1;
         box-shadow: none!important;
 
-        transform: rotate(180deg);
-        -moz-transform:rotate(180deg);
-        -webkit-transform:rotate(180deg);
+        -webkit-transform: rotate(180deg);
+           -moz-transform: rotate(180deg);
+                transform: rotate(180deg);
+    }
+
+    &.active {        
+        background: none;   /* remove selected color as background */
     }
 
     &.active .btn-multi {
-        transform: rotate(90deg);
-        -moz-transform:rotate(90deg);
-        -webkit-transform:rotate(90deg);
+        -webkit-transform: rotate(90deg);
+           -moz-transform: rotate(90deg);
+                transform: rotate(90deg);
     }
 
     &.active .btn-multi-option {
             
-        transform: rotate(0deg);
-        -moz-transform:rotate(0deg);
-        -webkit-transform:rotate(0deg);
+        -webkit-transform: rotate(0deg);
+           -moz-transform: rotate(0deg);
+                transform: rotate(0deg);
 
         &:nth-child(2) {
             top: -3rem;

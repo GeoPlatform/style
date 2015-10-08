@@ -24,7 +24,7 @@
         border-radius: 2rem;
         padding: .1rem 0 0;
     }
-    
+
     &.btn-lg {
         border-radius: @px-xxlg;
     }
@@ -193,80 +193,83 @@
         -webkit-transform:rotate(180deg);
     }
 
-    &.active {
+    &.active .btn-multi {
+        transform: rotate(90deg);
+        -moz-transform:rotate(90deg);
+        -webkit-transform:rotate(90deg);
+    }
 
-        background: none;
-        border: none;
-
-        .btn-multi {
-            transform: rotate(90deg);
-            -moz-transform:rotate(90deg);
-            -webkit-transform:rotate(90deg);
-        }
-
-        .btn-multi-option {
+    &.active .btn-multi-option {
             
-            transform: rotate(0deg);
-            -moz-transform:rotate(0deg);
-            -webkit-transform:rotate(0deg);
+        transform: rotate(0deg);
+        -moz-transform:rotate(0deg);
+        -webkit-transform:rotate(0deg);
 
-            &:nth-child(2) {
-                top: -3rem;
-            }
-            &:nth-child(3) { 
-                top:  -3rem*sin(45deg); 
-                left:  3rem*cos(45deg);
-            }
-            &:nth-child(4) { 
-                left:  3rem;
-            }
-            &:nth-child(5) {
-                top:   3rem*sin(45deg); 
-                left:  3rem*cos(45deg); 
-            }
-            &:nth-child(6) { 
-                top:   3rem;
-            }
+        &:nth-child(2) {
+            top: -3rem;
+        }
+        &:nth-child(3) { 
+            top:  -3rem*sin(45deg); 
+            left:  3rem*cos(45deg);
+        }
+        &:nth-child(4) { 
+            left:  3rem;
+        }
+        &:nth-child(5) {
+            top:   3rem*sin(45deg); 
+            left:  3rem*cos(45deg); 
+        }
+        &:nth-child(6) { 
+            top:   3rem;
         }
 
     }
 
 
-    &.btn-group-multi-right.active {
+    &.btn-group-multi-right.active .btn-multi-option {
 
-        .btn-multi-option {
-            &:nth-child(2) {
-                top: -3rem;
-            }
-            &:nth-child(3) { 
-                top:  -3rem*sin(45deg); 
-                left: -3rem*cos(45deg);
-            }
-            &:nth-child(4) { 
-                left: -3rem;
-            }
-            &:nth-child(5) {
-                top:   3rem*sin(45deg); 
-                left: -3rem*cos(45deg); 
-            }
-            &:nth-child(6) { 
-                top: 3rem;
-            }
+        &:nth-child(2) {
+            top: -3rem;
+        }
+        &:nth-child(3) { 
+            top:  -3rem*sin(45deg); 
+            left: -3rem*cos(45deg);
+        }
+        &:nth-child(4) { 
+            left: -3rem;
+        }
+        &:nth-child(5) {
+            top:   3rem*sin(45deg); 
+            left: -3rem*cos(45deg); 
+        }
+        &:nth-child(6) { 
+            top: 3rem;
         }
 
     }
-
 
 }
+
+
+/* prevent outline shadow around selected button */
+.btn-group-multi.active,
+.btn-group-multi.active:focus, .btn-group-multi:active:focus, .btn-group-multi:focus,
+.btn-group-multi.active.focus, .btn-group-multi:active.focus, .btn-group-multi.focus,
+.btn-group-multi .btn-multi,
+.btn-group-multi.active:focus .btn-multi, .btn-group-multi:active:focus .btn-multi, .btn-group-multi:focus .btn-multi,
+.btn-group-multi.active.focus .btn-multi, .btn-group-multi:active.focus .btn-multi, .btn-group-multi.focus {
+    outline: none;
+    box-shadow: none;
+    border:none;
+}   
+
+
 
 @media(min-width: @screen-md-min) {
     
     /* on non-mobile, enable expand on hover */
 
     .btn-group-multi:hover {
-
-        background: none;
-        border: none;
 
         .btn-multi {
             transform: rotate(90deg);
@@ -305,6 +308,7 @@
     .btn-group-multi.btn-group-multi-right:hover {
 
         .btn-multi-option {
+
             &:nth-child(2) {
                 top: -3rem;
             }

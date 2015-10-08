@@ -16,13 +16,13 @@ module.exports = function(grunt) {
                     cleancss: true,
                     strictImports: true
                 },
-                files: { 'static/css/platform.css': [ 'src/less/platform.less' ] }  
+                files: { 'dist/css/platform.css': [ 'src/less/platform.less' ] }  
             }
         },
 
         autoprefixer: {
             platform: {
-                src: "static/css/platform.css"
+                src: "dist/css/platform.css"
             }
         },
 
@@ -32,7 +32,18 @@ module.exports = function(grunt) {
             },
             js: {
                 src: [ 'src/js/*.js'],
-                dest: 'static/js/geoplatform.style.js'
+                dest: 'dist/js/geoplatform.style.js'
+            }
+        },
+
+        uglify: {
+            options: {
+                mangle: false
+            },
+            js: {
+                files: {
+                    'dist/js/geoplatform.style.min.js': 'dist/js/geoplatform.style.js',
+                }
             }
         }
 
@@ -42,7 +53,8 @@ module.exports = function(grunt) {
     grunt.registerTask('default', [
         'less',             //compile less
         'autoprefixer',     //apply x-browser prefixes
-        'concat:js'
+        'concat:js',
+        'uglify:js'
     ]);
 
 };

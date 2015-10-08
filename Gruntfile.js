@@ -1,9 +1,7 @@
 
 /* 
  http://www.sitepoint.com/writing-awesome-build-script-grunt/
-
  https://github.com/jlengstorf/hyper-optimized-workflow/blob/master/Gruntfile.js
-
  */
 module.exports = function(grunt) {
 
@@ -26,6 +24,16 @@ module.exports = function(grunt) {
             platform: {
                 src: "static/css/platform.css"
             }
+        },
+
+        concat: {
+            options: {
+                separator: grunt.util.linefeed + ';' + grunt.util.linefeed
+            },
+            js: {
+                src: [ 'src/js/*.js'],
+                dest: 'static/js/geoplatform.style.js'
+            }
         }
 
     });
@@ -33,7 +41,8 @@ module.exports = function(grunt) {
     
     grunt.registerTask('default', [
         'less',             //compile less
-        'autoprefixer'      //apply x-browser prefixes
+        'autoprefixer',     //apply x-browser prefixes
+        'concat:js'
     ]);
 
 };

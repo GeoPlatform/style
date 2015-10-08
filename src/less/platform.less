@@ -30,6 +30,7 @@ h6 { font-size: 0.75rem; }
 @import "shadows.less";
 @import "animation.less";
 @import "buttons.less";
+@import "icons.less";
 @import "header.less";
 @import "mega-menu.less";
 @import "mobile-menu.less";
@@ -42,6 +43,7 @@ h6 { font-size: 0.75rem; }
 
 
 
+/* padding helper classes */
 .pd-xs { padding: @px-xs; }
 .pd-sm { padding: @px-sm; }
 .pd-md { padding: @px-md; }
@@ -50,6 +52,8 @@ h6 { font-size: 0.75rem; }
 .pd-xxlg { padding: @px-xxlg; }
 .pd-xxxlg { padding: @px-xxxlg; }
 
+
+/* margin helper classes */
 .mg-xs { margin: @px-xs; }
 .mg-sm { margin: @px-sm; }
 .mg-md { margin: @px-md; }
@@ -58,9 +62,25 @@ h6 { font-size: 0.75rem; }
 .mg-xxlg { margin: @px-xxlg; }
 .mg-xxxlg { margin: @px-xxxlg; }
 
-.small-text { font-size: 0.85rem; }
+
+/* text sizing helper classes */
+.small-text, .text-small { font-size: 0.85rem; }
 
 
+/* alignment helper classes */
+.righted { text-align: right; }
+
+
+
+
+
+
+/* ================================ *\
+    Input Group "Slick"
+    custom input group that inlines
+    the icons without borders and 
+    background color differences
+\* ================================ */
 .input-group-slick {
     position: relative;
 
@@ -92,17 +112,6 @@ h6 { font-size: 0.75rem; }
     }
 
 }
-
-
-.righted {
-    text-align: right;
-}
-
-.text-small {
-    font-size: 85%;
-}
-
-
 
 
 

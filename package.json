@@ -1,12 +1,11 @@
 {
-    "name": "geoplatform.portal",
-    "version": "1.0.1",
+    "name": "geoplatform.style",
+    "version": "1.0.2",
     "private": true,
     "repository": {
         "type": "git",
-        "url": "https://github.com/GeoPlatform/portal.git"
+        "url": "https://github.com/GeoPlatform/style.git"
     },
-    "main": "server.js",
     "dependencies": {
         "grunt-cli": "~0.1.13"
     },
@@ -16,6 +15,7 @@
         "grunt-contrib-clean": "0.5.x",
         "grunt-contrib-copy": "0.4.x",
         "grunt-contrib-less": "0.12.0",
+        "grunt-contrib-concat": "0.4.x",
         "matchdep": "^0.3.0"
     },
     "scripts": {

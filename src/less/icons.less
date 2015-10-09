@@ -46,10 +46,12 @@
 
 
 /* active state, i.e. menu open */
+.btn.active .icon-hamburger-menu,
 .btn[aria-expanded="true"] .icon-hamburger-menu {
     background: none;
 }
 
+.btn.active .icon-hamburger-menu::before,
 .btn[aria-expanded="true"] .icon-hamburger-menu::before {
     top: 0;
     -webkit-transform: rotate(45deg);
@@ -57,6 +59,7 @@
             transform: rotate(45deg);
 }
 
+.btn.active .icon-hamburger-menu::after,
 .btn[aria-expanded="true"] .icon-hamburger-menu::after {
     bottom: 0;
     -webkit-transform: rotate(-45deg);
@@ -64,11 +67,102 @@
             transform: rotate(-45deg);
 }
 
+.btn.active .icon-hamburger-menu::before,
+.btn.active .icon-hamburger-menu::after,
 .btn[aria-expanded="true"] .icon-hamburger-menu::before,
 .btn[aria-expanded="true"] .icon-hamburger-menu::after {
     -webkit-transition-delay: 0s, 0.3s;
             transition-delay: 0s, 0.3s;
 }
+
+
+
+
+
+
+
+
+
+/* ---------------------------- *\
+    Animated Options Icon
+\* ---------------------------- */
+
+
+.icon-options {
+    display: inline-block;
+    position: relative;
+    width: @px-sm;
+    height: @px-sm;
+    background: @color-gray-md;
+    vertical-align: middle;
+    padding: 0 2px;
+    margin-bottom: 2px;
+    border-radius: @px-md;
+    -webkit-transition: background 0s 0.3s;
+            transition: background 0s 0.3s;
+}
+
+.icon-options::before,
+.icon-options::after {
+    position: absolute;
+    display: block;
+    width: @px-sm;
+    height: @px-sm;
+    background-color: @color-gray-md;
+    content: "";
+    border-radius: @px-md;
+    -webkit-transition-duration: 0.3s, 0.3s;
+            transition-duration: 0.3s, 0.3s;
+    -webkit-transition-delay: 0.3s, 0s;
+            transition-delay: 0.3s, 0s;
+    -webkit-transition-property: width, -webkit-transform;
+            transition-property: width, transform;
+}
+
+.icon-options::before {
+    left: -6px;
+}
+
+.icon-options::after {
+    right: -6px;
+}
+
+
+/* active state, i.e. menu open */
+.btn.active .icon-options,
+.btn[aria-expanded="true"] .icon-options {
+    background: none;
+}
+
+.btn.active .icon-options::before,
+.btn[aria-expanded="true"] .icon-options::before {
+    width: @px-xlg;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+}
+
+.btn.active .icon-options::after,
+.btn[aria-expanded="true"] .icon-options::after {
+    width: @px-xlg;
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+}
+
+.btn.active .icon-options::before,
+.btn.active .icon-options::after,
+.btn[aria-expanded="true"] .icon-options::before,
+.btn[aria-expanded="true"] .icon-options::after {
+    -webkit-transition-delay: 0s, 0.3s;
+            transition-delay: 0s, 0.3s;
+}
+
+
+
+
+
+
 
 
 

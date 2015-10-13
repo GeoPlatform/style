@@ -72,6 +72,98 @@
         }
     }
 
+    &.btn-white, a&.btn-white {
+        background-color: #fff;
+        border-color: #eaeaea;
+        color: @color-gray-md;
+
+        &:hover, &:focus, &.active {
+            background-color: #eaeaea;
+            border-color: #dedede;
+            color: @color-gray-dk;
+        }
+    }
+
+    &.btn-default-outline, 
+    &.btn-secondary-outline {
+        background-color: transparent;
+        border-color: @color-gray-md;
+        color: @color-gray-md;
+
+        &:hover {
+            background-color: @color-gray-xlt;
+        }
+    }
+    &.btn-primary-outline {
+        background-color: transparent;
+        border-color: #337ab7;
+        color: #337ab7;
+
+        &:hover {
+            background-color: #337ab7;
+            color: #fff;
+        }
+    }
+    &.btn-accent-outline {
+        background-color: transparent;
+        border-color: @color-accent;
+        color: @color-accent;
+
+        &:hover {
+            background-color: @color-accent;
+            color: #fff;
+        }   
+    }
+    &.btn-info-outline {
+        background-color: transparent;
+        border-color: @color-info;
+        color: @color-info;
+
+        &:hover {
+            background-color: @color-info;
+            color: #fff;
+        }   
+    }
+    &.btn-warning-outline {
+        background-color: transparent;
+        border-color: @color-warning;
+        color: @color-warning;
+
+        &:hover {
+            background-color: @color-warning;
+            color: #fff;
+        }   
+    }
+    &.btn-danger-outline {
+        background-color: transparent;
+        border-color: @color-danger;
+        color: @color-danger;
+
+        &:hover {
+            background-color: @color-danger;
+            color: #fff;
+        }   
+    }
+    &.btn-wild-outline {
+        background-color: transparent;
+        border-color: @color-wild;
+        color: @color-wild;
+
+        &:hover {
+            background-color: @color-wild;
+            color: #fff;
+        }   
+    }
+    &.btn-white-outline {
+        background-color: transparent;
+        border-color: #fff;
+        color: #fff;
+
+        &:hover {
+            background-color: @color-primary;
+            color: #fff;
+        }   
+    }
 
     // //may not be needed if <!DOCTYPE html> is on the page
     // .glyphicon {
@@ -170,10 +262,11 @@
     .btn-multi {
         position: relative;
         z-index: 2;
-
+        width: 2.5rem;  //should be a bit bigger to hide option btns
+        height: 2.5rem; //
+            
+        //padding fix for glyphicon-option-horizontal icon
         &.btn-round.btn-dots {
-            width: 2.5rem;
-            height: 2.5rem;
             padding-top: 0.3rem;
         }
     }
@@ -193,36 +286,65 @@
 
     &.active {        
         background: none;   /* remove selected color as background */
-    }
+    
+        //rotate activator button if "hoverable"
+        &.hoverable .btn-multi {
+            -webkit-transform: rotate(90deg);
+               -moz-transform: rotate(90deg);
+                    transform: rotate(90deg);
+        }
 
-    &.active .btn-multi {
-        -webkit-transform: rotate(90deg);
-           -moz-transform: rotate(90deg);
-                transform: rotate(90deg);
-    }
-
-    &.active .btn-multi-option {
+        //animate and show hidden options on active
+        .btn-multi-option {
             
-        -webkit-transform: rotate(0deg);
-           -moz-transform: rotate(0deg);
-                transform: rotate(0deg);
+            -webkit-transform: rotate(0deg);
+               -moz-transform: rotate(0deg);
+                    transform: rotate(0deg);
 
-        &:nth-child(2) {
-            top: -3rem;
+            &:nth-child(2) {
+                top: -3rem;
+            }
+            &:nth-child(3) { 
+                top:  -3rem*sin(45deg); 
+                left:  3rem*cos(45deg);
+            }
+            &:nth-child(4) { 
+                left:  3rem;
+            }
+            &:nth-child(5) {
+                top:   3rem*sin(45deg); 
+                left:  3rem*cos(45deg); 
+            }
+            &:nth-child(6) { 
+                top:   3rem;
+            }
         }
-        &:nth-child(3) { 
-            top:  -3rem*sin(45deg); 
-            left:  3rem*cos(45deg);
-        }
-        &:nth-child(4) { 
-            left:  3rem;
-        }
-        &:nth-child(5) {
-            top:   3rem*sin(45deg); 
-            left:  3rem*cos(45deg); 
-        }
-        &:nth-child(6) { 
-            top:   3rem;
+
+        //if using icon-options inside .btn-multi, 
+        // enable its animations when .btn-group-multi is active
+        &.active .btn-multi .icon-options, 
+        &[aria-expanded="true"] .btn-multi .icon-options {
+            background: none;
+
+            &::before {
+                width: @px-xlg;
+                -webkit-transform: rotate(45deg);
+                    -ms-transform: rotate(45deg);
+                        transform: rotate(45deg);
+            }
+
+            &::after {
+                width: @px-xlg;
+                -webkit-transform: rotate(-45deg);
+                    -ms-transform: rotate(-45deg);
+                        transform: rotate(-45deg);
+            }
+
+            &::before, &::after {
+                -webkit-transition-delay: 0s, 0.3s;
+                        transition-delay: 0s, 0.3s;
+            }
+
         }
 
     }
@@ -271,7 +393,7 @@
     
     /* on non-mobile, enable expand on hover */
 
-    .btn-group-multi:hover {
+    .btn-group-multi.hoverable:hover {
 
         .btn-multi {
             transform: rotate(90deg);
@@ -307,7 +429,7 @@
     }
 
 
-    .btn-group-multi.btn-group-multi-right:hover {
+    .btn-group-multi.btn-group-multi-right.hoverable:hover {
 
         .btn-multi-option {
 

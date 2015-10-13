@@ -171,27 +171,35 @@
 
 /* ---------------------------- *\
     CSS-only GeoPlatform Logo
+
+    Uses "em" instead of "rem" 
+    so that it scales with the 
+    container it's in. 
+    
+    ie: 
+    <h3><span class="icon-gp"></span></h3>
+    
+    would be larger than
+    <h4><span class="icon-gp"></span></h4>
+    
 \* ---------------------------- */
 
 .icon-gp {
+    display: inline-block;
     position: relative;
     top: 1px;
-    display: inline-block;
-    font-family: 'Glyphicons Halflings';
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    color: #fff;
-    background-color: @color-accent;
-    padding-bottom: 0.0625rem;
-    padding-right: 0.0625rem;
-    border: 0.1875rem solid @color-primary;
+    border: .15em solid #112158;
     box-shadow: 0 0 1px #fff;
-    border-radius: @px-xs;
+    border-radius: 2px;
+    padding: 0;
 }
-.icon-gp:after {
-    content: "\e074";
+.icon-gp::after {
+    content: " ";
+    display: block;
+    width: 0.75em;
+    height: 0.75em;
+    background-color: #fff;
+    border: .125em solid @color-accent;
 }
 
 

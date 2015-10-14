@@ -86,31 +86,27 @@ h6 { font-size: 0.75rem; }
 .input-group-slick {
     position: relative;
 
+    &.active { background-color: transparent; }
+
+    &.input-group-lg { font-size: 1.5rem; }
+
     & > .glyphicon {
         position: absolute;
         top: @px-md+@px-xs;
         color: lighten(@color-gray-md, 5%);
 
-        &:first-child {
-            left: @px-lg;
-        }
-
-        &:last-child {
-            right: @px-lg;
-        }
+        &:first-child { left: @px-lg; }
+        &:last-child {  right: @px-lg; }
 
     }
 
     & > input.form-control {
-        padding-left: @px-xxxlg;
-        padding-right: @px-xxxlg;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
 
-        &:first-child {
-            padding-left: @px-lg;
-        }
-        &:last-child {
-            padding-right: @px-lg;
-        }
+        //pad form control without a sibling on an end
+        &:first-child { padding-left: @px-lg; }
+        &:last-child {  padding-right: @px-lg; }
     }
 
 }

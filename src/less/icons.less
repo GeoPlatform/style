@@ -204,3 +204,159 @@
 
 
 
+
+
+
+
+
+
+
+
+/* ---------------------------------------- *\
+    Animated Search Icon
+    
+    Transforms into a spinning load icon 
+    when inside an "active" parent element
+
+    <button type="button" class="btn btn-default">
+      <span class="icon-checked"></span>
+    </button>
+    
+\* --------------------------------------- */
+
+.icon-search {
+
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    
+    &::before {
+        display: block;
+        content: " ";
+        border: .2em solid @color-gray-dk;
+        border-radius: 1em;
+        width: 0.9em;
+        height: 0.9em;
+        
+        -webkit-transition-duration: 0.2s, 0.2s;
+                transition-duration: 0.2s, 0.2s;
+        -webkit-transition-property: all, -webkit-transform;
+                transition-property: all, transform;
+    }
+
+    &::after {
+        display: block;
+        content: " ";
+        background-color: @color-gray-dk;
+        height: 0.25em;
+        width: 0.5em;
+        -webkit-transform:translate(10/16/16em, -2/16em) rotate(45deg);
+           -moz-transform:translate(10/16em, -2/16em) rotate(45deg); 
+             -o-transform:translate(10/16em, -2/16em) rotate(45deg);
+                transform:translate(10/16em, -2/16em) rotate(45deg);
+
+        -webkit-transition-duration: 0.3s, 0.3s;
+                transition-duration: 0.3s, 0.3s;
+        -webkit-transition-property: width, -webkit-transform;
+                transition-property: width, transform;
+    }
+
+    [aria-expanded="true"] > & , 
+    .active > & {
+
+        &::before {
+            width: 1em;
+            height: 1em;
+            border-style: dotted;
+            .spin;
+        }
+        &::after {
+            width: 0;
+        }
+    }
+}
+
+//support being inside an input-group-slick element
+.input-group-slick > .icon-search {
+    
+    position:   absolute;
+    top:        .5em;
+    
+    //lighten color
+    &::before { border-color: lighten(@color-gray-md, 5%); }
+    &::after {  background-color: lighten(@color-gray-md, 5%); }
+
+    //pad based on location in input group
+    &:first-child { left: 0.5em; }
+    &:last-child { right: 0.5em; }
+
+}
+.input-group-slick.active > .icon-search {
+    &::before {
+        width:  1em;
+        height: 1em;
+        border-style: dotted;
+        border-color: @color-gray-dk;
+        .spin;
+    }
+    &::after {
+        width: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* -------------------------------------- *\
+    Animated Checkbox Icon
+
+    <button type="button" class="btn btn-default">
+      <span class="icon-checked"></span>
+    </button>
+
+\* -------------------------------------- */
+
+.icon-checked {
+
+    display: inline-block;
+    position: relative;
+    width: 1em;
+    height: 1em;
+    border: 3/16em solid @color-gray-dk;
+    border-radius: 3/16em;
+
+    &::after {
+
+        content: '';
+        display: block;
+        height: 0px;
+        left: 0px;
+        position: absolute;
+        top: 6/16em;
+        width: 0px;
+        border-right: 0 solid @color-accent;
+        border-top: 0 solid @color-accent;
+        transform: scaleX(-1) rotate(180deg + -45deg);
+        transform-origin: top left;
+        -webkit-transition: width 0.3s, height 0.6s 0.3s;
+        transition: width 0.3s, height 0.6s 0.3s;
+    }
+
+    .active > & {
+
+        &::after {
+            border-right-width: 4/16em;
+            border-top-width: 4/16em;
+            width: .5em;
+            height: 1em;
+        }
+    }
+}
+
+
+

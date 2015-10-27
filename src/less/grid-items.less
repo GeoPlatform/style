@@ -96,6 +96,14 @@
         .border-color(@color-accent);
     }
 
+    //don't let selected/active status alter color inside item
+    &.selected, &.active {
+        background: transparent;
+        color: @color-gray-dk;
+        box-shadow: 0 1px 3px @color-active;
+        border-color: @color-active;
+    }
+
 
     .form-group label, .form-group .control-label { 
         margin-bottom: 0; 

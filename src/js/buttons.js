@@ -4,7 +4,7 @@
 \* ================================== */
 
 $(document)
-    .on('click', '.btn-group-multi > .btn-multi', function (e) {
+    .on('click', '.btn-group-multi > .btn-multi', function (evt) {
 
     var tgt = $(evt.target);
     if(!tgt.hasClass('btn-group-multi'))

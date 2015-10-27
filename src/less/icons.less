@@ -190,9 +190,11 @@
 
     //transition back to normal
     //  delay width by .3s, do height/transform immediately
-    transition-duration: 0.3s, 0.3s, 0.3s;
-    transition-delay: 0.3s, 0s, 0s;
-    transition-property: width, height, transform;
+    // transition-duration: 0.3s, 0.3s, 0.3s;
+    // transition-delay: 0.3s, 0s, 0s;
+    // transition-property: width, height, transform;
+
+    transition: width 0.3s 0.3s, height 0.3s 0s, transform 0.3s 0s;
 
 }
 
@@ -238,7 +240,8 @@
 
     //transition to active state
     //  delay height/transform by .3s, do width immediately
-    transition-delay: 0s, 0.3s, 0.3s;
+    // transition-delay: 0s, 0.3s, 0.3s;
+    transition: width 0.3s 0s, height 0.3s 0.3s, transform 0.3s 0.3s;
 }
 
 /*

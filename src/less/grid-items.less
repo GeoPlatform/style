@@ -120,6 +120,10 @@
     }
     .grid-item-detail-tabs .btn {
         color: @color-gray-md;
+
+        &:focus {
+            outline: none;  //override bootstrap highlight
+        }
     }
     .grid-item-detail-tabs .btn.active {
         background-color: #fff;

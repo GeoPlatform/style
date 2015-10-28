@@ -473,5 +473,54 @@
 
 
 
+/* -------------------------------- *\
+   Update colors for animated icons 
+   when inside colored buttons
+\* -------------------------------- */
 
+.btn-info > .icon-options, 
+.btn-primary > .icon-options, 
+.btn-accent > .icon-options,
+.btn-wild > .icon-options,
+.btn-danger > .icon-options {
+    background: #fff;
+    
+    &::before,
+    &::after { background-color: #fff; }
+}
 
+.btn-info > .icon-hamburger-menu, 
+.btn-primary > .icon-hamburger-menu, 
+.btn-accent > .icon-hamburger-menu,
+.btn-wild > .icon-hamburger-menu,
+.btn-danger > .icon-hamburger-menu {
+    background: #fff;
+
+    &::before,
+    &::after { background-color: #fff; }
+    &::before { border-bottom-color: #fff; }
+    &::after { border-top-color: #fff; }
+}
+
+.btn-info > .icon-search, 
+.btn-primary > .icon-search, 
+.btn-accent > .icon-search,
+.btn-wild > .icon-search,
+.btn-danger > .icon-search {
+
+    &::before { border-color: #fff; }
+    &::after { background-color: #fff; }
+}
+
+.btn-info > .icon-checked, 
+.btn-primary > .icon-checked, 
+.btn-accent > .icon-checked,
+.btn-wild > .icon-checked,
+.btn-danger > .icon-checked {
+    border-color: #fff;
+
+    &::after {
+        border-right-color: #fff;
+        border-top-color: #fff;
+    }
+}

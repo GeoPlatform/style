@@ -1,14 +1,21 @@
 
 
-$(document).on('click', '.grid-item .grid-item-detail-tabs .btn', function(event) {
+$(document).on('click', '.grid-item .grid-item-detail-tabs .btn.grid-item-detail-tab', function(event) {
 
     var btn = $(event.target);
     if(!btn.hasClass("btn")) btn = btn.parent();
 
-    var index = btn.index() + 1;
+    var selector = btn.data('target');
 
-    btn.closest('.grid-item').find('.grid-item-detail').removeClass('active');
-    btn.closest('.grid-item').find('.grid-item-detail:nth-child(' + index + ')').addClass('active');
+    var item = btn.closest('.grid-item');
+
+    //deactive current detail section
+    item.find('.grid-item-detail.active').removeClass('active');
+
+    //activate selected detail section
+    item.find(".grid-item-details").find(selector).addClass('active');
+    
+    //deactivate other tabs
     btn.siblings().removeClass('active');
     btn.addClass('active');
 

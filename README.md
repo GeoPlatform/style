@@ -47,6 +47,8 @@ machine github.com
 
 `git config --global url."https://github".insteadOf git://github`
 
+**Important:** copy/paste the command into your terminal to ensure it's entered accurately. There should be no spaces around either period in the command and should be one space after "insteadOf".
+
 4. Update the `bower.json` file in your downstream project to reference the style project.
 
 ```json

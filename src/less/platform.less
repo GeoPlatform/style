@@ -107,6 +107,11 @@ h6 { font-size: 0.75rem; }
         //pad form control without a sibling on an end
         &:first-child { padding-left: @px-lg; }
         &:last-child {  padding-right: @px-lg; }
+
+        //hide ie10+ auto-added clear button from the input
+        &::-ms-clear {
+            display: none;
+        }
     }
 
 }

@@ -37,9 +37,12 @@ header {
     /* responsive menu button */
     .btn-nav {
         
-        float:   left;
         padding: @px-xlg;
-        margin:  @px-none @px-md @px-none -@px-xlg;
+        
+        &.pull-left {
+            //put space between it and brand if left-aligned
+            margin:  @px-none @px-md @px-none -@px-xlg;
+        }
 
         &.open {
             background-color: @color-accent;

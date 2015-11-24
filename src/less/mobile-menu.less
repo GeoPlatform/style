@@ -3,54 +3,65 @@ nav.mobile-menu {
 
     position:   fixed;
     top:        50px;
-    left:       -100%;
     bottom:     0px;
     width:      100%;
     padding:    0;
     z-index:    1000;
     background-color: fadeout(@color-gray-dk, 30%);
-    
-    transition: .3s linear all;
-    -webkit-transition: .3s linear all;
-    -moz-transition: .3s linear all;
-    -o-transition: .3s linear all;
+        
 
-    &.open {
-        left: 0;
+    //slides in from left
+    &.mobile-menu-left {
+        left: -100%;
+        -webkit-transition: .3s linear left;
+        -moz-transition: .3s linear left;
+        -o-transition: .3s linear left;
+        transition: .3s linear left;
+
+        &.open {
+            left: 0;
+        }
     }
 
+    //slides in from right
+    &.mobile-menu-right {
+        right: -100%;
+        -webkit-transition: .3s linear right;
+        -moz-transition: .3s linear right;
+        -o-transition: .3s linear right;
+        transition: .3s linear right;
+
+        &.open {
+            right: 0;
+        }
+    }
+
+    
+
     & > ul {
-        width:      85%;
+        position: absolute;
+        right: 0;
+        width:      95%;
         height:     100%;
         padding:    0;
         overflow:   auto;
         overflow-x: hidden;
         list-style: none;
-        box-shadow: 1px 0 3px #000;
-        background: rgba(255, 255, 255, 0.95);
-        
+        box-shadow: -1px 0 3px rgba(0,0,0,0.5);
+        background: #fff;
+
         li {
 
             display: block;
             
             &.header {
                 font-size:      18px;
-                font-weight:    700;
                 padding:        @px-xxlg @px-xlg @px-xlg;
-                margin-bottom:  @px-md;
                 border:         none;
                 text-transform: uppercase;
-                .text-white;
-                .shadowed-bottom-dk;
+                border-bottom: 1px solid @color-gray-lt;
+                background-color: #f5f5f5;
 
-                background: @color-gray-dk;
-                background: -moz-radial-gradient(center, ellipse cover, lighten(@color-gray-dk,10%) 0%, lighten(@color-gray-dk,5%) 60%, @color-gray-dk 100%);
-                background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, lighten(@color-gray-dk,10%)), color-stop(60%, lighten(@color-gray-dk,5%)), color-stop(100%, @color-gray-dk));
-                background: -webkit-radial-gradient(center, ellipse cover, lighten(@color-gray-dk,10%) 0%, lighten(@color-gray-dk,5%) 60%, @color-gray-dk 100%);
-                background: -o-radial-gradient(center, ellipse cover, lighten(@color-gray-dk,10%) 0%, lighten(@color-gray-dk,5%) 60%, @color-gray-dk 100%);
-                background: -ms-radial-gradient(center, ellipse cover, lighten(@color-gray-dk,10%) 0%, lighten(@color-gray-dk,5%) 60%, @color-gray-dk 100%);
-                background: radial-gradient(ellipse at center, lighten(@color-gray-dk,10%) 0%, lighten(@color-gray-dk,5%) 60%, @color-gray-dk 100%);
-                    
                 &.account-details {
                     font-size:      inherit;
                     text-transform: none;
@@ -65,7 +76,6 @@ nav.mobile-menu {
                     }
                     hr {
                         margin: @px-xs @px-none @px-md;
-                        border-color: lighten(@color-gray-dk,15%);
                     }
                 }
             }
@@ -73,12 +83,11 @@ nav.mobile-menu {
             & > ul.sub-menu {
                 width:  100%;
                 padding: @px-none;
-                border-left: @px-md solid @color-accent;
+                // border-left: @px-md solid @color-accent;
 
                 li > a {
                     .text-gray-md;
-                    border-left: @px-lg solid fadeout(@color-accent, 75%);
-            
+                    
                     & > .glyphicon {
                         margin-right: @px-lg;
                     }
@@ -90,26 +99,13 @@ nav.mobile-menu {
                 padding:        @px-lg @px-xlg;
                 clear:          both;
                 text-transform: uppercase;
-                border-left:    @px-md solid @color-accent;
+                border-bottom: 1px solid @color-gray-xlt;
                 font-size:      0.9em;
-                .text-gray-md;
                 
                 & > .glyphicon {
                     margin-right: @px-xs;
                 }
 
-                &[href]:not(.btn):after {
-                    float:       right;
-                    position:    relative;
-                    top:         @px-sm;
-                    display:     inline-block;
-                    font-family: 'Glyphicons Halflings';
-                    font-style:  normal;
-                    font-weight: 400;
-                    line-height: 1;
-                    content:     "\e258";
-                    -webkit-font-smoothing: antialiased;
-                }
             }
         }
     }

@@ -87,7 +87,8 @@
 }
 
 @media (min-width: @screen-sm-min) {
-    .mega-menu {
+    
+    .mega-menu, .mega-menu.mega-menu-left, .mega-menu.mega-menu-right {
         position: absolute;
         left: @px-xlg;
         right: @px-xlg;
@@ -105,6 +106,7 @@
         }
 
         &.open {
+            left: @px-xlg;
             right: @px-xlg;
             margin-top: 0;
         }

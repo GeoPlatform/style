@@ -1,0 +1,125 @@
+<!doctype html>
+<html ng-app="app">
+    <head>
+        <title>Examples</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/dist/css/platform.css">
+        <style>
+            
+            label { width: 100px; }
+
+            .swatch {
+
+                display:        block;
+                float:          left;
+                height:         250px;
+                width:          100%;
+                overflow:       hidden;
+                margin-bottom:  @px-xlg;
+                
+            }
+            .preview {
+                width: 100px; 
+                height: 100px;
+            }
+
+            .details {
+                width: 100%;
+                overflow: hidden;
+                font-size: 0.8em;
+                color: @color-gray-dk;
+
+                h3,h4,h5 {
+                    margin-bottom: @px-xs;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <div class="page page--responsive-drawer">
+
+            <aside class="page__drawer page__drawer--left ">
+                <h4>Examples</h4>
+                <ul class="nav nav-pills nav-stacked">
+                    <li><a href="#/colors">Colors</a></li>
+                    <li><a href="#/buttons">Buttons</a></li>
+                    <li><a href="#/headers">Headers</a></li>
+                    <li><a href="#/lists">Lists</a></li>
+                    <li><a href="#/cards">Cards</a></li>
+                    <li><a href="#/grid">Grid Results</a></li>
+                    <li><a href="#/search">Search</a></li>
+                    <li><a href="#/pagination">Pagination</a></li>
+                </ul>
+            </aside>
+
+            <div class="page__content">
+        
+                <div class="heading">
+                    <div class="pull-left heading__nav">
+                        <!-- <button type="button" class="btn btn-link btn-link-lite" 
+                            onclick="$(this).closest('.page').toggleClass('opened')">
+                            <span class="icon-hamburger-menu"></span>
+                        </button> -->
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-link btn-link-lite dropdown-toggle" 
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="icon-hamburger-menu"></span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <h4>Examples</h4>
+                                <ul>
+                                    <li><a href="#/colors">Colors</a></li>
+                                    <li><a href="#/buttons">Buttons</a></li>
+                                    <li><a href="#/headers">Headers</a></li>
+                                    <li><a href="#/lists">Lists</a></li>
+                                    <li><a href="#/cards">Cards</a></li>
+                                    <li><a href="#/grid">Grid Results</a></li>
+                                    <li><a href="#/search">Search</a></li>
+                                    <li><a href="#/pagination">Pagination</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <h4>Examples</h4>
+                </div>
+                
+                <div class="body">
+
+                    <br><br>
+                    <div ng-view></div>
+
+                </div>
+            </div>
+        </div>
+           
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>    
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-route.min.js"></script>
+
+
+        <script>
+
+            angular.module('app', ['ngRoute']).config(function myAppConfig ( $routeProvider ) {
+                $routeProvider
+                .when('/buttons', { templateUrl: '/static/examples/buttons.html' })
+                .when('/cards', { templateUrl: '/static/examples/cards.html' })
+                .when('/colors', { templateUrl: '/static/examples/colors.html' })
+                .when('/grid', { templateUrl: '/static/examples/grid-results.html' })
+                .when('/lists', { templateUrl: '/static/examples/lists.html' })
+                .when('/search', { templateUrl: '/static/examples/search.html' })
+                .when('/headers', { templateUrl: '/static/examples/headers.html' })
+                .when('/pagination', { templateUrl: '/static/examples/pagination.html' })
+            });
+
+        </script>
+
+    </body>
+</html>
+
+
+
+
+

@@ -31,6 +31,7 @@ h6 { font-size: 0.75rem; }
 @import "animation.less";
 @import "buttons.less";
 @import "icons.less";
+@import "forms.less";
 @import "header.less";
 @import "mega-menu.less";
 @import "mobile-menu.less";
@@ -40,6 +41,7 @@ h6 { font-size: 0.75rem; }
 @import "thumbnails.less";
 @import "cards.less";
 @import "grid-items.less";
+@import "layout.less";
 
 
 
@@ -64,6 +66,11 @@ h6 { font-size: 0.75rem; }
 
 
 /* text sizing helper classes */
+.text--xs { font-size: 0.6em; }
+.text--sm { font-size: 0.85em; }
+.text--xlg { font-size: 2em; }
+.text--xxlg { font-size: 3em; }
+.text--xxxlg { font-size: 4em; }
 .small-text, .text-small { font-size: 0.85rem; }
 
 
@@ -71,51 +78,6 @@ h6 { font-size: 0.75rem; }
 .text-centered { text-align: center; }
 .text-righted, .righted { text-align: right; }
 .child-centered-horizontal { margin: 0 auto; }
-
-
-
-
-
-
-/* ================================ *\
-    Input Group "Slick"
-    custom input group that inlines
-    the icons without borders and 
-    background color differences
-\* ================================ */
-.input-group-slick {
-    position: relative;
-
-    &.active { background-color: transparent; }
-
-    &.input-group-lg { font-size: 1.5rem; }
-
-    & > .glyphicon {
-        position: absolute;
-        top: @px-md+@px-xs;
-        color: lighten(@color-gray-md, 5%);
-
-        &:first-child { left: @px-lg; }
-        &:last-child {  right: @px-lg; }
-
-    }
-
-    & > input.form-control {
-        padding-left: 2.5rem;
-        padding-right: 2.5rem;
-
-        //pad form control without a sibling on an end
-        &:first-child { padding-left: @px-lg; }
-        &:last-child {  padding-right: @px-lg; }
-
-        //hide ie10+ auto-added clear button from the input
-        &::-ms-clear {
-            display: none;
-        }
-    }
-
-}
-
 
 
 /*

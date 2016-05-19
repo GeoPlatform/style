@@ -1,4 +1,211 @@
 
+
+/* ----------------------------------------- *\
+    GP UI Card
+    New card structure
+    REPLACES .card elements
+
+    Standard: 
+        .gp-ui-card
+        
+    Fixed Height:
+        .gp-ui-card.gp-ui-card--sm
+        .gp-ui-card.gp-ui-card--md
+        .gp-ui-card.gp-ui-card--lg
+        .gp-ui-card.gp-ui-card--xlg
+
+    
+    Usage:
+
+    <div class="gp-ui-card">
+        <div class="media">
+            <a class="embed-responsive embed-responsive-16by9" href="#" target="_blank" title="Open this item">
+                <img class="embed-responsive-item" src="/img/ImageNotAvailable.png" alt="Card Image">
+            </a>
+        </div>
+        <div class="gp-ui-card__body">
+            <div class="text--primary">Card Title</div>
+            <div class="text--secondary">card sub-title</div>
+            <div class="text--supporting">Lorem ipsum...</div>
+        </div>
+        <div class="gp-ui-card__footer">
+            <div class="pull-right">
+                <a href="#" class="btn btn-link pull-right">Action</a>
+            </div>
+        </div>
+    </div>
+
+\* ----------------------------------------- */
+
+.gp-ui-card {
+    position:       relative;
+    margin:         0 0 1em;
+    overflow:       hidden;
+    border:         1px solid @color-gray-lt;
+    border-radius:  4px;
+    box-shadow:     0 1px 3px rgba(0,0,0,0.25);
+    font-size:      1rem;
+    background:     #fff;
+    color:          inherit;
+}
+
+.gp-ui-card .media {
+    display: block;
+    background-color: #efefef;
+    border-bottom: 1px solid @color-gray-xlt;
+}
+
+.gp-ui-card .text--primary {    
+    display:     block;        
+    font-size:   1em;
+    padding:     .5em 1em 0.5em;
+    font-weight: 700;
+}
+.gp-ui-card .text--secondary {
+    display: block;
+    font-size:  0.875em;
+    padding:    0 1.143em 0.5715em;
+    color:      @color-accent;
+    font-weight: 700;
+}
+
+.gp-ui-card .text--supporting {
+    font-size:  0.875em;
+    padding:    0 1.143em 0.5175em;
+    color:      @color-gray-md;
+
+    .gp-ui-card__details {
+        display: none;
+
+        &.active {
+            display: initial;
+            color: inherit;
+            background: transparent;
+        }
+    }
+
+}
+
+.gp-ui-card__footer {
+    padding: 0.5em 1em;
+    height:     3em;
+    background: #fff;
+    border-top: 1px solid @color-gray-xlt;
+    
+    .active {
+        background: transparent;
+        color: initial;
+        border: initial;
+    }
+
+}   
+
+.gp-ui-card__tab {
+        
+    color:      @color-gray-lt;
+
+    &:hover {
+        color: @color-gray-md;
+    }
+
+    &.active {
+        
+        //I know this is bad for screen readers, but it looks like garbage otherwise
+        outline:    none; 
+
+        position:   relative;
+        color: @color-gray-md;
+        
+        &:after {
+            bottom: 76%;
+            left:   50%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width:  0;
+            position: absolute;
+            pointer-events: none;
+            border-color: rgba(51, 153, 51, 0);
+            border-bottom-color: @color-gray-lt;
+            border-width: 8px;
+            margin-left: -8px;
+            transform: rotate(180deg);
+        }
+    }
+}
+
+
+/* Fixed Height variants */
+
+.gp-ui-card.gp-ui-card--sm {
+
+    .gp-ui-card__body {
+        height: 2.5em;
+
+        .text--primary {
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .text--secondary {
+            display: none;
+        }
+
+        .text--supporting {
+            display: none;
+        }
+    }
+
+    .gp-ui-card__footer {
+        border-top: none;
+    }
+}
+
+.gp-ui-card.gp-ui-card--md {
+    
+    .gp-ui-card__body {
+        height: 9em;
+        overflow: hidden;
+    }
+}
+
+.gp-ui-card.gp-ui-card--lg {
+
+    .gp-ui-card__body {
+        height: 12em;
+    }
+
+    .text--supporting {
+        height:     6rem;
+        overflow:   hidden;
+    } 
+
+}
+
+.gp-ui-card.gp-ui-card--xlg {
+
+    .gp-ui-card__body {
+        height: 15em;
+
+        .text--supporting {
+            height:     11em;
+            max-height: 11em;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+/* ----------------------------------------- *\
+    Old card structure
+    DEPRECATED 
+    Use .gp-ui-card instead (see above)
+\* ----------------------------------------- */
 .card {
 
     padding:    @px-xlg;

@@ -45,6 +45,32 @@ module.exports = function(grunt) {
                     'dist/js/geoplatform.style.min.js': 'dist/js/geoplatform.style.js',
                 }
             }
+        },
+
+        connect: {
+            server: {
+                options: {
+                    livereload: true,
+                    port: 8888
+                }
+            }
+        },
+
+        watch: {    //monitor stylesheets and rebuild them upon changes to them
+            less: {
+                files: ['src/**/*.less'],
+                tasks: ['less', 'autoprefixer'],
+                options: {
+                    // livereload: true
+                }
+            }
+            // ,
+            // html: {
+            //     files: ['static/**/*.html'],
+            //     options: {
+            //         livereload: true
+            //     }
+            // }
         }
 
     });
@@ -55,6 +81,12 @@ module.exports = function(grunt) {
         'autoprefixer',     //apply x-browser prefixes
         'concat:js',
         'uglify:js'
+    ]);
+
+    grunt.registerTask('dev', [
+        'default',
+        // 'connect:server',       //start webserver
+        'watch'                 //monitor file changes
     ]);
 
 };

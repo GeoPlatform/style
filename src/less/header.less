@@ -222,3 +222,57 @@ header {
 }
 
 
+
+
+
+
+.header__menu {
+    float:  right;
+    margin: 0;
+    padding:0;
+    list-style-type: none;
+    
+    .open > .dropdown-menu {
+        z-index: 2;
+    }
+
+    a, a:visited, .btn-link, a.btn-link,
+    button {
+        text-decoration: none;
+        font-size:  1rem;
+        color:      @color-gray-dk;
+    }
+}
+.primary .header__menu {
+    a, a:visited, .btn-link, a.btn-link,
+    button {
+        color: #fff;
+    }
+}
+
+.header__menu > li {
+    display: inline-block;
+
+    &.active {
+        background: transparent;
+    }
+}
+
+.header__menu > li > a, 
+.header__menu > li > button,
+.header__menu > li > .dropdown > button {
+
+    font-size: 1rem;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 1rem .5rem;
+    border: none;
+    background: transparent;
+}
+
+.header__menu > li.active > a,
+.header__menu > li.active > button,
+.header__menu > li.active > .dropdown > button {
+    border-bottom: 0.25rem solid @color-accent;
+    padding-bottom: 0.75rem;
+}

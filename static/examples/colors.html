@@ -1,196 +1,157 @@
-<!doctype html>
-<html>
-    <head>
-        <title>Colors</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-        <link rel="stylesheet" href="../../dist/css/platform.css">
-        <style>
-            .swatch {
 
-                display:        block;
-                float:          left;
-                height:         250px;
-                width:          100%;
-                overflow:       hidden;
-                margin-bottom:  @px-xlg;
-                
-            }
-            .preview {
-                width: 100px; 
-                height: 100px;
-            }
+<div class="container">
 
-            .details {
-                width: 100%;
-                overflow: hidden;
-                font-size: 0.8em;
-                color: @color-gray-dk;
+    <h3>Colors</h3>
 
-                h3,h4,h5 {
-                    margin-bottom: @px-xs;
-                }
-            }
+    <h4>Theme Colors</h4>
 
-        </style>
-    </head>
-    <body>
-
-        <div class="container">
-
-            <h3>Colors</h3>
-
-            <h4>Theme Colors</h4>
-
-            <div class="row">
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="swatch">
-                        <div class="preview primary"></div>
-                        <div class="details">
-                            <h5>Primary</h5>
-                            <div>#112158 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rgb(17,33,88)</div>
-                            <div><strong>CSS: </strong> .primary, .text-primary</div>
-                            <div><strong>LESS: </strong> @color-primary</div>
-                            <div class="text-muted">Used for headers, heading text, and borders</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="swatch">
-                        <div class="preview accented"></div>
-                        <div class="details">
-                            <h5>Accent</h5>
-                            <div>#339933 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rgb(51, 153, 51)</div>
-                            <div><strong>CSS: </strong> .accented, .text-accented</div>
-                            <div><strong>LESS: </strong> @color-accent</div>
-                            <div class="text-muted">Used for some headings and labels, title bars, and calling attention to elements</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="swatch">
-                        <div class="preview selected"></div>
-                        <div class="details">
-                            <h5>Selection</h5>
-                            <div>#428bca &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rgb(66, 139, 202)</div>
-                            <div><strong>CSS: </strong> .selected, .text-selected</div>
-                            <div><strong>LESS: </strong> @color-active</div>
-                            <div class="text-muted">Used for indicating user selections, links, and current state</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <hr/>
-
-            <h4>State Colors <small>inherited from Twitter Bootstrap</small></h4>
-
-            <div class="row">
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="swatch">
-                        <div class="preview success"></div>
-                        <div class="details">
-                            <h5>Success</h5>
-                            <div>#5cb85c &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rgb(92, 184, 92)</div>
-                            <div><strong>CSS: </strong> .success, .text-success</div>
-                            <div><strong>LESS: </strong> @color-success</div>
-                            <div class="text-muted">Used for indicating success and valid input / state</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="swatch">
-                        <div class="preview info"></div>
-                        <div class="details">
-                            <h5>Info</h5>
-                            <div>#5bc0de &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rgb(91, 192, 222)</div>
-                            <div><strong>CSS: </strong> .info, .text-info</div>
-                            <div><strong>LESS: </strong> @color-info</div>
-                            <div class="text-muted">Used for indicating informational items and actions</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="swatch">
-                        <div class="preview warning"></div>
-                        <div class="details">
-                            <h5>Warning</h5>
-                            <div>#f0ad4e &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rgb(240, 173, 78)</div>
-                            <div><strong>CSS: </strong> .warning, .text-warning</div>
-                            <div><strong>LESS: </strong> @color-warning</div>
-                            <div class="text-muted">Used for indicating caution or potential for issues</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="swatch">
-                        <div class="preview danger"></div>
-                        <div class="details">
-                            <h5>Danger</h5>
-                            <div>#d9534f &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rgb(217, 83, 79)</div>
-                            <div><strong>CSS: </strong> .danger, .text-danger</div>
-                            <div><strong>LESS: </strong> @color-danger</div>
-                            <div class="text-muted">Used for indicating failure and invalid input / state</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <hr/>
-
-
-            <h4>Grayscale Colors</h4>
-
-            <div class="row">
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="swatch">
-                        <div class="preview gray-dk"></div>
-                        <div class="details">
-                            <h5>Dark Gray</h5>
-                            <div>#333333 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rgb(223, 240, 216)</div>
-                            <div><strong>CSS: </strong> .gray-dk, .text-gray-dk</div>
-                            <div><strong>LESS: </strong> @color-gray-dk</div>
-                            <div class="text-muted">Bootstrap default text color; used for headers</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="swatch">
-                        <div class="preview gray-md"></div>
-                        <div class="details">
-                            <h5>Medium Gray</h5>
-                            <div>#777777 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rgb(91, 192, 222)</div>
-                            <div><strong>CSS: </strong> .gray-md, .text-gray-md</div>
-                            <div><strong>LESS: </strong> @color-gray-md</div>
-                            <div class="text-muted">Bootstrap muted text color; used for supplimentary text</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="swatch">
-                        <div class="preview gray-lt"></div>
-                        <div class="details">
-                            <h5>Light Gray</h5>
-                            <div>#bbbbbb &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rgb(240, 173, 78)</div>
-                            <div><strong>CSS: </strong> .gray-lt, .text-gray-lt</div>
-                            <div><strong>LESS: </strong> @color-gray-lt</div>
-                            <div class="text-muted">Used for some non-prominent borders</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="swatch">
-                        <div class="preview gray-xlt"></div>
-                        <div class="details">
-                            <h5>Extra-light Gray</h5>
-                            <div>#dddddd &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rgb(217, 83, 79)</div>
-                            <div><strong>CSS: </strong> .gray-xlt, .text-gray-xlt</div>
-                            <div><strong>LESS: </strong> @color-gray-xlt</div>
-                            <div class="text-muted">Used for most non-prominent borders</div>
-                        </div>
-                    </div>
+    <div class="row">
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="swatch">
+                <div class="preview primary"></div>
+                <div class="details">
+                    <h5>Primary</h5>
+                    <div>#112158 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rgb(17,33,88)</div>
+                    <div><strong>CSS: </strong> .primary, .text-primary</div>
+                    <div><strong>LESS: </strong> @color-primary</div>
+                    <div class="text-muted">Used for headers, heading text, and borders</div>
                 </div>
             </div>
         </div>
-            
-    </body>
-</html>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="swatch">
+                <div class="preview accented"></div>
+                <div class="details">
+                    <h5>Accent</h5>
+                    <div>#339933 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rgb(51, 153, 51)</div>
+                    <div><strong>CSS: </strong> .accented, .text-accented</div>
+                    <div><strong>LESS: </strong> @color-accent</div>
+                    <div class="text-muted">Used for some headings and labels, title bars, and calling attention to elements</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="swatch">
+                <div class="preview selected"></div>
+                <div class="details">
+                    <h5>Selection</h5>
+                    <div>#428bca &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rgb(66, 139, 202)</div>
+                    <div><strong>CSS: </strong> .selected, .text-selected</div>
+                    <div><strong>LESS: </strong> @color-active</div>
+                    <div class="text-muted">Used for indicating user selections, links, and current state</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr/>
+
+    <h4>State Colors <small>inherited from Twitter Bootstrap</small></h4>
+
+    <div class="row">
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="swatch">
+                <div class="preview success"></div>
+                <div class="details">
+                    <h5>Success</h5>
+                    <div>#5cb85c &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rgb(92, 184, 92)</div>
+                    <div><strong>CSS: </strong> .success, .text-success</div>
+                    <div><strong>LESS: </strong> @color-success</div>
+                    <div class="text-muted">Used for indicating success and valid input / state</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="swatch">
+                <div class="preview info"></div>
+                <div class="details">
+                    <h5>Info</h5>
+                    <div>#5bc0de &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rgb(91, 192, 222)</div>
+                    <div><strong>CSS: </strong> .info, .text-info</div>
+                    <div><strong>LESS: </strong> @color-info</div>
+                    <div class="text-muted">Used for indicating informational items and actions</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="swatch">
+                <div class="preview warning"></div>
+                <div class="details">
+                    <h5>Warning</h5>
+                    <div>#f0ad4e &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rgb(240, 173, 78)</div>
+                    <div><strong>CSS: </strong> .warning, .text-warning</div>
+                    <div><strong>LESS: </strong> @color-warning</div>
+                    <div class="text-muted">Used for indicating caution or potential for issues</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="swatch">
+                <div class="preview danger"></div>
+                <div class="details">
+                    <h5>Danger</h5>
+                    <div>#d9534f &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rgb(217, 83, 79)</div>
+                    <div><strong>CSS: </strong> .danger, .text-danger</div>
+                    <div><strong>LESS: </strong> @color-danger</div>
+                    <div class="text-muted">Used for indicating failure and invalid input / state</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <hr/>
+
+
+    <h4>Grayscale Colors</h4>
+
+    <div class="row">
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="swatch">
+                <div class="preview gray-dk"></div>
+                <div class="details">
+                    <h5>Dark Gray</h5>
+                    <div>#333333 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rgb(223, 240, 216)</div>
+                    <div><strong>CSS: </strong> .gray-dk, .text-gray-dk</div>
+                    <div><strong>LESS: </strong> @color-gray-dk</div>
+                    <div class="text-muted">Bootstrap default text color; used for headers</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="swatch">
+                <div class="preview gray-md"></div>
+                <div class="details">
+                    <h5>Medium Gray</h5>
+                    <div>#777777 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rgb(91, 192, 222)</div>
+                    <div><strong>CSS: </strong> .gray-md, .text-gray-md</div>
+                    <div><strong>LESS: </strong> @color-gray-md</div>
+                    <div class="text-muted">Bootstrap muted text color; used for supplimentary text</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="swatch">
+                <div class="preview gray-lt"></div>
+                <div class="details">
+                    <h5>Light Gray</h5>
+                    <div>#bbbbbb &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rgb(240, 173, 78)</div>
+                    <div><strong>CSS: </strong> .gray-lt, .text-gray-lt</div>
+                    <div><strong>LESS: </strong> @color-gray-lt</div>
+                    <div class="text-muted">Used for some non-prominent borders</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="swatch">
+                <div class="preview gray-xlt"></div>
+                <div class="details">
+                    <h5>Extra-light Gray</h5>
+                    <div>#dddddd &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rgb(217, 83, 79)</div>
+                    <div><strong>CSS: </strong> .gray-xlt, .text-gray-xlt</div>
+                    <div><strong>LESS: </strong> @color-gray-xlt</div>
+                    <div class="text-muted">Used for most non-prominent borders</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

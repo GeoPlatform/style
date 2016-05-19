@@ -1,0 +1,85 @@
+
+<div class="container-fluid">
+
+    <div id="results" class="row">
+
+    </div>
+    
+    <script>
+
+        var html = [
+            '<div class="col-lg-3 col-md-4 col-sm-6">',
+            '    <div class="gp-ui-card">',
+            '        <div class="media">',
+            '            <a class="embed-responsive embed-responsive-16by9" href="#" target="_blank" title="Open this item">',
+            '                <img class="embed-responsive-item" src="/static/img/placeholder.png" alt="Card Image">',
+            '            </a>',
+            '        </div>',
+            '        <div class="gp-ui-card__body">',
+            '            <div class="text--primary">Item</div>',
+            '            <div class="text--secondary">item type(s)</div>',
+            '            <div class="text--supporting">',
+            '                <div class="gp-ui-card__details active" id="description">',
+            '                    <p>',
+            '                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            '                    </p>',
+            '                </div>',
+            '                <div class="gp-ui-card__details" id="keywords">',
+            '                    <p><strong>Keywords: </strong> keyword one, keyword two, keyword three</p>',
+            '                    <p>',
+            '                        <strong>Facets: </strong> ',
+            '                        one, two, three, four, five six and seven, eight, nine, and ten',
+            '                    </p>',
+            '                </div>',
+            '                <div class="gp-ui-card__details" id="author">',
+            '                    <div><strong>Author:</strong> Author Name <span>(Organization)</span></div>',
+            '                    <div class=""><strong>Created:</strong> Jan 01, 2015 2:10 PM</div>',
+            '                    <div class=""><strong>Updated:</strong> Jan 01, 2015 2:10 PM</div>',
+            '                </div>',
+            '            </div>',
+            '        </div>',
+            '        <div class="gp-ui-card__footer">',
+            '            <div class="pull-right">',
+            '                <a href="#" class="btn btn-link" title="Delete this item">',
+            '                    <span class="glyphicon glyphicon-trash text-danger"></span>',
+            '                </a>',
+            '                <a href="#" class="btn btn-link" title="Open this item">',
+            '                    <span class="glyphicon glyphicon-share-alt"></span>',
+            '                </a>',
+            '            </div>',
+            '            <div class="gp-ui-card__tabs">',
+            '                <button type="button" class="btn btn-sm btn-link gp-ui-card__tab active" ',
+            '                    title="Description of this item" data-target="#description">',
+            '                    <span class="glyphicon glyphicon-info-sign"></span>',
+            '                </button>',
+            '                <button type="button" class="btn btn-sm btn-link gp-ui-card__tab" ',
+            '                    title="Keywords" data-target="#keywords">',
+            '                    <span class="glyphicon glyphicon-tags"></span>',
+            '                </button>',
+            '                <button type="button" class="btn btn-sm btn-link gp-ui-card__tab" ',
+            '                    title="Author information" data-target="#author">',
+            '                    <span class="glyphicon glyphicon-user"></span>',
+            '                </button>',
+            '            </div>',
+            '        </div>',
+            '    </div>',
+            '</div>'
+        ].join(' ');
+
+        var content = [];
+        for(var i=1; i<13; ++i) {
+            content.push(html);
+            if((i % 2)===0) 
+                content.push('<div class="clearfix visible-sm-block"></div>');
+            if((i % 3)===0) 
+                content.push('<div class="clearfix visible-md-block"></div>');
+            if((i % 4)===0) 
+                content.push('<div class="clearfix visible-lg-block"></div>');
+        }
+
+        var parent = document.getElementById("results");
+        parent.innerHTML = content.join(' ');
+
+    </script>
+
+</div>

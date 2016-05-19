@@ -1,88 +1,171 @@
-<!doctype html>
-<html>
-    <head>
-        <title>Cards</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-        <link rel="stylesheet" href="../../dist/css/platform.css">
-        <style>
-            body { background-color: #ddd; }
+<div class="container-fluid">
 
-        </style>
-    </head>
-    <body>
+    <h4>Normal Cards</h4>
+    <div class="row">
 
-        <div class="container">
-
-            <div class="row">
-
-                <div class="col-md-12" >
-            
-                    <div class="row">
-
-                        <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-                        
-                            <div class="card">
-                                <h3 class="card-title">
-                                    Large Card Title
-                                </h3>
-                                <p class="card-desc">
-                                    Some text and an image...<br/>
-                                    
-                                    <img alt="Placeholder image" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDI0MiAyMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxkZWZzLz48cmVjdCB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjkyLjQ2MDkzNzUiIHk9IjEwMCIgc3R5bGU9ImZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMXB0O2RvbWluYW50LWJhc2VsaW5lOmNlbnRyYWwiPjI0MngyMDA8L3RleHQ+PC9nPjwvc3ZnPg==" height="150" width="100%"><br/><br/>
-
-                                </p>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <a class="pull-right text-accented" href>Action</a>
-                                    </div>
-                                </div>
-                            </div>
-            
-                        </div>
-                    </div>
-
-                    <div class="row">
-                    
-                        <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-
-                            <div class="card">
-                                <h4 class="card-title centered">Medium, Centered Card Title</h4>
-                                <p class="card-desc">
-                                    A description and a list of items...<br/>
-                                    
-                                    <ul class="list-group">
-                                        <li class="list-group-item">Item One</li>
-                                        <li class="list-group-item">Item Two</li>
-                                        <li class="list-group-item">Item Three</li>
-                                    </ul>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                    
-                        <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-
-                            <div class="card">
-                                <h5 class="card-title">
-                                    <a href class="pull-right"><span class="glyphicon glyphicon-remove"></span></a>
-                                    Small Card Title with Close
-                                </h5>
-                                <p class="card-desc">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                </p>
-                            </div>
-                        </div>
-
+        <div class="col-sm-6 col-md-4 col-lg-3">
+                
+            <div class="gp-ui-card">
+                <div class="media">
+                    <a class="embed-responsive embed-responsive-16by9" href="#" target="_blank" title="Open this item">
+                        <img class="embed-responsive-item" src="/static/img/placeholder.png" alt="Card Image" >
+                    </a>
+                </div>
+                <div class="gp-ui-card__body">
+                    <div class="text--primary">Card w/ Everything</div>
+                    <div class="text--secondary">card sub-title</div>
+                    <div class="text--supporting">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     </div>
                 </div>
+                <div class="gp-ui-card__footer">
+                    <div class="pull-right">
+                        <a href="#" class="btn btn-link pull-right">Action</a>
+                    </div>
+                </div>
+            </div>
 
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3">
+                
+            <div class="gp-ui-card">
+                <div class="media">
+                    <a class="embed-responsive embed-responsive-16by9" href="#" target="_blank" title="Open this item">
+                        <img class="embed-responsive-item" src="/static/img/placeholder.png" alt="Card Image" >
+                    </a>
+                </div>
+                <div class="gp-ui-card__body">
+                    <div class="text--primary">Standard Card</div>
+                    <div class="text--supporting">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </div>
+                </div>
+                <div class="gp-ui-card__footer">
+                    <div class="pull-right">
+                        <a href="#" class="btn btn-link pull-right">Action</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="clearfix visible-sm-block"></div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3">
+
+            <div class="gp-ui-card">
+                <div class="gp-ui-card__body">
+                    <div class="text--primary">Card w/o Image</div>
+                    <div class="text--secondary">card sub-title</div>
+                    <div class="text--supporting">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </div>
+                </div>
+                <div class="gp-ui-card__footer">
+                    <div class="pull-right">
+                        <a href="#" class="btn btn-link pull-right">Action</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="clearfix visible-md-block"></div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3">
+
+            <div class="gp-ui-card">
+                <div class="media">
+                    <a class="embed-responsive embed-responsive-16by9" href="#" target="_blank" title="Open this item">
+                        <img class="embed-responsive-item" src="/static/img/placeholder.png" alt="Card Image" >
+                    </a>
+                </div>
+                <div class="gp-ui-card__body">
+                    <div class="text--primary"><a href="#">Simple Card</a></div>
+                </div>
             </div>
         </div>
-            
-    </body>
-</html>
+
+
+    </div>
+
+
+
+    <h4>Fixed-Height Cards</h4>
+    <div class="row">
+
+        <div class="col-sm-6 col-md-4 col-lg-3">
+                
+            <div class="gp-ui-card gp-ui-card--lg">
+                <div class="media">
+                    <a class="embed-responsive embed-responsive-16by9" href="#" target="_blank" title="Open this item">
+                        <img class="embed-responsive-item" src="/static/img/placeholder.png" alt="Card Image" >
+                    </a>
+                </div>
+                <div class="gp-ui-card__body">
+                    <div class="text--primary">Large Card</div>
+                    <div class="text--secondary">card sub-title</div>
+                    <div class="text--supporting">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </div>
+                </div>
+                <div class="gp-ui-card__footer">
+                    <div class="pull-right">
+                        <a href="#" class="btn btn-link pull-right">Action</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3">
+                
+            <div class="gp-ui-card gp-ui-card--md">
+                <div class="media">
+                    <a class="embed-responsive embed-responsive-16by9" href="#" target="_blank" title="Open this item">
+                        <img class="embed-responsive-item" src="/static/img/placeholder.png" alt="Card Image" >
+                    </a>
+                </div>
+                <div class="gp-ui-card__body">
+                    <div class="text--primary">Medium Card</div>
+                    <div class="text--secondary">card sub-title</div>
+                    <div class="text--supporting">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </div>
+                </div>
+                <div class="gp-ui-card__footer">
+                    <div class="pull-right">
+                        <a href="#" class="btn btn-link pull-right">Action</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="clearfix visible-sm-block"></div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3">
+
+            <div class="gp-ui-card gp-ui-card--sm">
+                <div class="media">
+                    <a class="embed-responsive embed-responsive-16by9" href="#" target="_blank" title="Open this item">
+                        <img class="embed-responsive-item" src="/static/img/placeholder.png" alt="Card Image" >
+                    </a>
+                </div>
+                <div class="gp-ui-card__body">
+                    <div class="text--primary"><a>Small Card</a></div>
+                    <div class="text--secondary">card sub-title</div>
+                    <div class="text--supporting">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
 
 
 

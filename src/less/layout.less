@@ -1,0 +1,186 @@
+
+
+
+/* ------------------------------- *\
+    Page
+    main content 
+    (everything not the drawer)
+\* ------------------------------- */
+
+.page {}
+
+.page__content {
+
+    .body {
+        padding: 0 2em;
+    }
+
+    .heading {
+        background-color: @color-gray-dk;
+        color: #fff;
+        padding: 0.5em 1em;
+        
+        .btn-group {
+            // margin-right: 1em;
+
+            .dropdown-menu nav.style-menu {
+                padding:    1em;
+                font-size:  1rem;
+                width:      250px;
+                color:      @color-gray-dk;
+            }
+        }
+    }
+}
+
+
+/* ------------------------------- *\
+    Drawer
+    sidebar content
+    (typically nav menu)
+\* ------------------------------- */
+
+.page .page__drawer {
+    display:    block;
+    z-index:    4;
+    position:   fixed;
+    
+    top:        0;
+    bottom:     0;
+    width:      240px;
+    padding:    1em;
+    background: lighten(@color-gray-xlt,5%);
+    color:      @color-gray-dk;
+    
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    
+    -webkit-transition-delay: 0.1s;
+    -moz-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+    
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    
+    -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    -moz-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
+    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+}
+
+.page .page__drawer.page__drawer--left {
+    left: 0;
+    border-right: 1px solid rgba(0,0,0,0.14);
+    -webkit-transition-property: -webkit-transform,left;
+    -moz-transition-property: -moz-transform,left;
+    transition-property: transform,left;
+}
+
+.page .page__drawer.page__drawer--right {
+    right:  0;
+    border-left: 1px solid rgba(0,0,0,0.14);
+    -webkit-transition-property: -webkit-transform,left;
+    -moz-transition-property: -moz-transform,left;
+    transition-property: transform,left;
+}
+
+
+.page.page--toggle-drawer {
+
+    .page__drawer.page__drawer--left {
+        left: -240px;
+        border-right: 1px solid rgba(0,0,0,0.14);
+        -webkit-transition-property: -webkit-transform,left;
+        -moz-transition-property: -moz-transform,left;
+        transition-property: transform,left;
+    }
+
+    .page__drawer.page__drawer--right {
+        right: -240px;
+        border-left: 1px solid rgba(0,0,0,0.14);
+        -webkit-transition-property: -webkit-transform,right;
+        -moz-transition-property: -moz-transform,right;
+        transition-property: transform,right;
+    }
+
+    .page__content {
+        -webkit-transform: translateZ(0);
+        -moz-transform: translateZ(0);
+        -ms-transform: translateZ(0);
+        -o-transform: translateZ(0);
+        transform: translateZ(0);
+
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+        -o-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        
+        -webkit-transition-delay: 0.1s;
+        -moz-transition-delay: 0.1s;
+        transition-delay: 0.1s;
+        
+        -webkit-transition-duration: 0.2s;
+        -moz-transition-duration: 0.2s;
+        transition-duration: 0.2s;
+        
+        -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        -moz-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        
+        -webkit-transition-property: -webkit-transform,padding;
+        -moz-transition-property: -moz-transform,padding;
+        transition-property: transform,padding;
+    }
+}
+
+.page.page--toggle-drawer.opened {
+
+    .page__drawer.page__drawer--left {
+        left: 0px;
+    }
+    .page__drawer.page__drawer--right {
+        right: 0px;
+    }
+
+    .page__content {
+        padding-left:240px;
+        overflow-x: hidden;
+    }
+}
+
+
+
+
+
+
+@media(min-width: 1280px) {
+    .page--responsive-drawer .page__content {
+        padding-left:240px;
+
+        & > .heading {
+            display:none;
+        }
+    }
+}
+
+@media(max-width:1279px) {
+    .page--responsive-drawer .page__drawer {
+        display: none;
+    }
+}
+

@@ -35,6 +35,50 @@
         </div>
     </div>
 
+
+
+
+    with tabbed details
+
+
+    <div class="gp-ui-card" ng-class="{selected:map.selected}">
+
+        <div class="media">
+            <a class="embed-responsive embed-responsive-16by9" href="#" target="_blank" title="Open this item">
+                <img class="embed-responsive-item" src="/img/ImageNotAvailable.png" alt="Card Image">
+            </a>
+        </div>
+
+        <div class="gp-ui-card__body">
+            <div class="text--primary">Card Title</div>
+            <div class="text--secondary">card sub-title</div>
+            <div class="text--supporting">
+                <div class="gp-ui-card__details active" id="description">
+                    <p>This is a helpful description</p>
+                </div>
+                <div class="gp-ui-card__details" id="author">
+                    <div><strong>Author:</strong> John Doe</div>
+                    <div><strong>Created:</strong> Jan 1, 2000</div>
+                    <div><strong>Updated:</strong> Jan 1, 2001</div>
+                </div>
+            </div>
+        </div>
+        <div class="gp-ui-card__footer">
+            <div class="pull-right">
+                <a href="#" class="btn btn-link pull-right">Action</a>
+            </div>        
+            <button type="button" class="btn btn-sm btn-link gp-ui-card__tab active" 
+                title="Description of this item" data-target="#description">
+                <span class="glyphicon glyphicon-info-sign"></span>
+            </button>
+            <button type="button" class="btn btn-sm btn-link gp-ui-card__tab" 
+                title="Author information" data-target="#author">
+                <span class="glyphicon glyphicon-user"></span>
+            </button>
+        </div>
+    </div>
+
+
 \* ----------------------------------------- */
 
 .gp-ui-card {
@@ -53,6 +97,10 @@
     display: block;
     background-color: #efefef;
     border-bottom: 1px solid @color-gray-xlt;
+
+    &[ng-click], &[onclick] {
+        cursor: pointer;
+    }
 }
 
 .gp-ui-card .text--primary {    

@@ -58,6 +58,11 @@ $(document).on('click', '.gp-ui-card__tab', function(event) {
 });
 ;
 
+
+/* ----------------------------------------- *\
+    Material Forms JS Support
+\* ----------------------------------------- */
+
 (function($) {
 
     var selector = '.form-group.t-material > .form-control, .form-group.t-material > .input-group > .form-control';

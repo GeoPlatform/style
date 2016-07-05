@@ -234,12 +234,13 @@ body .btn {
     }
 
     & > button, & > .btn {
-        color:      @color-gray-md;
-        padding:    @px-xlg @px-lg;
-        border:     none;
+        color:          @color-gray-md;
+        padding:        @px-xlg @px-lg;
+        border:         none;
         text-decoration: none;
-        font-size:          inherit;
-        
+        font-size:      inherit;
+        background:     transparent;
+        transition:     background .2s ease;
 
         & > .glyphicon {
             background-color:   @color-gray-md;
@@ -247,12 +248,18 @@ body .btn {
             border-radius:      @px-xlg;
             .text-white();
             vertical-align: bottom;
+            transition:     background .3s ease;
         }
+
     }
 
     &:hover > .btn {
         background-color:   lighten(@color-gray-xlt, 5%);
         text-decoration:    none;
+
+        & > .glyphicon {
+            background-color: @color-accent;
+        }
     }
 
     .account-details {
@@ -268,6 +275,12 @@ body .btn {
     }
 
 }
+header .pull-right .btn-account > .btn > .glyphicon,
+.header__menu li > .btn-group.btn-account > .btn > .glyphicon {
+    vertical-align: top;
+    font-size: 0.75em;
+}
+
 
 
 

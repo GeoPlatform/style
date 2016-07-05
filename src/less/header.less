@@ -244,17 +244,53 @@ header {
         z-index: 2;
     }
 
-    a, a:visited, .btn-link, a.btn-link,
-    button {
+    
+
+    & > li > button,
+    & > li > a, 
+    & > li > a:visited, 
+    & > li > .btn-link, 
+    & > li > a.btn-link,
+    & > li > .btn-group > button,
+    & > li > .btn-group > a, 
+    & > li > .btn-group > a:visited, 
+    & > li > .btn-group > .btn-link, 
+    & > li > .btn-group > a.btn-link,
+    .header__btn, a.header__btn, a.header__btn:visited {
+
+        color:      @color-gray-md;
+        padding:    @px-xlg @px-lg;
+        border:     none;
         text-decoration: none;
-        font-size:  1rem;
-        color:      @color-gray-dk;
+        font-size:  1em;
+        height:     3.5em;
+        transition: background .2s ease;
+        background: transparent;
+
+        & > .glyphicon {
+            vertical-align: baseline;
+            font-size: 1em;
+        }
+
+        &:hover {
+            background-color:   lighten(@color-gray-xlt, 5%);
+            text-decoration:    none;
+        }
     }
+
 }
 .primary .header__menu {
-    a, a:visited, .btn-link, a.btn-link,
-    button {
+    
+    & > li > .btn-link, & > li > .header__btn {
         color: #fff;
+
+        .dropdown-menu .btn-link {
+            color: @color-gray-dk;
+        }
+
+        &:hover {
+            color: @color-gray-dk;
+        }
     }
 }
 
@@ -270,10 +306,10 @@ header {
 .header__menu > li > button,
 .header__menu > li > .dropdown > button {
 
-    font-size: 1rem;
+    font-size: 1em;
     display: inline-block;
     vertical-align: middle;
-    padding: 1rem .5rem;
+    padding: 1em .5em;
     border: none;
     background: transparent;
 }
@@ -281,6 +317,6 @@ header {
 .header__menu > li.active > a,
 .header__menu > li.active > button,
 .header__menu > li.active > .dropdown > button {
-    border-bottom: 0.25rem solid @color-accent;
-    padding-bottom: 0.75rem;
+    border-bottom: 0.25em solid @color-accent;
+    padding-bottom: 0.75em;
 }

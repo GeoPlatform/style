@@ -73,7 +73,10 @@ $(document).on('click', '.gp-ui-card__tab', function(event) {
 
     var GROUP_SELECTOR = '.form-group.t-material';
 
-    var selector = GROUP_SELECTOR + ' > .form-control, ' + GROUP_SELECTOR + ' > .input-group > .form-control';
+    var selector = GROUP_SELECTOR + ' > .form-control, ' + 
+                   GROUP_SELECTOR + ' > .input-group > .form-control, ' + 
+                   GROUP_SELECTOR + ' > .input-group-slick > .form-control';
+                   
     var switchSelector = GROUP_SELECTOR + '.switch .lever';
     var requiredSelector = GROUP_SELECTOR + ' .form-control[required]';
 

@@ -265,6 +265,41 @@ body .input-group-addon {
 
 
 
+
+    /* --------- INPUT GROUPS ---------- */
+
+    .input-group-addon {
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+        background-image: linear-gradient(@color-accent,@color-accent),linear-gradient(@color-gray-lt,@color-gray-lt);
+        background-size: 0 2px,100% 1px;
+        background-repeat: no-repeat;
+        background-position: right bottom, right calc(99%);
+        background-color: transparent;
+        transition: background 0s ease-out;
+
+        & > .btn {
+            font-size: 0.85em;
+        }
+    }
+
+    &.is-focused .input-group-addon {
+        outline: 0;
+        background-image: linear-gradient(@color-accent,@color-accent),linear-gradient(@color-gray-lt,@color-gray-lt);
+        background-size: 100% 2px,100% 1px;
+        box-shadow: none;
+        transition-duration: .3s;
+    }
+
+    &.form-group-sm .input-group-addon > .btn {
+        font-size: 0.7em;
+    }
+
+
+
+
+
     /* ---------- CONTROLS ------------- */
 
     .form-control {

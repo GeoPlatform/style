@@ -56,20 +56,11 @@ machine github.com
     
     /* other dependencies...*/
 
-    "gp.style": "GeoPlatform/style"
+    "gp.style": "GeoPlatform/style#<version number>"
 },
 ```
 
-Note: you can reference specific versions of the style project using tags, but the style project doesn't have any tags just yet.  When it does, reference like so:
-
-```json
-"dependencies" : {
-    
-    /* other dependencies...*/
-    
-    "gp.style": "GeoPlatform/style#-TAGNAME"
-}
-```
+Note: _version number_ should be that of the current release version of this project.  It is advised to __never__ reference any non-release tag or branch, such as "develop" or "master", when adding this project as a dependency in another.
 
 
 5. Ensure Bower is configured to run install before NPM by adding it as a preinstall step inside `package.json` in your project's home dir:

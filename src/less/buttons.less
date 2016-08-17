@@ -4,20 +4,20 @@ body .btn {
     font-size: 1rem;
 
     &.btn-lg {
-        font-size: 1.25rem;
-        padding: .75rem 1.25rem;
+        font-size: 1.25em;
+        padding: .75em 1em;
         line-height: 1.333333;
     }
 
     &.btn-sm {
-        padding:    .25rem .75rem;
-        font-size:  .875rem;
+        padding:    .25em .75em;
+        font-size:  .875em;
         line-height: 1.5;
     }
 
     &.btn-xs {
-        padding:    .0625rem .3125rem;
-        font-size:  .75rem;
+        padding:    .0625em .3125em;
+        font-size:  .75em;
         line-height: 1.5;
     }
 }
@@ -31,28 +31,30 @@ body .btn {
 
 .btn-round {
     
-    width: 2.25rem;
-    height: 2.25rem;
-    border-radius: 2.5rem;
-    padding: 0.125rem 0 0;
+    width: 2.25em;
+    height: 2.25em;
+    border-radius: 2.5em;
+    padding: 0.125em 0 0;
 
     &.btn-sm {
-        width: 1.875rem;
-        height: 1.875rem;
-        border-radius: 2.5rem;
-        padding: .1rem 0 0;
+        width: 1.875em;
+        height: 1.875em;
+        border-radius: 100%;
+        padding: .1em 0 0!important;
     }
 
     &.btn-xs {
-        width: 1.5rem;
-        height: 1.5rem;
-        border-radius: 2rem;
-        padding: .1rem 0 0;
+        width: 1.5em;
+        height: 1.5em;
+        border-radius: 100%;
+        padding: .1em 0 0!important;
     }
 
-    &.btn-lg {
-        border-radius: @px-xxlg;
-        padding: .45rem .5rem;
+    &.btn-lg {        
+        border-radius: 100%;
+        padding: 0!important;
+        width: 2.125em;
+        height: 2.125em;
     }
 }
 
@@ -186,8 +188,8 @@ body .btn {
         color: #fff;
 
         &:hover {
-            background-color: @color-primary;
-            color: #fff;
+            background-color: #fff;
+            color: @color-gray-dk;
         }   
     }
 
@@ -200,6 +202,7 @@ body .btn {
 .btn.btn-link.active {
     //override .active style for link buttons
     background-color: transparent;
+    border-color: transparent;
 }
 
 
@@ -270,7 +273,7 @@ body .btn {
             font-weight: 700; 
         }
         .glyphicon { 
-            font-size: 6rem; 
+            font-size: 6em; 
         }
     }
 

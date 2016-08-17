@@ -103,6 +103,18 @@
     }
 }
 
+.gp-ui-card__body:first-child {
+    padding-top: @px-xlg;
+}
+.gp-ui-card__body:last-child {
+    padding-bottom: @px-xlg;
+
+    .text--supporting {
+        padding-bottom: 0;
+    }
+}
+
+
 .gp-ui-card .text--primary {    
     display:     block;        
     font-size:   1em;
@@ -241,6 +253,39 @@
         }
     }
 }
+
+
+
+/*  ------------- strip cards ------------- *\
+    these layout similar to Bootstrap media 
+    at tablet and higher resolutions
+\*  ------------- strip cards ------------- */    
+
+@media(min-width:768px) {
+    .gp-ui-card.gp-ui-card--strip .embed-responsive {
+        display: table-cell;
+        vertical-align: top;
+    }
+    .gp-ui-card.gp-ui-card--strip .embed-responsive.embed-responsive-16by9 {
+        padding: 1em;
+    }
+    .gp-ui-card.gp-ui-card--strip .embed-responsive .embed-responsive-item {
+        position: relative;
+        height:   auto;
+        width:    10em;
+    }
+    .gp-ui-card.gp-ui-card--strip .gp-ui-card__body {
+        display: table-cell;
+        vertical-align: top;
+        width: 10000px;
+    }
+}
+
+
+
+
+
+
 
 
 

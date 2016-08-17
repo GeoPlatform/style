@@ -82,8 +82,10 @@
 
 /* Hover state */
 
-*:hover > .icon-hamburger-menu {
+*:hover:not(.active) > .icon-hamburger-menu {
     background: @color-accent;
+}
+*:hover > .icon-hamburger-menu {
 
     &::before,
     &::after {
@@ -173,12 +175,14 @@
 
 // active state, i.e. menu open 
 .active > .icon-options,
-.btn[aria-expanded="true"] .icon-options {
+.btn[aria-expanded="true"] .icon-options,
+.expanded > .icon-options {
     background: none;
 }
 
 .active > .icon-options::before,
-.btn[aria-expanded="true"] .icon-options::before {
+.btn[aria-expanded="true"] .icon-options::before,
+.expanded > .icon-options::before {
     width: 1em;
     height: 0.2em;
     left: -.35em;
@@ -188,7 +192,8 @@
 }
 
 .active > .icon-options::after,
-.btn[aria-expanded="true"] .icon-options::after {
+.btn[aria-expanded="true"] .icon-options::after,
+.expanded > .icon-options::after {
     width: 1em;
     height: 0.2em;
     right: -.35em;
@@ -200,7 +205,9 @@
 .active > .icon-options::before,
 .active > .icon-options::after,
 .btn[aria-expanded="true"] .icon-options::before,
-.btn[aria-expanded="true"] .icon-options::after {
+.btn[aria-expanded="true"] .icon-options::after,
+.expanded > .icon-options::before,
+.expanded > .icon-options::after {
 
     //transition to active state
     //  delay height/transform by .3s, do width immediately
@@ -208,77 +215,29 @@
     transition: width 0.3s 0s, height 0.3s 0.3s, transform 0.3s 0.3s;
 }
 
-/*
-.icon-options {
-    display: inline-block;
-    position: relative;
-    width: @px-sm;
-    height: @px-sm;
-    background: @color-gray-md;
-    vertical-align: middle;
-    padding: 0 2px;
-    margin-bottom: 2px;
-    border-radius: @px-md;
-    -webkit-transition: background 0s 0.3s;
-            transition: background 0s 0.3s;
+.icon-options.text-active,
+.icon-options.text-active::before, 
+.icon-options.text-active::after { 
+    background: @color-active; 
 }
-
-.icon-options::before,
-.icon-options::after {
-    position: absolute;
-    display: block;
-    width: @px-sm;
-    height: @px-sm;
-    background-color: @color-gray-md;
-    content: "";
-    border-radius: @px-md;
-    -webkit-transition-duration: 0.3s, 0.3s;
-            transition-duration: 0.3s, 0.3s;
-    -webkit-transition-delay: 0.3s, 0s;
-            transition-delay: 0.3s, 0s;
-    -webkit-transition-property: width, -webkit-transform;
-            transition-property: width, transform;
-}
-
-.icon-options::before {
-    left: -6px;
-}
-
-.icon-options::after {
-    right: -6px;
+.active > .icon-options.text-active,
+.btn[aria-expanded="true"] .icon-options.text-active,
+.expanded > .icon-options.text-active { 
+    background: none; 
 }
 
 
-// active state, i.e. menu open 
-.btn.active .icon-options,
-.btn[aria-expanded="true"] .icon-options {
-    background: none;
+//light theme
+.icon-options.t-light { background: #fff; }
+.icon-options.t-light::before,
+.icon-options.t-light::after { background-color: #fff; }
+
+//vertical orientation
+.icon-options.u-vertical {
+    transform: rotateZ(90deg);
 }
 
-.btn.active .icon-options::before,
-.btn[aria-expanded="true"] .icon-options::before {
-    width: @px-xlg;
-    -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-            transform: rotate(45deg);
-}
 
-.btn.active .icon-options::after,
-.btn[aria-expanded="true"] .icon-options::after {
-    width: @px-xlg;
-    -webkit-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-}
-
-.btn.active .icon-options::before,
-.btn.active .icon-options::after,
-.btn[aria-expanded="true"] .icon-options::before,
-.btn[aria-expanded="true"] .icon-options::after {
-    -webkit-transition-delay: 0s, 0.3s;
-            transition-delay: 0s, 0.3s;
-}
-*/
 
 
 

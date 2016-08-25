@@ -1,0 +1,53 @@
+
+/*
+ * WIP - Flex layout classes
+ */
+
+.container-flex {
+    display:flex;
+    align-items: stretch;
+    justify-content: space-around;
+
+    &.flex-column {
+        flex-direction: column;
+    }
+    &.flex-row {
+        flex-direction: row;
+    }
+
+    &.flex-align-start { align-items: flex-start; }
+    &.flex-align-end { align-items: flex-end; }
+
+    .col-flex {
+
+
+    }
+
+    .flex-basis-one-third { flex-basis: 33%; }
+
+    .flex-order-1 { order: 1; }
+    .flex-order-2 { order: 2; }
+    .flex-order-3 { order: 3; }
+    .flex-order-4 { order: 4; }
+    .flex-order-5 { order: 5; }
+
+}
+
+@media(min-width: 768px) {
+    .container-flex {
+        .flex-order-sm-1 { order: 1; }
+        .flex-order-sm-2 { order: 2; }
+        .flex-order-sm-3 { order: 3; }
+        .flex-order-sm-4 { order: 4; }
+        .flex-order-sm-5 { order: 5; }
+    }
+}
+@media(min-width: 992px) {
+    .container-flex {
+        .flex-order-md-1 { order: 1; }
+        .flex-order-md-2 { order: 2; }
+        .flex-order-md-3 { order: 3; }
+        .flex-order-md-4 { order: 4; }
+        .flex-order-md-5 { order: 5; }
+    }
+}

@@ -82,21 +82,23 @@
 
 /* Hover state */
 
-*:hover:not(.active) > .icon-hamburger-menu {
+.btn:hover > .icon-hamburger-menu,
+.hover > .icon-hamburger-menu {
     background: @color-accent;
-}
-*:hover > .icon-hamburger-menu {
 
-    &::before,
-    &::after {
-        background-color: @color-accent;
+    .active&,
+    [aria-expanded="true"]& {
+        background: transparent!important;
     }
-    
+}
+.btn:hover > .icon-hamburger-menu,
+.hover > .icon-hamburger-menu {
+
     &::before {
-        border-bottom-color: @color-accent;
+        border-bottom-color: @color-accent!important;
     }
     &::after {
-        border-top-color: @color-accent;
+        border-top-color: @color-accent!important;
     }
 }
 
@@ -118,6 +120,7 @@
         border-top-color: #fff;
     }
 }
+
 
 
 

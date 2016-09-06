@@ -478,7 +478,7 @@ body .input-group-lg > .input-group-btn > .btn {
     /* ---------- CONTROLS ------------- */
 
     .form-control {
-        padding:          0.5em 0 0;
+        padding:          0.5em 0 0;    //.25em 0 0 ???
         background-color: transparent;
         box-shadow:       none;
         
@@ -502,6 +502,7 @@ body .input-group-lg > .input-group-btn > .btn {
         border-radius: 0;
 
     }
+
 
     &.has-error .form-control {
         background-image: -webkit-gradient(linear, left top, left bottom, from(@color-accent), to(@color-accent)), -webkit-gradient(linear, left top, left bottom, from(@color-danger), to(@color-danger));
@@ -603,6 +604,23 @@ body .input-group-lg > .input-group-btn > .btn {
     &.is-focused .form-control[type="radio"] + .control-label {
         color: @color-gray-dk;
     }
+
+
+    /* When wrapped by a "slick" input group */
+
+    //pad the right side of form controls inside a "slick" input group
+    // when there's an icon after it
+    .input-group-slick .form-control:not(:last-child) {
+        padding-right: 2em;
+    }
+    .input-group-slick>.glyphicon:last-child {
+        right: .5em;    //???
+    }
+    .input-group-slick > .glyphicon {
+        top: 0.875em;   //???
+    }
+
+
 
 
 

@@ -566,3 +566,61 @@ header .pull-right .btn-account > .btn > .glyphicon,
         border-top-color: #fff;
     }
 }
+
+
+
+
+
+/*  ---------------------------
+    Buttons that don't show backgrounds
+    until on hover
+    --------------------------- */
+
+.btn.btn-hoverable,
+.btn.btn-info.btn-hoverable,
+.btn.btn-success.btn-hoverable, 
+.btn.btn-primary.btn-hoverable, 
+.btn.btn-danger.btn-hoverable {
+    background: transparent;
+    border-color: transparent;
+}
+
+.btn.btn-info.btn-hoverable { 
+    color: @color-info;
+    &:hover {
+        background: @color-info;
+        border-color: @color-info;
+        color: #fff;
+    }
+}
+.btn.btn-success.btn-hoverable {
+    color: @color-success;
+    &:hover {
+        background: @color-success;
+        border-color: @color-success;
+        color: #fff;
+    }
+}
+.btn.btn-primary.btn-hoverable {
+    color: @color-primary;
+    &:hover {
+        background: @color-primary;
+        border-color: @color-primary;
+        color: #fff;
+    }
+} 
+.btn.btn-danger.btn-hoverable {
+    color: @color-danger;
+    &:hover {
+        background: @color-danger;
+        border-color: @color-danger;
+        color: #fff;
+    }
+}
+
+
+
+
+
+
+

@@ -144,3 +144,71 @@
   50% { opacity: 0.3; }
   100% { opacity: 0; }
 }
+
+
+
+
+
+
+/*  -------------------------------------
+    animation class for fast fade out
+    -------------------------------------*/
+
+.t-fade-out--fast {
+    animation: .3s linear .6s 1 forwards fadeOut;
+    -webkit-animation: .3s linear .6s 1 forwards fadeOutWebkit;
+    -moz-animation: .3s linear .6s 1 forwards fadeOutMoz;
+}
+ 
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+  
+@-webkit-keyframes fadeOutWebkit {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+ 
+@-moz-keyframes fadeOutMoz {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+
+
+/*  -------------------------------------
+    helper classes to set transition 
+    property and duration (speed)
+    ------------------------------------- */
+.u-transition--width {
+    transition-property: width;
+    transition-timing-function: ease-in-out;
+}
+.u-transition--fast { transition-duration: 0.3s; }
+.u-transition--med { transition-duration:  0.6s; }
+.u-transition--slow { transition-duration: 1s; }
+
+
+
+/*  -------------------------------------
+    Animation for ng-if affecting opacity
+    ------------------------------------- */
+.u-animated-if--opacity {
+    opacity: 1;
+
+    &.ng-enter, 
+    &.ng-leave {
+        transition: opacity 0.3s linear;
+    }
+
+    &.ng-enter,
+    &.ng-leave.ng-leave-active {
+      opacity:0;
+    }
+
+    &.ng-leave,
+    &.ng-enter.ng-enter-active {
+      opacity:1;
+    }
+}

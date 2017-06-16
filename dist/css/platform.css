@@ -504,6 +504,12 @@ a:visited {
 .child-centered-horizontal {
   margin: 0 auto;
 }
+.t-text--bold {
+  font-weight: 700;
+}
+.t-text--normal {
+  font-weight: 400;
+}
 /* requires mixins.less */
 .bordered {
   border-width: 1px;

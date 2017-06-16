@@ -74,7 +74,6 @@ gulp.task('less', 'Compile less into a single file.', function() {
         .on("error", notify.onError({message: 'LESS compile error: <%= error.message %>'}))
         .pipe(gulp.dest('dist/css/'))
         .pipe(cssmin())
-        .pipe(concat('geoplatform.style.css'))
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('dist/css/'))
         .pipe(notify('Compiled styles'));

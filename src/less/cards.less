@@ -103,6 +103,34 @@
     }
 }
 
+.gp-ui-card__body {
+    position: relative;
+
+    //floating action button
+    .gp-ui-card__fab {
+        position: absolute;
+        top: -1.25em;
+        right: .5em;
+        z-index: 1000;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .btn-round {
+            display: flex;
+            justify-content: center;
+            align-items: center;            
+        }
+
+        &:hover {
+            .btn {
+                box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+            }
+        }
+    }
+}
+
 .gp-ui-card__body:first-child {
     padding-top: @px-xlg;
 }

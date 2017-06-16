@@ -624,3 +624,49 @@ header .pull-right .btn-account > .btn > .glyphicon,
 
 
 
+//rounded outline buttons (like used for CARD FABs)
+
+.btn.btn-outline-blue,
+.btn.btn-default.btn-outline-blue {
+    border: 2px solid @color-active;
+    color: @color-active;
+
+    &:hover {
+        border-color: saturate(@color-active,50%);
+        color: saturate(@color-active,50%);
+        background-color: #fff;
+    }
+
+    &.active {
+        background: @color-active;
+        color: #fff;
+
+        &:hover {
+            border-color: saturate(@color-active,50%);
+            background-color: saturate(@color-active,50%);
+            color: #fff;
+        }
+    }
+}
+
+
+.btn.btn-outline-pink,
+.btn.btn-default.btn-outline-pink {
+
+    border: 2px solid fadeOut(#e25284, 50%);
+    color: fadeOut(#e25284, 50%);
+    background-color: #fff;
+    box-shadow: none;
+
+    &:hover {
+        border-color: #e25284;
+        color: #e25284;
+        background-color: #fff;
+    }
+
+    &.active {
+        border-color: #e25284;
+        color: #fff;
+        background-color: #e25284;
+    }
+}

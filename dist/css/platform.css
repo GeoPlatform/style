@@ -235,6 +235,9 @@ a:visited {
   background-color: #5bc0de;
 }
 /* padding helper classes */
+.u-pd--none {
+  padding: 0 0 0 0;
+}
 .u-pd--xs,
 .pd-xs {
   padding: 0.125em;
@@ -263,6 +266,9 @@ a:visited {
 .pd-xxxlg {
   padding: 2em;
 }
+.u-pd-top--none {
+  padding-top: 0;
+}
 .u-pd-top--xs {
   padding-top: 0.125em;
 }
@@ -283,6 +289,9 @@ a:visited {
 }
 .u-pd-top--xxxlg {
   padding-top: 2em;
+}
+.u-pd-bottom--none {
+  padding-bottom: 0;
 }
 .u-pd-bottom--xs {
   padding-bottom: 0.125em;
@@ -305,6 +314,9 @@ a:visited {
 .u-pd-bottom--xxxlg {
   padding-bottom: 2em;
 }
+.u-pd-left--none {
+  padding-left: 0;
+}
 .u-pd-left--xs {
   padding-left: 0.125em;
 }
@@ -325,6 +337,9 @@ a:visited {
 }
 .u-pd-left--xxxlg {
   padding-left: 2em;
+}
+.u-pd-right--none {
+  padding-right: 0;
 }
 .u-pd-right--xs {
   padding-right: 0.125em;
@@ -348,6 +363,9 @@ a:visited {
   padding-right: 2em;
 }
 /* margin helper classes */
+.u-mg--none {
+  margin: 0 0 0 0;
+}
 .u-mg--xs,
 .mg-xs {
   margin: 0.125em;
@@ -376,6 +394,9 @@ a:visited {
 .mg-xxxlg {
   margin: 2em;
 }
+.u-mg-top--none {
+  margin-top: 0;
+}
 .u-mg-top--xs {
   margin-top: 0.125em;
 }
@@ -396,6 +417,9 @@ a:visited {
 }
 .u-mg-top--xxxlg {
   margin-top: 2em;
+}
+.u-mg-bottom--none {
+  margin-bottom: 0;
 }
 .u-mg-bottom--xs {
   margin-bottom: 0.125em;
@@ -418,6 +442,9 @@ a:visited {
 .u-mg-bottom--xxxlg {
   margin-bottom: 2em;
 }
+.u-mg-left--none {
+  margin-left: 0;
+}
 .u-mg-left--xs {
   margin-left: 0.125em;
 }
@@ -438,6 +465,9 @@ a:visited {
 }
 .u-mg-left--xxxlg {
   margin-left: 2em;
+}
+.u-mg-right--none {
+  margin-right: 0;
 }
 .u-mg-right--xs {
   margin-right: 0.125em;
@@ -490,11 +520,13 @@ a:visited {
   overflow: hidden;
 }
 /* alignment helper classes */
+.u-text--center,
 .u-text--centered,
 .text--centered,
 .text-centered {
   text-align: center;
 }
+.u-text--right,
 .u-text--righted,
 .text--righted,
 .text-righted,
@@ -504,11 +536,14 @@ a:visited {
 .child-centered-horizontal {
   margin: 0 auto;
 }
-.t-text--bold {
+.t-text--bold,
+.t-text--strong {
   font-weight: 700;
 }
-.t-text--normal {
-  font-weight: 400;
+.t-text--em,
+.t-text--italic,
+.t-text--italics {
+  font-style: italic;
 }
 /* requires mixins.less */
 .bordered {
@@ -1476,6 +1511,26 @@ header .pull-right .btn-account > .btn > .glyphicon,
   border-color: #e25284;
   color: #fff;
   background-color: #e25284;
+}
+.btn-faded {
+  opacity: 0.3;
+}
+.btn.btn-pink {
+  background-color: #e25284;
+  border-color: #de3c74;
+  color: #fff;
+}
+.btn.btn-pink:hover {
+  background-color: #de3c74;
+  border-color: #db2665;
+}
+.btn.btn-pink.btn-link {
+  color: #e25284;
+  background-color: transparent;
+  border-color: transparent;
+}
+.btn.btn-pink.btn-link:hover {
+  color: #de3c74;
 }
 /* ---------------------------- *\
     Animated Hamburger Menu

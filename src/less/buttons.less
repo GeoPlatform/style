@@ -670,3 +670,30 @@ header .pull-right .btn-account > .btn > .glyphicon,
         background-color: #e25284;
     }
 }
+
+
+
+.btn-faded {
+    opacity: 0.3;
+}
+
+.btn.btn-pink {
+    background-color: #e25284;
+    border-color: darken(#e25284,5%);
+    color: #fff;
+
+    &:hover {
+        background-color: darken(#e25284,5%);
+        border-color: darken(#e25284,10%);
+    }
+
+    &.btn-link {
+        color: #e25284;
+        background-color: transparent;
+        border-color: transparent;
+
+        &:hover {
+            color: darken(#e25284, 5%);
+        }
+    }
+}

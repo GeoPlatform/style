@@ -222,6 +222,12 @@ a:visited {
 .t-fg--gray-xlt {
   color: #ddd;
 }
+.t-bg--pink {
+  background-color: #e25284;
+}
+.t-fg--pink {
+  color: #e25284;
+}
 .badge.badge-accented {
   background-color: #393;
 }
@@ -516,6 +522,7 @@ a:visited {
   font-size: 0.85rem;
 }
 .u-text-max--sm {
+  line-height: 1.4em;
   max-height: 3em;
   overflow: hidden;
 }
@@ -544,6 +551,65 @@ a:visited {
 .t-text--italic,
 .t-text--italics {
   font-style: italic;
+}
+.u-break--all {
+  word-break: break-all !important;
+}
+h1.u-mg--none,
+h2.u-mg--none,
+h3.u-mg--none,
+h4.u-mg--none,
+h5.u-mg--none,
+h6.u-mg--none {
+  margin: 0;
+}
+h1.u-mg--xs,
+h2.u-mg--xs,
+h3.u-mg--xs,
+h4.u-mg--xs,
+h5.u-mg--xs,
+h6.u-mg--xs {
+  margin: 0.125em;
+}
+h1.u-mg--sm,
+h2.u-mg--sm,
+h3.u-mg--sm,
+h4.u-mg--sm,
+h5.u-mg--sm,
+h6.u-mg--sm {
+  margin: 0.25em;
+}
+h1.u-mg--md,
+h2.u-mg--md,
+h3.u-mg--md,
+h4.u-mg--md,
+h5.u-mg--md,
+h6.u-mg--md {
+  margin: 0.5em;
+}
+h1.u-mg--lg,
+h2.u-mg--lg,
+h3.u-mg--lg,
+h4.u-mg--lg,
+h5.u-mg--lg,
+h6.u-mg--lg {
+  margin: 0.75em;
+}
+h1.u-mg--xlg,
+h2.u-mg--xlg,
+h3.u-mg--xlg,
+h4.u-mg--xlg,
+h5.u-mg--xlg,
+h6.u-mg--xlg {
+  margin: 1em;
+}
+h1.u-mg--xxlg,
+h2.u-mg--xxlg,
+h3.u-mg--xxlg,
+h4.u-mg--xxlg,
+h5.u-mg--xxlg,
+h6.u-mg--xxlg {
+  margin: 1.5em;
 }
 /* requires mixins.less */
 .bordered {
@@ -1531,6 +1597,31 @@ header .pull-right .btn-account > .btn > .glyphicon,
 }
 .btn.btn-pink.btn-link:hover {
   color: #de3c74;
+}
+/**
+ * A UI element to look similar to a .btn.btn-link but without being one
+ */
+.faux-btn {
+  display: inline-block;
+  line-height: 1.42857143;
+  font-size: 1em;
+  padding: .267em .75em;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.faux-btn.btn-sm {
+  font-size: .75em;
+  padding: .417em .83em;
+}
+.faux-btn[onclick],
+.faux-btn[ng-click],
+.faux-btn[type="submit"] {
+  cursor: pointer;
 }
 /* ---------------------------- *\
     Animated Hamburger Menu
@@ -3152,6 +3243,9 @@ a.list-group .list-group-item.active:visited {
 }
 .gp-ui-card__body .gp-ui-card__fab:hover .btn {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+.gp-ui-card__body .gp-ui-card__fab + .text--primary {
+  padding-top: 1em;
 }
 .gp-ui-card__body:first-child {
   padding-top: 1em;

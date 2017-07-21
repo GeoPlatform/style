@@ -697,3 +697,33 @@ header .pull-right .btn-account > .btn > .glyphicon,
         }
     }
 }
+
+
+
+
+
+/**
+ * A UI element to look similar to a .btn.btn-link but without being one
+ */
+.faux-btn {
+    
+    display:        inline-block;
+    line-height:    1.42857143;
+    font-size:      1em;
+    padding:        .267em .75em;
+    text-align:     center;
+    white-space:    nowrap;
+    vertical-align: middle;
+    user-select:    none;
+
+    &.btn-sm {
+        font-size:  .75em;
+        padding:    .417em .83em;
+    }
+
+    &[onclick],
+    &[ng-click],
+    &[type="submit"] { 
+        cursor: pointer; 
+    }
+}

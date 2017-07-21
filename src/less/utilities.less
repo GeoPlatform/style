@@ -100,8 +100,9 @@
 
 //limit text to a specific height
 .u-text-max--sm {
-    max-height: 3em;
-    overflow: hidden;
+    line-height: 1.4em;
+    max-height:  3em;
+    overflow:    hidden;
 }
 
 
@@ -132,3 +133,27 @@
 .t-text--italics {
     font-style: italic;
 }
+
+.u-break--all {
+    word-break: break-all!important;
+}
+
+
+
+
+
+h1.u-mg--none,  h2.u-mg--none,  h3.u-mg--none, 
+h4.u-mg--none,  h5.u-mg--none,  h6.u-mg--none   { margin: 0;        }
+h1.u-mg--xs,    h2.u-mg--xs,    h3.u-mg--xs, 
+h4.u-mg--xs,    h5.u-mg--xs,    h6.u-mg--xs     { margin: @px-xs;   }
+h1.u-mg--sm,    h2.u-mg--sm,    h3.u-mg--sm, 
+h4.u-mg--sm,    h5.u-mg--sm,    h6.u-mg--sm     { margin: @px-sm;   }
+h1.u-mg--md,    h2.u-mg--md,    h3.u-mg--md, 
+h4.u-mg--md,    h5.u-mg--md,    h6.u-mg--md     { margin: @px-md;   }
+h1.u-mg--lg,    h2.u-mg--lg,    h3.u-mg--lg, 
+h4.u-mg--lg,    h5.u-mg--lg,    h6.u-mg--lg     { margin: @px-lg;   }
+h1.u-mg--xlg,   h2.u-mg--xlg,   h3.u-mg--xlg, 
+h4.u-mg--xlg,   h5.u-mg--xlg,   h6.u-mg--xlg    { margin: @px-xlg;  }
+h1.u-mg--xxlg,  h2.u-mg--xxlg,  h3.u-mg--xxlg, 
+h4.u-mg--xxlg,  h5.u-mg--xxlg,  h6.u-mg--xxlg   { margin: @px-xxlg; }
+

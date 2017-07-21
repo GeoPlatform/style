@@ -106,6 +106,9 @@
 .gp-ui-card__body {
     position: relative;
 
+    //prevent fab from overlapping the title of the card
+    &.has-fab .text--primary { margin-right: 3em; }
+
     //floating action button
     .gp-ui-card__fab {
         position: absolute;
@@ -128,12 +131,6 @@
                 box-shadow: 0 1px 3px rgba(0,0,0,0.4);
             }
         }
-    }
-
-    //increase padding on card titles when a fab is provided
-    // to ensure no overlap occurs
-    .gp-ui-card__fab + .text--primary {
-        padding-top: 1em;
     }
 }
 

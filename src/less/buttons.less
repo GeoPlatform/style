@@ -673,6 +673,37 @@ header .pull-right .btn-account > .btn > .glyphicon,
 
 
 
+
+.btn.btn-outline-accent,
+.btn.btn-default.btn-outline-accent {
+    border: 2px solid @color-accent;
+    color: @color-accent;
+
+    &:hover {
+        border-color: saturate(@color-accent,25%);
+        color: saturate(@color-accent,25%);
+        background-color: #fff;
+    }
+
+    &.active {
+        background: @color-accent;
+        color: #fff;
+        box-shadow: none;   //prevent boostrap default
+
+        &:hover {
+            border-color: saturate(@color-accent,25%);
+            background-color: saturate(@color-accent,25%);
+            color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+    }
+}
+
+
+
+
+
+
 .btn-faded {
     opacity: 0.3;
 }

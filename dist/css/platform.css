@@ -1578,6 +1578,30 @@ header .pull-right .btn-account > .btn > .glyphicon,
   color: #fff;
   background-color: #e25284;
 }
+.btn.btn-outline-accent,
+.btn.btn-default.btn-outline-accent {
+  border: 2px solid #393;
+  color: #393;
+}
+.btn.btn-outline-accent:hover,
+.btn.btn-default.btn-outline-accent:hover {
+  border-color: #19b319;
+  color: #19b319;
+  background-color: #fff;
+}
+.btn.btn-outline-accent.active,
+.btn.btn-default.btn-outline-accent.active {
+  background: #393;
+  color: #fff;
+  box-shadow: none;
+}
+.btn.btn-outline-accent.active:hover,
+.btn.btn-default.btn-outline-accent.active:hover {
+  border-color: #19b319;
+  background-color: #19b319;
+  color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
 .btn-faded {
   opacity: 0.3;
 }
@@ -3215,6 +3239,9 @@ a.list-group .list-group-item.active:visited {
 .gp-ui-card__body {
   position: relative;
 }
+.gp-ui-card__body.has-fab .text--primary {
+  margin-right: 3em;
+}
 .gp-ui-card__body .gp-ui-card__fab {
   position: absolute;
   top: -1.25em;
@@ -3243,9 +3270,6 @@ a.list-group .list-group-item.active:visited {
 }
 .gp-ui-card__body .gp-ui-card__fab:hover .btn {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
-}
-.gp-ui-card__body .gp-ui-card__fab + .text--primary {
-  padding-top: 1em;
 }
 .gp-ui-card__body:first-child {
   padding-top: 1em;

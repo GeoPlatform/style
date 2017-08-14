@@ -624,3 +624,137 @@ header .pull-right .btn-account > .btn > .glyphicon,
 
 
 
+//rounded outline buttons (like used for CARD FABs)
+
+.btn.btn-outline-blue,
+.btn.btn-default.btn-outline-blue {
+    border: 2px solid @color-active;
+    color: @color-active;
+
+    &:hover {
+        border-color: saturate(@color-active,50%);
+        color: saturate(@color-active,50%);
+        background-color: #fff;
+    }
+
+    &.active {
+        background: @color-active;
+        color: #fff;
+
+        &:hover {
+            border-color: saturate(@color-active,50%);
+            background-color: saturate(@color-active,50%);
+            color: #fff;
+        }
+    }
+}
+
+
+.btn.btn-outline-pink,
+.btn.btn-default.btn-outline-pink {
+
+    border: 2px solid fadeOut(#e25284, 50%);
+    color: fadeOut(#e25284, 50%);
+    background-color: #fff;
+    box-shadow: none;
+
+    &:hover {
+        border-color: #e25284;
+        color: #e25284;
+        background-color: #fff;
+    }
+
+    &.active {
+        border-color: #e25284;
+        color: #fff;
+        background-color: #e25284;
+    }
+}
+
+
+
+
+.btn.btn-outline-accent,
+.btn.btn-default.btn-outline-accent {
+    border: 2px solid @color-accent;
+    color: @color-accent;
+
+    &:hover {
+        border-color: saturate(@color-accent,25%);
+        color: saturate(@color-accent,25%);
+        background-color: #fff;
+    }
+
+    &.active {
+        background: @color-accent;
+        color: #fff;
+        box-shadow: none;   //prevent boostrap default
+
+        &:hover {
+            border-color: saturate(@color-accent,25%);
+            background-color: saturate(@color-accent,25%);
+            color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+    }
+}
+
+
+
+
+
+
+.btn-faded {
+    opacity: 0.3;
+}
+
+.btn.btn-pink {
+    background-color: #e25284;
+    border-color: darken(#e25284,5%);
+    color: #fff;
+
+    &:hover {
+        background-color: darken(#e25284,5%);
+        border-color: darken(#e25284,10%);
+    }
+
+    &.btn-link {
+        color: #e25284;
+        background-color: transparent;
+        border-color: transparent;
+
+        &:hover {
+            color: darken(#e25284, 5%);
+        }
+    }
+}
+
+
+
+
+
+/**
+ * A UI element to look similar to a .btn.btn-link but without being one
+ */
+.faux-btn {
+    
+    display:        inline-block;
+    line-height:    1.42857143;
+    font-size:      1em;
+    padding:        .267em .75em;
+    text-align:     center;
+    white-space:    nowrap;
+    vertical-align: middle;
+    user-select:    none;
+
+    &.btn-sm {
+        font-size:  .75em;
+        padding:    .417em .83em;
+    }
+
+    &[onclick],
+    &[ng-click],
+    &[type="submit"] { 
+        cursor: pointer; 
+    }
+}

@@ -1,3 +1,11 @@
+
+
+.rotate-90 {
+    transform: rotate(90deg);
+}
+
+
+
 /* spinning Glyphicons */
 .spin {
     -animation: spin .5s infinite linear;
@@ -212,3 +220,38 @@
       opacity:1;
     }
 }
+
+
+
+
+/* Will only fade IN, not out */
+
+.u-animated-fade {
+    opacity: 1;
+}
+.u-animated-fade.ng-enter {
+    transition:0.3s linear opacity;
+    opacity: 0;
+}
+
+.u-animated-fade.ng-enter.ng-enter-active {
+    opacity:1;
+}
+
+
+
+
+
+/* */
+.u-animated-show {
+    transition: all linear 0.5s;
+    opacity: 1;
+}
+.u-animated-show.ng-hide {
+  opacity: 0;
+}
+
+
+
+
+

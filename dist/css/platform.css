@@ -2269,7 +2269,7 @@ body .input-group-lg > .input-group-btn > .btn {
 .form-group-slick .indicators {
   position: absolute;
   top: 0.625em;
-  z-index: 3001;
+  z-index: 1901;
 }
 .form-group-slick .indicators:last-child {
   right: 0.75em;

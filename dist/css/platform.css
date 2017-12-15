@@ -804,10 +804,9 @@ table.shadowed-bottom-dk {
 }
 /* spinning Glyphicons */
 .spin {
-  -animation: spin .5s infinite linear;
+  -webkit-animation: spin .5s infinite linear;
+          animation: spin .5s infinite linear;
   -ms-animation: spin .5s infinite linear;
-  -webkit-animation: spinwebkit .5s infinite linear;
-  -moz-animation: spinmoz .5s infinite linear;
 }
 @-webkit-keyframes spin {
   from {
@@ -829,18 +828,10 @@ table.shadowed-bottom-dk {
             transform: scale(1) rotate(360deg);
   }
 }
-@-webkit-keyframes spinwebkit {
-  from {
-    -webkit-transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-  }
-}
 /* -------------------- */
 .flip-horizontal {
   -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
+          transform: scaleX(-1);
   -webkit-filter: FlipH;
           filter: FlipH;
   -ms-filter: "FlipH";
@@ -851,17 +842,15 @@ table.shadowed-bottom-dk {
   transition-property: transform;
   transition-property: transform, -webkit-transform;
   -webkit-transform: rotate(0deg);
-  transform: rotate(0deg);
+          transform: rotate(0deg);
 }
 .rotate90.active {
   color: #333;
   -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 .fadein {
   transition: .3s linear all;
-  -webkit-transition: .3s linear all;
-  -moz-transition: .3s linear all;
   -o-transition: .3s linear all;
 }
 .fadein.ng-enter {
@@ -879,8 +868,6 @@ table.shadowed-bottom-dk {
 .slide-left,
 .slide-left-full {
   transition: .3s linear all;
-  -webkit-transition: .3s linear all;
-  -moz-transition: .3s linear all;
   -o-transition: .3s linear all;
 }
 .slide-left.ng-enter {
@@ -967,9 +954,8 @@ table.shadowed-bottom-dk {
     animation class for fast fade out
     -------------------------------------*/
 .t-fade-out--fast {
-  animation: .3s linear .6s 1 forwards fadeOut;
-  -webkit-animation: .3s linear .6s 1 forwards fadeOutWebkit;
-  -moz-animation: .3s linear .6s 1 forwards fadeOutMoz;
+  -webkit-animation: .3s linear .6s 1 forwards fadeOut;
+          animation: .3s linear .6s 1 forwards fadeOut;
 }
 @-webkit-keyframes fadeOut {
   from {
@@ -987,16 +973,8 @@ table.shadowed-bottom-dk {
     opacity: 0;
   }
 }
-@-webkit-keyframes fadeOutWebkit {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
 /*  -------------------------------------
-    helper classes to set transition 
+    helper classes to set transition
     property and duration (speed)
     ------------------------------------- */
 .u-transition--width {
@@ -2000,10 +1978,9 @@ header .pull-right .btn-account > .btn > .glyphicon,
   width: 1em;
   height: 1em;
   border-style: dotted;
-  -animation: spin .5s infinite linear;
+  -webkit-animation: spin .5s infinite linear;
+          animation: spin .5s infinite linear;
   -ms-animation: spin .5s infinite linear;
-  -webkit-animation: spinwebkit .5s infinite linear;
-  -moz-animation: spinmoz .5s infinite linear;
 }
 [aria-expanded="true"] > .icon-search::after,
 .active > .icon-search::after {
@@ -2030,10 +2007,9 @@ header .pull-right .btn-account > .btn > .glyphicon,
   height: 1em;
   border-style: dotted;
   border-color: #333;
-  -animation: spin .5s infinite linear;
+  -webkit-animation: spin .5s infinite linear;
+          animation: spin .5s infinite linear;
   -ms-animation: spin .5s infinite linear;
-  -webkit-animation: spinwebkit .5s infinite linear;
-  -moz-animation: spinmoz .5s infinite linear;
 }
 .input-group-slick.active > .icon-search::after {
   width: 0;

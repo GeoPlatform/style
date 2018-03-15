@@ -151,6 +151,7 @@
     font-size:   1em;
     padding:     .5em 1em 0.5em;
     font-weight: 700;
+    word-break: break-all;
 }
 .gp-ui-card .text--secondary {
     display: block;
@@ -312,6 +313,83 @@
     }
 }
 
+
+
+
+//----------------------------------------
+// CARD FOOTER BUTTONS WITH DROPDOWN MENUS
+
+.gp-ui-card__footer .btn-group {
+    
+    .dropdown-menu li a {
+        text-align: left;
+    }
+
+    .glyphicon-option-horizontal {
+        -webkit-transition-duration: 0.2s;
+        -moz-transition-duration: 0.2s;
+        -o-transition-duration: 0.2s;
+        transition-duration: 0.2s;
+
+        -webkit-transition-property: -webkit-transform;
+        -moz-transition-property: -moz-transform;
+        -o-transition-property: -o-transform;
+        transition-property: transform;
+
+        -webkit-transform:rotate(0deg);
+        -moz-transform:rotate(0deg); 
+        -o-transform:rotate(0deg);
+        transform:rotate(0deg);
+    }
+
+    &.open .glyphicon-option-horizontal {
+        -webkit-transform:rotate(90deg);
+        -moz-transform:rotate(90deg); 
+        -o-transform:rotate(90deg);
+        transform:rotate(90deg);
+    }
+
+}
+//----------------------------------------
+
+
+
+
+
+
+
+
+
+
+.gp-ui-card.gp-ui-card--error {
+    
+    margin-top: 1em;
+
+    .gp-ui-card__body:first-child {
+        padding-top: 0;    
+    }
+
+    .gp-ui-card__body,
+    .gp-ui-card__body .text--primary,
+    .gp-ui-card__body .text--secondary,
+    .gp-ui-card__body .text--supporting,
+    .gp-ui-card__body a,
+    .gp-ui-card__body a:visited { 
+        background-color: @color-danger; 
+        color: @color-white;
+    }
+
+    .gp-ui-card__body a,
+    .gp-ui-card__body a:visited {
+        text-decoration: underline;
+    }
+
+    .gp-ui-card__body .text--supporting {
+        max-height: 6em;
+        overflow: hidden;
+        line-height: 1.5em;
+    }
+}
 
 
 

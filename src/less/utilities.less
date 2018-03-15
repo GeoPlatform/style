@@ -105,6 +105,11 @@
     overflow:    hidden;
 }
 
+.u-text--no-wrap {
+    white-space: nowrap;
+    overflow:hidden;
+}
+
 
 /* alignment helper classes */
 .u-text--center,
@@ -140,6 +145,13 @@
 
 
 
+.url, .is-url {
+    word-break: break-all;
+    font-style: italic;
+}
+
+
+
 
 
 h1.u-mg--none,  h2.u-mg--none,  h3.u-mg--none, 
@@ -157,3 +169,53 @@ h4.u-mg--xlg,   h5.u-mg--xlg,   h6.u-mg--xlg    { margin: @px-xlg;  }
 h1.u-mg--xxlg,  h2.u-mg--xxlg,  h3.u-mg--xxlg, 
 h4.u-mg--xxlg,  h5.u-mg--xxlg,  h6.u-mg--xxlg   { margin: @px-xxlg; }
 
+
+
+
+.faded {
+    opacity: 0.5;
+}
+
+
+
+.is-hoverable {
+    .on-out { display: inline-block; }
+    .on-over { display: none; }
+
+    &:hover:not(.disabled) {
+        .on-over { display: inline-block; }
+        .on-out { display: none; }
+    }
+}
+
+.collapsible, .is-collapsible {
+
+    height: auto;
+    opacity: 1;
+    transition: all ease-in-out 0.5s;
+
+    &.is-collapsed {
+        height: 0;
+        opacity: 0;
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+
+
+.maskable, .has-mask {
+    position: relative;
+    
+    .mask {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    .mask--white {
+        background: rgba(255,255,255,0.75);
+    }
+}

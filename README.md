@@ -1,6 +1,6 @@
 ## GeoPlatform Style Repository
 
-This repo contains platform-wide style artifacts.  
+This repo contains platform-wide style artifacts.
 
 ### Overview
 
@@ -26,6 +26,16 @@ Run `grunt` or `grunt default` to compile the source LESS stylesheets.
 4. Run `git commit -a -m "<YOUR COMMIT MESSAGE>"
 5. Run `git pull origin master` to fetch remote changes and merge conflicts (be sure to run `grunt` again after resolving conflicts but before merging conflict resolutions)
 6. Run `git push origin master` to push your committed changes
+
+#### Pull from CDN
+
+Resources in this library can be pulled directly from the front end via a CDN.
+
+Example:
+```html
+<link href="http://dyk46gk69472z.cloudfront.net/gp.style/1.8.1/css/platform.css"></link>
+<script src="http://dyk46gk69472z.cloudfront.net/gp.style/1.8.1/js/geoplatform.style.js"></script>
+```
 
 
 #### As a Bower Dependency

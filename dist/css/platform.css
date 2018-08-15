@@ -4478,20 +4478,22 @@ table.grid-item {
      -moz-box-pack: start;
           justify-content: flex-start;
 }
-media (min-width: 768px) and (max-width: 991px) .l-flex-container > .flex-justify-center-sm {
-  -webkit-justify-content: center !important;
-     -moz-box-pack: center !important;
-          justify-content: center !important;
-}
-media (min-width: 768px) and (max-width: 991px) .l-flex-container > .flex-justify-end-sm {
-  -webkit-justify-content: flex-end !important;
-     -moz-box-pack: end !important;
-          justify-content: flex-end !important;
-}
-media (min-width: 768px) and (max-width: 991px) .l-flex-container > .flex-justify-stretch-sm {
-  -webkit-justify-content: stretch !important;
-     -moz-box-pack: stretch !important;
-          justify-content: stretch !important;
+@media (min-width: 768px) and (max-width: 991px) {
+  .l-flex-container > .flex-justify-center-sm {
+    -webkit-justify-content: center !important;
+       -moz-box-pack: center !important;
+            justify-content: center !important;
+  }
+  .l-flex-container > .flex-justify-end-sm {
+    -webkit-justify-content: flex-end !important;
+       -moz-box-pack: end !important;
+            justify-content: flex-end !important;
+  }
+  .l-flex-container > .flex-justify-stretch-sm {
+    -webkit-justify-content: stretch !important;
+       -moz-box-pack: stretch !important;
+            justify-content: stretch !important;
+  }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .l-flex-container > .flex-justify-center-md {

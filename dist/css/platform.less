@@ -1,0 +1,55 @@
+
+
+@import "reset.less";
+@import "variables.less";
+@import "mixins.less";
+@import "colors.less";
+@import "utilities.less";
+@import "borders.less";
+@import "shadows.less";
+@import "animation.less";
+@import "buttons.less";
+@import "icons.less";
+@import "forms.less";
+@import "header.less";
+@import "mega-menu.less";
+@import "mobile-menu.less";
+@import "pagination.less";
+@import "lists.less";
+@import "callouts.less";
+@import "thumbnails.less";
+@import "cards.less";
+@import "grid-items.less";
+@import "layout.less";
+@import "flex.less";
+
+
+
+
+/* ---------------------------------
+    miscellaneous styles
+--------------------------------- */
+
+//ensure pointer cursor over ng-click anchors without hrefs
+a[ng-click], [onclick], [ng-click], a[ui-sref] { cursor: pointer; }
+
+
+
+
+/*
+ * Hack necessary to enable bootstrap dropdown-contained links work on touch devices
+ * http://stackoverflow.com/questions/17579750/drop-down-menu-not-working-on-mobile-devices
+ */
+.dropdown-backdrop{
+    position: static;
+}
+
+
+//don't let .active background color seep into nav-tabs
+ul.nav.nav-tabs > li.active {
+    background: transparent;
+}
+.tab-pane.active {
+    background: none;
+    color:      inherit;
+}

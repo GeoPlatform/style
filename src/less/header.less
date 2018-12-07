@@ -36,9 +36,9 @@ header {
 
     /* responsive menu button */
     .btn-nav {
-        
+
         padding: @px-xlg;
-        
+
         &.pull-left {
             //put space between it and brand if left-aligned
             margin:  @px-none @px-md @px-none -@px-xlg;
@@ -51,12 +51,12 @@ header {
 
     }
 
-    /* desktop nav links 
+    /* desktop nav links
         see .mobile-menu for mobile nav links
     */
     .nav-menu {
         margin-bottom: 0;
-        
+
         & > li {
             display:block;
 
@@ -167,7 +167,7 @@ header {
                     font-weight: 700;
                     color: @color-gray-dk;
                     position: relative;
-                    
+
                     &:after,&:before {
                         top: 100%;
                         left: 50%;
@@ -191,7 +191,7 @@ header {
                         border-top-color: #ddd;
                         border-width: 12px;
                         margin-left: -12px;
-                    }                    
+                    }
                 }
 
             }
@@ -228,10 +228,10 @@ header {
 
 /* ------------------------------ *\
     Header Menu styles
-    <ul> inside <header> that 
-    displays links 
-    
-    added in R5 
+    <ul> inside <header> that
+    displays links
+
+    added in R5
 \* ------------------------------ */
 
 .header__menu {
@@ -239,27 +239,27 @@ header {
     margin: 0;
     padding:0;
     list-style-type: none;
-    
+
     .open > .dropdown-menu {
         z-index: 2;
     }
 
-    
+
 
     & > li > button,
-    & > li > a, 
-    & > li > a:visited, 
-    & > li > .btn-link, 
+    & > li > a,
+    & > li > a:visited,
+    & > li > .btn-link,
     & > li > a.btn-link,
     & > li > .btn-group > button,
-    & > li > .btn-group > a, 
-    & > li > .btn-group > a:visited, 
-    & > li > .btn-group > .btn-link, 
+    & > li > .btn-group > a,
+    & > li > .btn-group > a:visited,
+    & > li > .btn-group > .btn-link,
     & > li > .btn-group > a.btn-link,
     .header__btn, a.header__btn, a.header__btn:visited {
 
-        color:      @color-gray-md;
-        padding:    @px-xlg @px-lg;
+        color:      darken(@color-gray-md, 15%);
+        padding:    1em 0.75em;
         border:     none;
         text-decoration: none;
         font-size:  1em;
@@ -274,13 +274,14 @@ header {
 
         &:hover {
             background-color:   lighten(@color-gray-xlt, 5%);
+            color:              @color-gray-dk;
             text-decoration:    none;
         }
     }
 
 }
 .primary .header__menu {
-    
+
     & > li > .btn-link, & > li > .header__btn {
         color: #fff;
 
@@ -302,7 +303,7 @@ header {
     }
 }
 
-.header__menu > li > a, 
+.header__menu > li > a,
 .header__menu > li > button,
 .header__menu > li > .dropdown > button {
 

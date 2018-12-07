@@ -2584,7 +2584,7 @@ header {
   border-collapse: separate;
   /* for IE 9+ */
   /* responsive menu button */
-  /* desktop nav links 
+  /* desktop nav links
         see .mobile-menu for mobile nav links
     */
   /* logos */
@@ -2758,10 +2758,10 @@ header.primary .btn-account:hover > .btn {
 }
 /* ------------------------------ *\
     Header Menu styles
-    <ul> inside <header> that 
-    displays links 
-    
-    added in R5 
+    <ul> inside <header> that
+    displays links
+
+    added in R5
 \* ------------------------------ */
 .header__menu {
   float: right;
@@ -2785,7 +2785,7 @@ header.primary .btn-account:hover > .btn {
 .header__menu .header__btn,
 .header__menu a.header__btn,
 .header__menu a.header__btn:visited {
-  color: #777;
+  color: #515151;
   padding: 1em 0.75em;
   border: none;
   text-decoration: none;
@@ -2824,6 +2824,7 @@ header.primary .btn-account:hover > .btn {
 .header__menu a.header__btn:hover,
 .header__menu a.header__btn:visited:hover {
   background-color: #eaeaea;
+  color: #333;
   text-decoration: none;
 }
 .primary .header__menu > li > .btn-link,

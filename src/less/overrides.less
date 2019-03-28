@@ -1,0 +1,84 @@
+
+html, body { font-size: @default_font_size; }
+
+/* font size resets */
+h1, h2, h3, h4, h5, h6 { font-weight: 700!important; }
+h1 { font-size: @sz-xxxlg; }
+h2 { font-size: @sz-xxlg; }
+h3 { font-size: @sz-xlg; }
+h4 { font-size: @sz-lg; }
+h5 { font-size: @sz-md; }
+h6 { font-size: @sz-sm; }
+
+
+
+
+
+/* -------- ANCHORS ------------------ */
+
+a:not(.btn), a:visited:not(.btn) { color: @color-active; }
+a.selected:not(.btn) { color: #fff; }
+
+a.btn.btn-dark, a.btn.btn-dark:visited { color: #fff; }
+
+//ensure pointer cursor over ng-click anchors without hrefs
+a[ng-click], [onclick], [ng-click], a[ui-sref] { cursor: pointer; }
+
+
+
+/* -------- FORMS ------------------ */
+
+body .form-control.form-control-lg {
+    padding:        0.65em 1em;
+    font-size:      1.25em;
+    line-height:    1.5;
+    border-radius:  0.3em;
+    height:         auto;
+}
+
+
+/* ------- INPUT GROUP ------------- */
+.input-group .input-group-btn {
+    font-size: 1em; //fix 'font-size: 0' rule ?!?!?!
+}
+.input-group-slick > .icon:first-child { left: .75em; }
+.input-group-slick > .icon {
+    position: absolute;
+    top:      .625em;
+    color:    #848484;
+    height:   1em;
+    width:    1em;
+}
+
+.input-group-slick.input-group-slick--lg { font-size: 1.2875em; }
+.input-group-slick.input-group-slick--lg > .icon { top: 0.9em; }
+
+
+/* -------- BOOTSTRAP DROPDOWNS -------- */
+/*
+ * Hack necessary to enable bootstrap dropdown-contained links work on touch devices
+ * http://stackoverflow.com/questions/17579750/drop-down-menu-not-working-on-mobile-devices
+ */
+.dropdown-backdrop{
+    position: static;
+}
+
+
+/* -------- BOOTSTRAP TABS -------- */
+//don't let .active background color seep into nav-tabs
+ul.nav.nav-tabs > li.active { background: transparent; }
+.tab-pane.active {
+    background: none;
+    color:      inherit;
+}
+
+
+/* -------- BUTTONS --------------- */
+.btn.btn-primary {
+    background-color: @color-active; //#006ee4;
+    border-color: @color-active; //#006ee4;
+}
+.btn.btn-info {
+    background-color: @color-info;
+    border-color: @color-info;
+}

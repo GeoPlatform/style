@@ -1,0 +1,61 @@
+
+.m-error {
+
+    text-align: center;
+    overflow:   hidden;
+
+    .gp-ui-card {
+        text-align: left;
+        margin:     0 auto;
+        width:      350px; //90%;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        .t-bg--danger;
+        .t-fg--white;
+    }
+    .media,
+    .gp-ui-card__media {
+        text-align: center;
+        padding: 2em 0 0;
+        border-bottom: 0;
+        background: transparent;
+
+        .far, .fas, .fa { font-size: 2em; }
+    }
+    .gp-ui-card__body {
+        a, a:visited {
+            .t-fg--white;
+            text-decoration: underline;
+        }
+    }
+    .gp-ui-card__footer {
+        border: none;
+        height: auto;
+        padding: 0.5em 1em 1em;
+        background: transparent;
+
+        .btn-block { border-radius: 20px; }
+    }
+
+    .text--primary {
+        margin-bottom: 1em;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .text--supporting {
+        .t-fg--white;
+        padding-bottom: 1em;
+    }
+
+    .m-error-message {
+        line-height: 1.4;
+        max-height: 7em;
+        overflow: hidden;
+    }
+
+}
+// @media(min-width:768px) {
+//     .m-error .gp-ui-card {
+//         width:      400px;
+//     }
+// }

@@ -1,0 +1,76 @@
+
+.o-browse__filter > .a-heading {
+    display:         flex;
+    justify-content: space-between;
+    align-items:     flex-end;
+
+    & h6, & h5, & h4,
+    & h3, & h2, & h1 { margin: 0; }
+}
+
+
+
+
+
+
+.o-query-filter {
+
+    font-size:  @text-md;
+
+    &.card,
+    &.m-card,
+    &.m-card--simple,
+    &.gp-ui-card {
+        background: transparent;
+        box-shadow: none;
+        border:     none;
+        padding:    0;
+        margin-bottom: 2em;
+
+        .card-title,
+        .m-card__title,
+        .m-card__label,
+        .text--primary {
+            display:         flex;
+            justify-content: flex-start;
+            align-items:     center;
+            font-size:       @text-sm;    //override default card-title style
+            margin-bottom:   0;
+            min-height:      2em;    //for those without collapse buttons
+            color:           lighten(@color-gray-dk, 15%);
+            border-bottom:   1px solid @color-gray-xlt;
+            text-transform:  uppercase;
+
+            .btn-link { color: lighten(@color-gray-dk, 15%); }
+        }
+    }
+
+
+    //Facets overrides while inside Query Filters...
+
+    .o-facets > .m-facet {
+        font-size:      @sz-md; //override default m-facet__value style
+    }
+
+    .o-facets.is-collapsed > .m-facet.active {
+        background-color: transparent;
+        border-color:     transparent;
+        color:            @color-gray-md;
+    }
+
+}
+
+
+
+//override selected value styles when expanded for specific filters
+.o-filter__recommended-terms .o-facets > .m-facet.active {
+    background: transparent;
+    color: @color-gray-dk;
+}
+
+
+//override selected value styles when expanded for specific filters
+.o-filter__recommended-terms .o-facets > .m-facet.active {
+    background: transparent;
+    color: @color-gray-dk;
+}

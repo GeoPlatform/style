@@ -1,0 +1,69 @@
+
+/*
+
+ */
+
+
+
+/**
+ Example:
+
+ <div class="m-card o-query-filter">
+     <div class="m-card__title"> Filter by ... </div>
+     <div class="m-card__content">
+
+         <div class="o-facets is-collapsed">
+
+             <div class="m-facet active"> Value 1 </div>
+             <div class="m-facet"> Value 2 </div>
+             <div class="m-facet"> Value 3 </div>
+             <div class="m-facet"> Value 4 </div>
+             <div class="m-facet"> Value 5 </div>
+
+         </div>
+     </div>
+ </div>
+ */
+
+.o-facets {
+
+    font-size: @text-sm;
+
+    &.is-collapsed li > a:not(.active),
+    &.is-collapsed > .m-facet:not(.active) {
+        opacity: 0;
+        height: 0;
+        padding: 0;
+        border: none;
+        margin-bottom: 0;
+        overflow: hidden;
+    }
+    &.is-collapsed li > a.active,
+    &.is-collapsed > .m-facet.active {
+        .t-fg--gray-dk;
+        background-color: transparent;
+    }
+
+    //any inputs that aren't wrapped in a m-facet__value should have a bit of margin
+    .input-group-slick, select {
+        margin-top: 0.5em;
+    }
+    //otherwise, don't...
+    .m-facet > .input-group-slick,
+    .m-facet > select {
+        margin-top:     0;
+        margin-left:  -.5em;
+        margin-right: -.5em;
+    }
+
+    & > li > a,
+    & > .m-facet {
+        opacity:    1;
+        transition: opacity ease-in-out 0.5s;
+    }
+
+    .o-pagination,
+    .o-pagination .o-pagination__pages,
+    .o-pagination .o-pagination__pages .o-pagination__page { flex: 1; }
+
+}

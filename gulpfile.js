@@ -1,5 +1,5 @@
 
-var pkg         = require('./package.json'), 
+var pkg         = require('./package.json'),
     gulp        = require('gulp'),
     jshint      = require('gulp-jshint'),
     concat      = require('gulp-concat'),
@@ -15,12 +15,12 @@ var pkg         = require('./package.json'),
     util        = require('gulp-util');
 
 
-const autoprefix = new autoprefixer({ 
+const autoprefix = new autoprefixer({
     browsers: [
-        "iOS >= 7", 
-        "Chrome >= 30", 
-        "Explorer >= 11", 
-        "last 2 Edge versions", 
+        "iOS >= 7",
+        "Chrome >= 30",
+        "Explorer >= 11",
+        "last 2 Edge versions",
         "Firefox >= 20"
     ]
 });
@@ -61,12 +61,31 @@ gulp.task('js', 'Concat, Uglify JavaScript into a single file', function() {
 });
 
 gulp.task('less', 'Compile less into a single file.', function() {
+
+    //Build GP platform style include
     gulp.src([
-            'src/less/platform.less'
+            'src/less/style.less'
         ], {base: "."})
         .pipe(concat('platform.less'))
         //must write to public before processing for paths to work
-        .pipe(gulp.dest('dist/css/')) 
+        // .pipe(gulp.dest('dist/css/'))
+        .pipe(less({
+            plugins: [autoprefix],
+            paths: ['./src/less']
+        }))
+        .on("error", notify.onError({message: 'LESS compile error: <%= error.message %>'}))
+        .pipe(gulp.dest('dist/css/'))
+        .pipe(cssmin())
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(gulp.dest('dist/css/'))
+        .pipe(notify('Compiled styles'));
+
+
+    //Build style includes needed by WP Portal Theme
+    gulp.src([ 'src/less/portal/style.less' ], {base: "."})
+        .pipe(concat('portal.less'))
+        //must write to public before processing for paths to work
+        // .pipe(gulp.dest('dist/css/'))
         .pipe(less({
             plugins: [autoprefix],
             paths: ['./src/less']

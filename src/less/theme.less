@@ -1,0 +1,98 @@
+
+
+//Mixin for colorizing
+.colorize(@color; @fontColor) {
+    background-color: @color;
+    border-color: darken(@color, 5%);
+    color: @fontColor;
+}
+
+
+/* deprecated, use .t-fg--<name> instead
+.text-primary, a.text-primary,
+a.text-primary:visited  { color: @color-primary; }
+.text-accented, a.text-accented,
+a.text-accented:visited { color: @color-accent; }
+.text-selected, .text-active,
+a:not(.btn), a:not(.btn):visited   { color: @color-active; }
+.text-gray-dk  { color: @color-gray-dk; }
+.text-gray-md  { color: @color-gray-md; }
+.text-gray-lt  { color: @color-gray-lt; }
+.text-gray-xlt { color: @color-gray-xlt; }
+.text-white    { color: @color-white; }
+.text-danger   { color: @color-danger; }
+*/
+
+/* deprecated, use .t-bg--<name> instead
+.primary    { .colorize(@color-primary; #fff);  }
+.accented   { .colorize(@color-accent; #fff);   }
+.selected, .is-selected, .is-active  { .colorize(@color-active; #fff);   }
+.success    { .colorize(@color-success; #333);  }
+.info       { .colorize(@color-info; #333);     }
+.warning    { .colorize(@color-warning; #333);  }
+.danger     { .colorize(@color-danger; #333);   }
+.gray-dk    { .colorize(@color-gray-dk; #fff);  }
+.gray-md    { .colorize(@color-gray-md; #fff);  }
+.gray-lt    { .colorize(@color-gray-lt; #333);  }
+.gray-xlt   { .colorize(@color-gray-xlt; #333); }
+*/
+
+
+
+
+.t-bg-transparent { background-color: transparent; }
+
+.t-bg--white { background-color: #fff; }
+.t-fg--white { color: #fff; }
+
+.t-bg--accent { background-color: @color-accent; }
+.t-fg--accent { color: @color-accent; }
+
+.t-bg--primary { background-color: @color-primary; }
+.t-fg--primary { color: @color-primary; }
+
+.t-bg--danger { background-color: @color-danger; }
+.t-fg--danger { color: @color-danger; }
+
+.t-bg--success { background-color: @color-success; }
+.t-fg--success { color: @color-success; }
+
+.t-bg--warning { background-color: @color-warning; }
+.t-fg--warning { color: @color-warning; }
+
+.t-bg--info { background-color: @color-info; }
+.t-fg--info { color: @color-info; }
+
+.t-bg--selected { background-color: @color-active; }
+.t-fg--selected { color: @color-active; }
+
+.t-bg--wild { background-color: @color-wild; }
+.t-fg--wild { color: @color-wild; }
+
+.t-bg--gray-dk { background-color: @color-gray-dk; }
+.t-fg--gray-dk { color: @color-gray-dk; }
+
+.t-bg--gray-md { background-color: @color-gray-md; }
+.t-fg--gray-md { color: @color-gray-md; }
+
+.t-bg--gray-lt { background-color: @color-gray-lt; }
+.t-fg--gray-lt { color: @color-gray-lt; }
+
+.t-bg--gray-xlt { background-color: @color-gray-xlt; }
+.t-fg--gray-xlt { color: @color-gray-xlt; }
+
+.t-bg--pink { background-color: @color-pink; }
+.t-fg--pink { color: @color-pink; }
+
+
+.t-bg--blue-dk { background-color: @color-blue-dk; }
+.t-fg--blue-dk { color: @color-blue-dk; }
+
+.t-bg--blue-md { background-color: @color-blue-md; }
+.t-fg--blue-md { color: @color-blue-md; }
+
+.t-bg--blue-lt { background-color: @color-blue-lt; }
+.t-fg--blue-lt { color: @color-blue-lt; }
+
+.t-bg--blue-xlt { background-color: @color-blue-xlt; }
+.t-fg--blue-xlt { color: @color-blue-xlt; }

@@ -1,0 +1,28 @@
+
+//paths are relative to 'src/less' and not this directory
+
+@import "./style.less";
+
+// note: have to pre-process and copy font/*.* into dist/font folder
+@import (inline) "../icons/geoplatform-icons-font.css";
+
+@import (reference) "./variables.less";
+
+@import "portal/pages/default.less";
+@import "portal/pages/landing-page.less";
+@import "portal/pages/ngda.less";
+@import "portal/pages/ngda-theme.less";
+@import "portal/pages/data-registration.less";
+@import "portal/pages/item.less";
+@import "portal/pages/style-guide.less";
+
+
+.a-heading {
+    font-size: 1em; // h5 equivalent
+    font-weight: 700;
+}
+
+// prevent anchors with type="button" attrs from looking like crap
+html a[type=button] {
+    -webkit-appearance: initial;
+}

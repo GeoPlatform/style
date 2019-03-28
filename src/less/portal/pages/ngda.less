@@ -1,0 +1,33 @@
+
+.p-ngda {
+
+    .m-icon-grid {
+        display: grid;
+        grid: auto-flow/1fr;
+        grid-gap: 2em 1em;
+    }
+    @media(min-width: 420px) {
+        .m-icon-grid {
+            grid: auto-flow/1fr 1fr;
+            grid-gap: 2em 1em;
+        }
+    }
+    @media(min-width: 768px) {
+        .m-icon-grid {
+            grid: auto-flow/1fr 1fr 1fr;
+            grid-gap: 2em 1em;
+        }
+    }
+    @media(min-width: 992px) {
+        .m-icon-grid {
+            grid: auto-flow/1fr 1fr 1fr 1fr;
+            grid-gap: 2em 1em;
+        }
+    }
+    @media(min-width: 1200px) {
+        .m-icon-grid {
+            grid: auto-flow/1fr 1fr 1fr 1fr 1fr;
+            grid-gap: 2em 1em;
+        }
+    }
+}

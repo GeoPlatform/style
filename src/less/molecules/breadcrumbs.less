@@ -1,0 +1,38 @@
+
+.m-page-breadcrumbs {
+    margin: 0;
+    padding: 0.5em 1em;
+    background: lighten(@color-gray-xlt,5%);
+    border-bottom: 1px solid @color-gray-xlt;
+    list-style: none;
+
+    & > li {
+        .u-text--sm;
+        display: inline-block;
+        text-transform: uppercase;
+    }
+
+    & > li:not(:last-child):after {
+        content: ">";
+        padding: 0 0.5em;
+        color: @color-gray-md;
+    }
+
+    & > li.is-active {
+        background: transparent;
+        border-color: transparent;
+
+        & > a, &:hover > a {
+            background: transparent;
+            color: @color-gray-md;
+            cursor: default;
+            text-decoration: none;
+        }
+    }
+}
+
+@media(min-width: 992px) {
+    .m-page-breadcrumbs {
+        padding: 0.5em 3em;
+    }
+}

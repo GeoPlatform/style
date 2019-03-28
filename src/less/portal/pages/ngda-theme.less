@@ -1,0 +1,112 @@
+
+
+
+.p-ngda-theme .m-map {
+    width: 100%;
+    height: 350px;
+    z-index: 1;     /* to keep map from overlaying the page header */
+    border: 1px solid @color-blue-dk;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+
+.p-ngda-theme .carousel {
+
+    background-color: #fff;
+    color: @color-gray-dk;
+
+    .carousel-indicators {
+        position: relative;
+        bottom: unset;
+
+        li {
+            display:    block;  //needed to ensure icons center vertically
+            height:     auto;
+            border:     1px solid @color-gray-xlt;
+            border-radius: 4px;
+            text-indent: initial;
+            flex: 1;
+            text-align: center;
+            color: @color-gray-md;
+            background: #fff;
+
+            &.active {
+                background-color: @color-active;
+                color: #fff;
+            }
+        }
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 10%;
+    }
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        border-radius:    100%;
+        padding:          1em;
+        width: 3em;
+        height: 3em;
+        background-color: @color-gray-dk;
+        background-size:  50% 50%;
+    }
+
+    .carousel-tabs {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 2em;
+        font-size: 0.875em;
+
+        & > * {
+            flex: 1;
+            margin: 0 0.5em;
+            text-align:center;
+        }
+    }
+
+    .carousel-item {
+        overflow: hidden;
+        text-align: center;
+    }
+
+}
+
+@media(min-width: 768px) {
+    .p-ngda-theme .carousel .carousel-item {
+    }
+}
+@media(min-width: 992px) {
+    .p-ngda-theme .carousel .carousel-item {
+    }
+}
+@media(min-width: 1200px) {
+    .p-ngda-theme .carousel .carousel-item {
+    }
+}
+
+
+
+.p-ngda-theme .m-card {
+    border: 1px solid @color-gray-xlt;
+}
+
+
+
+
+.svg-icon {
+    display:inline-block;
+
+    &.svg-icon--sm {
+        width: 1em;
+        height: 1em;
+    }
+
+    &.svg-icon--lg {
+        width: 3em;
+        height: 3em;
+    }
+
+    img { width: 100%; }
+}

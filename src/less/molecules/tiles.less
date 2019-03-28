@@ -1,0 +1,109 @@
+
+/*
+    Example:
+
+    <a class="m-tile m-tile--4x3" href="#" title="Open this page">
+        <div class="m-tile__thumbnail"><img alt="ALT" src="/img/thumbs/ccb_1.jpeg"></div>
+        <div class="m-tile__body">
+            <div class="m-tile__heading">LINK LABEL</div>
+            <div class="m-tile-desc">
+                This tile uses a 4 x 3 aspect ratio for its background image...<br>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua.
+            </div>
+        </div>
+    </a>
+
+ */
+
+
+.m-tile {
+    position:      relative;
+    overflow:      hidden; //keep descriptive text from overflowing outside tile
+    border-radius: 4px;
+    display:       inline-block;
+}
+
+.m-tile__thumbnail {
+    position: relative;
+    display:  block;
+    width:    100%;
+    padding:  0;
+    overflow: hidden;
+
+    &::before {
+        display:     block;
+        content:     "";
+        padding-top: 100%;
+    }
+
+    & > img {
+        position: absolute;
+        top:      0;
+        bottom:   0;
+        left:     0;
+        width:    100%;
+        height:   100%;
+        border:   0;
+    }
+}
+
+.m-tile__body {
+    position:   absolute;
+    top:        0;
+    width:      100%;
+    bottom:     0;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) );
+    color:      #fff;
+    padding:    1em 1em 0;
+    text-align: center;
+
+    display: grid;
+    grid-template-rows: 4fr auto;
+    grid-template-columns: 1fr;
+    text-shadow: 0 0 1px #000;
+}
+
+.m-tile__heading {
+    font-weight:    500;
+    font-size:      1.125em;
+    text-transform: uppercase;
+    margin-bottom:  0.5em;
+    line-height:    1.25;
+    max-height:     3.5em;
+    overflow:       hidden;
+    display:        block;
+    align-self:     center;
+    justify-self:   center;
+    word-break:     break-word;
+}
+
+.m-tile__description {
+    font-size:  1em;
+    max-height: 100px;
+    overflow:   hidden;
+}
+.m-tile__timestamp, .m-tile__tags {
+    font-size: .75em;
+    align-self: end;
+}
+
+a.m-tile,
+.m-tile .m-tile__body a,
+.m-tile .m-tile__body a:visited,
+.m-tile .m-tile__body .btn.btn-link {
+    color: #fff;
+    cursor: pointer;
+}
+
+
+
+.m-tile.m-tile--4x3 {
+    .m-tile__thumbnail::before { padding-top: 75%; }
+    /*.m-tile__body { padding-top: 30%; }*/
+}
+.m-tile.m-tile--16x9 {
+    .m-tile__thumbnail::before { padding-top: 56.25%; }
+    /*.m-tile__body { padding-top: 25%; }*/
+}

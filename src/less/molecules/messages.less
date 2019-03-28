@@ -1,0 +1,77 @@
+
+.m-message {
+    margin: 0.25em 0;
+    padding: 0.75em 1em;
+    border: 1px solid #ddd;
+
+    .m-message__icon.far,
+    .m-message__icon.fas,
+    .m-message__icon.fa,
+    .m-message__icon.glyphicon {
+        font-size: 1.5em;
+        margin-right: 0.3em;
+    }
+
+    .m-message__heading {
+        display: flex;
+        align-items: center;
+        font-weight: 700;
+        font-size: 1.25em;
+
+        & .fa, & .far, & .fas, & .glyphicon {
+            margin-right: 0.25em;
+        }
+    }
+
+    .m-message__footer {
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+
+.m-message--tip {
+    .m-message;
+    color: #fff;
+    background-color: @color-info;
+    border-color: @color-info;
+
+    .m-message__footer a,
+    .m-message__footer a.is-linkless,
+    .m-message__footer .btn {
+        color: #fff;
+    }
+}
+
+.m-message--success {
+    .m-message;
+    color: #fff;
+    background-color: @color-success;
+    border-color: @color-success;
+
+    .m-message__footer a,
+    .m-message__footer a.is-linkless,
+    .m-message__footer .btn {
+        color: #fff;
+    }
+}
+
+.m-message--warning {
+    .m-message;
+    color: @color-gray-dk;
+    background-color: #fff3cd;
+    border-color: darken(#fff3cd, 10%);
+}
+
+.m-message--error {
+    .m-message;
+    color: #fff;
+    background-color: @color-danger;
+    border-color: @color-danger;
+
+    .m-message__footer a,
+    .m-message__footer a.is-linkless,
+    .m-message__footer .btn {
+        color: #fff;
+    }
+}

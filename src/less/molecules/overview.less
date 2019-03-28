@@ -1,0 +1,26 @@
+
+.m-page-overview {
+    background: #f6f6f6;
+    padding: 1em;
+    border-bottom: 1px solid #ddd;
+}
+@media(min-width:992px) {
+    .m-page-overview { padding: 1em 8em 1em 3em; }
+}
+
+.m-page-overview__toggle {
+    width: 100%;
+    text-align: center;
+}
+
+.m-page-overview__additional {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s linear;
+
+    &.is-expanded {
+        height: auto;
+        opacity: 1;
+    }
+}

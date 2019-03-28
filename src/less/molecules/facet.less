@@ -1,0 +1,38 @@
+
+
+/* ====================================
+    Facets
+    for displaying faceted information
+    such as when filtering search results
+   ==================================== */
+
+.m-facet {  // formerly .c-facet__value
+
+   display:        block;
+   cursor:         pointer;
+   text-decoration: none;
+   border-width:   0 0 0 2px;
+   border-color:   transparent;
+   border-style:   solid;
+   color:          @color-gray-md ;
+   padding:        0.5em;
+
+   &.disabled { cursor: default; }
+
+   &:not(.disabled):hover {
+       cursor:    pointer;
+       background: fadeOut(@color-gray-xlt, 10%);
+       color:              @color-gray-dk;
+   }
+   &.is-not-hoverable:not(.disabled):hover {
+       background: transparent;
+   }
+
+   &.active {
+       background: fadeOut(@color-active, 75%);
+       border-left-color:  @color-active;
+       color:              @color-white;
+   }
+
+   .badge { float: right; }
+}

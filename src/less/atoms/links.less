@@ -1,0 +1,37 @@
+
+/* show cursor and color links that don't have href attrs */
+a.is-linkless:not([href]):not([tabindex]) {
+    color: @color-active;
+    cursor: pointer;
+}
+
+
+
+// a[target="_blank"]:after {
+//     content: "\f35d";
+//     font-family: "Font Awesome 5 Free";
+//     margin-left: 0.25em;
+//     font-size: 0.875em;
+//     font-style: normal;
+//     font-variant: normal;
+//     text-rendering: auto;
+//     -webkit-font-smoothing: antialiased;
+//     /* https://stackoverflow.com/questions/47712987/font-awesome-5-on-pseudo-elements */
+//     font-weight: 900;
+// }
+
+
+a.is-image[target="_blank"] {
+    position: relative;
+    display: inline-block;
+
+    &:after {
+        background: rgba(220, 220, 220, 0.75);
+        position: absolute;
+        top:   0;
+        right: 0;
+        vertical-align: top;
+        padding: 0.3em 0.75em;
+        border-radius: 0 0 0 4px;
+    }
+}

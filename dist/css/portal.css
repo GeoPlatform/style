@@ -5635,8 +5635,10 @@ body {
 }
 .p-landing-page .o-featured .o-featured__side {
   width: 100%;
-  padding: 1em 0;
-  border-top: 1px solid #ddd;
+  padding: 0 2em 1em;
+  text-align: center;
+  border-top: none;
+  border-bottom: 1px solid #f6f6f6;
 }
 .p-landing-page .o-featured .o-featured__primary {
   width: 100%;
@@ -5791,7 +5793,6 @@ body {
   }
   .p-landing-page .o-featured .o-featured__side {
     width: 100%;
-    padding: 2em;
     border-left: none;
   }
   .p-landing-page .o-featured .o-featured__tertiary {
@@ -5812,6 +5813,7 @@ body {
     ======================================== */
 .p-landing-page__onboarding {
   padding: 2em 2em;
+  margin: 1em 0 2em;
   background: #3176a7;
   box-shadow: 0 4px 3px rgba(0, 0, 0, 0.25);
   color: #fff;

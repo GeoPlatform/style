@@ -222,6 +222,8 @@
             */
             /* with grid */
             grid-area: primary;
+            -ms-grid-row: 1;    //autoprefixer not setting these
+            -ms-grid-column: 1; //...
         }
         .o-featured__secondary {
             display: flex;
@@ -233,6 +235,9 @@
 
             /* with grid */
             grid-area: secondary;
+            -ms-grid-row: 3;    //autoprefixer not setting these
+            -ms-grid-column: 1; //...
+            -ms-grid-column-span: 3;//...
 
 
             .m-tile {
@@ -265,6 +270,8 @@
             */
             /* with grid */
             grid-area: map;
+            -ms-grid-row: 1;    //autoprefixer not setting these
+            -ms-grid-column: 3; //...
             width: 100%;
             height: calc( (100vw/2 - 3%) / 1.77); // 16x9
         }

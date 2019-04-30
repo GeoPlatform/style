@@ -243,7 +243,7 @@ button.btn {
         background:     transparent;
         transition:     background .2s ease;
 
-        & > .glyphicon {
+        & > .glyphicon, & > .fas, & > .far, & > .gpicons {
             .t-fg--gray-md;
             padding:            @sz-sm;
             border-radius:      @sz-xlg;
@@ -258,7 +258,7 @@ button.btn {
         background-color:   lighten(@color-gray-xlt, 5%);
         text-decoration:    none;
 
-        & > .glyphicon, & > .fa, & > .far, & > .fas {
+        & > .glyphicon, & > .fa, & > .far, & > .fas, & > .gpicons {
             background-color: @color-accent;
         }
     }
@@ -268,7 +268,7 @@ button.btn {
         padding: 0 @sz-xlg;
 
         .media-heading { font-weight: 700; }
-        .glyphicon, .fa, .fas, .far { font-size: 6em; }
+        .glyphicon, .fa, .fas, .far, & > .gpicons { font-size: 6em; }
     }
 
 }
@@ -278,7 +278,8 @@ header .pull-right .btn-account > .btn,
     & > .glyphicon,
     & > .fa,
     & > .far,
-    & > .fas {
+    & > .fas,
+    & > .gpicons {
         vertical-align: top;
         font-size: 0.75em;
     }

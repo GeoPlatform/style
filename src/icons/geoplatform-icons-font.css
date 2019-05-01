@@ -67,7 +67,7 @@
 .icon-page:before { content: '\e809'; } /* '' */
 .icon-post:before { content: '\e80a'; } /* '' */
 .icon-service:before { content: '\e80b'; } /* '' */
-.icon-vcard:before, .icon-contact:before { content: '\e80c'; } /* '' */
+.icon-vcard:before, .icon-contact:before, .icon-person:before { content: '\e80c'; } /* '' */
 .icon-attach:before, .icon-attachment:before, .icon-media:before { content: '\e80d'; } /* '' */
 .icon-application:before { content: '\e80e'; } /* '' */
 .icon-rights:before, .icon-rightsstatement:before { content: '\e80f'; } /* '' */
@@ -85,9 +85,9 @@
 .icon-concept.is-themed       { color: #ddd; }
 .icon-conceptscheme.is-themed { color: #bbb; }
 .icon-organization.is-themed  { color: #bbb; }
-.icon-vcard.is-themed, .icon-contact.is-themed    { color: #bbb; }
+.icon-vcard.is-themed, .icon-contact.is-themed, , .icon-person.is-themed  { color: #bbb; }
 .icon-page.is-themed, .icon-post.is-themed        { color: #bbb; }
-.icon-attach.is-themed, .icon-attachment.is-themed, .icon-media.is-themed  { color: #bbb; }
+.icon-attach.is-themed, .icon-attachment.is-themed, .icon-media.is-themed { color: #bbb; }
 .icon-website.is-themed       { color: #bbb; }
 .icon-application.is-themed   { color: #bbb; }
 .icon-rights.is-themed, .icon-rightsstatement.is-themed { color: #bbb; }

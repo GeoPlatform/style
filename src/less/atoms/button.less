@@ -245,10 +245,8 @@ button.btn {
 
         & > .glyphicon, & > .fas, & > .far, & > .gpicons {
             .t-fg--gray-md;
-            padding:            @sz-sm;
-            border-radius:      @sz-xlg;
-            .t-fg--white;
-            vertical-align: bottom;
+            padding: 0.25em;
+            vertical-align: baseline;
             transition:     background .3s ease;
         }
 
@@ -257,10 +255,6 @@ button.btn {
     &:hover > .btn {
         background-color:   lighten(@color-gray-xlt, 5%);
         text-decoration:    none;
-
-        & > .glyphicon, & > .fa, & > .far, & > .fas, & > .gpicons {
-            background-color: @color-accent;
-        }
     }
 
     .account-details {

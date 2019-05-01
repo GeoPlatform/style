@@ -2258,22 +2258,13 @@ header .pull-right .btn-account {
 .btn-account > button > .gpicons,
 .btn-account > .btn > .gpicons {
   color: #747474;
-  padding: 0.75em;
-  border-radius: 1.5em;
-  color: #fff;
-  vertical-align: bottom;
+  padding: 0.25em;
+  vertical-align: baseline;
   transition: background 0.3s ease;
 }
 .btn-account:hover > .btn {
   background-color: #eaeaea;
   text-decoration: none;
-}
-.btn-account:hover > .btn > .glyphicon,
-.btn-account:hover > .btn > .fa,
-.btn-account:hover > .btn > .far,
-.btn-account:hover > .btn > .fas,
-.btn-account:hover > .btn > .gpicons {
-  background-color: #283;
 }
 .btn-account .account-details {
   color: #747474;

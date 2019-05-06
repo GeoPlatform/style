@@ -509,6 +509,10 @@ h5 {
 h6 {
   font-size: 0.75em;
 }
+/* ng common */
+.p-app .gpLoginCover {
+  position: absolute;
+}
 /* -------- ANCHORS ------------------ */
 a:not(.btn),
 a:visited:not(.btn) {
@@ -2321,7 +2325,6 @@ header .btn-account > .btn > .gpicons,
 header .btn-account > button > .gpicons,
 .header__menu li > .btn-group.btn-account > .btn > .gpicons {
   vertical-align: top;
-  font-size: 0.75em;
   background-color: transparent;
 }
 .btn-account .dropdown-menu .media-object .gpicons {

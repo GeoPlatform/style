@@ -3,6 +3,10 @@ article, .m-article {
     margin-bottom: 2em;
     padding-bottom: 2em;
     border-bottom: 1px solid #f5f5f5;
+
+    /* reduce extra padding on nested articles */
+    .m-article:last-child { padding-bottom: 0; }
+
 }
 article:last-child, .m-article:last-child {
     margin-bottom: 0;

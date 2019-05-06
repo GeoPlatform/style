@@ -583,6 +583,31 @@ ul.nav.nav-tabs > li.active {
   background-color: #007fa4;
   border-color: #007fa4;
 }
+/* Bootstrap 4 list group overrides */
+a.list-group-item.active,
+a.list-group-item.active:visited {
+  color: #fff;
+}
+/* bootstrap 4 doesn't bold labels */
+.form-group label {
+  font-weight: 500;
+  font-size: 1.125em;
+}
+/* ui bootstrap typeahead dropdown wrapping of long values */
+.uib-typeahead-match .u-break--all {
+  white-space: pre-wrap;
+}
+/* ui-bootstrap for bs4 overrides for datepicker button colors */
+.uib-day button.btn-secondary:not(:disabled) {
+  background-color: #fff;
+  color: #333;
+}
+.uib-day button.btn-secondary:not(:disabled).active,
+.uib-day button.btn-secondary:not(:disabled).active:focus {
+  background-color: #ddd;
+  border-color: blue;
+  box-shadow: none;
+}
 .d-flex,
 .l-flex-container {
   display: flex;
@@ -1707,6 +1732,9 @@ h6.u-mg--xxlg {
 .bordered-bottom-thick {
   border-bottom-width: 3px;
 }
+.border--none {
+  border: none!important;
+}
 .is-hidden {
   display: none;
 }
@@ -2242,7 +2270,7 @@ header .pull-right .btn-account {
 .btn-account > button,
 .btn-account > .btn {
   color: #747474;
-  padding: 1.5em 1.25em;
+  padding: 0.375em 0.75em;
   border: none;
   text-decoration: none;
   font-size: inherit;
@@ -2280,18 +2308,28 @@ header .pull-right .btn-account {
 .btn-account .account-details > .gpicons {
   font-size: 6em;
 }
-header .pull-right .btn-account > .btn > .glyphicon,
+header .btn-account > .btn > .glyphicon,
+header .btn-account > button > .glyphicon,
 .header__menu li > .btn-group.btn-account > .btn > .glyphicon,
-header .pull-right .btn-account > .btn > .fa,
+header .btn-account > .btn > .fa,
+header .btn-account > button > .fa,
 .header__menu li > .btn-group.btn-account > .btn > .fa,
-header .pull-right .btn-account > .btn > .far,
+header .btn-account > .btn > .far,
+header .btn-account > button > .far,
 .header__menu li > .btn-group.btn-account > .btn > .far,
-header .pull-right .btn-account > .btn > .fas,
+header .btn-account > .btn > .fas,
+header .btn-account > button > .fas,
 .header__menu li > .btn-group.btn-account > .btn > .fas,
-header .pull-right .btn-account > .btn > .gpicons,
+header .btn-account > .btn > .gpicons,
+header .btn-account > button > .gpicons,
 .header__menu li > .btn-group.btn-account > .btn > .gpicons {
   vertical-align: top;
   font-size: 0.75em;
+  background-color: transparent;
+}
+.btn-account .dropdown-menu .media-object .gpicons {
+  font-size: 4em;
+  margin-right: 0.25em;
 }
 /*  ---------------------------
     Buttons that don't show backgrounds
@@ -2577,7 +2615,8 @@ body .input-group-lg > .input-group-btn > .btn {
   right: 0.75em;
 }
 .input-group-slick > input.form-control {
-  height: 2.25em;
+  height: 2.4em;
+  /* bootstrap 4 tweak to keep input same height as prepend/append */
   padding-left: 2.5em;
   padding-right: 2.5em;
 }
@@ -2604,6 +2643,10 @@ body .input-group-lg > .input-group-btn > .btn {
 \* ---------------------------------- */
 .input-group .input-group-slick {
   display: table-cell;
+  flex: 1 1 auto;
+  /* update for bootstrap 4 when input-group-slick within an input-group */
+  width: 1%;
+  /*  ----  */
 }
 .input-group .input-group-slick > .glyphicon,
 .input-group .input-group-slick > .fa,
@@ -2747,6 +2790,30 @@ body .input-group-lg > .input-group-btn > .btn {
 .a-badge--wild.a-badge--sm {
   font-size: 0.875em;
 }
+.a-badge--gray-lt {
+  display: inline-block;
+  font-size: 1em;
+  border-radius: 0.75em;
+  padding: 0.25em 0.75em;
+  margin: 0 0.25em 0.5em 0;
+  color: #747474;
+  background-color: rgba(221, 221, 221, 0.9);
+}
+.a-badge--gray-lt.a-badge--sm {
+  font-size: 0.875em;
+}
+.a-badge--blue-lt {
+  display: inline-block;
+  font-size: 1em;
+  border-radius: 0.75em;
+  padding: 0.25em 0.75em;
+  margin: 0 0.25em 0.5em 0;
+  color: #2079c5;
+  background-color: rgba(91, 155, 202, 0.25);
+}
+.a-badge--blue-lt.a-badge--sm {
+  font-size: 0.875em;
+}
 .a-icon {
   height: 1em;
   max-width: 1em;
@@ -2838,14 +2905,18 @@ article,
 article:last-child,
 .m-article:last-child {
   margin-bottom: 0;
-  /* padding-bottom: 0; */
   border-bottom: none;
+}
+.m-article:only-child {
+  margin-bottom: 2em;
+  border-bottom: 1px solid #f5f5f5;
 }
 .article__heading,
 .m-article__heading {
   font-size: 1.25em;
   font-weight: 700;
   text-transform: uppercase;
+  margin-bottom: 0.5em;
 }
 .article__heading--front-page,
 .m-article__heading--front-page {
@@ -4952,10 +5023,18 @@ nav.a-nav a:last-child {
 .o-query-filter.m-card .m-card__label,
 .o-query-filter.m-card--simple .m-card__label,
 .o-query-filter.gp-ui-card .m-card__label,
+.o-query-filter.card .m-article__heading,
+.o-query-filter.m-card .m-article__heading,
+.o-query-filter.m-card--simple .m-article__heading,
+.o-query-filter.gp-ui-card .m-article__heading,
 .o-query-filter.card .text--primary,
 .o-query-filter.m-card .text--primary,
 .o-query-filter.m-card--simple .text--primary,
-.o-query-filter.gp-ui-card .text--primary {
+.o-query-filter.gp-ui-card .text--primary,
+.o-query-filter.card .a-heading,
+.o-query-filter.m-card .a-heading,
+.o-query-filter.m-card--simple .a-heading,
+.o-query-filter.gp-ui-card .a-heading {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -4978,10 +5057,18 @@ nav.a-nav a:last-child {
 .o-query-filter.m-card .m-card__label .btn-link,
 .o-query-filter.m-card--simple .m-card__label .btn-link,
 .o-query-filter.gp-ui-card .m-card__label .btn-link,
+.o-query-filter.card .m-article__heading .btn-link,
+.o-query-filter.m-card .m-article__heading .btn-link,
+.o-query-filter.m-card--simple .m-article__heading .btn-link,
+.o-query-filter.gp-ui-card .m-article__heading .btn-link,
 .o-query-filter.card .text--primary .btn-link,
 .o-query-filter.m-card .text--primary .btn-link,
 .o-query-filter.m-card--simple .text--primary .btn-link,
-.o-query-filter.gp-ui-card .text--primary .btn-link {
+.o-query-filter.gp-ui-card .text--primary .btn-link,
+.o-query-filter.card .a-heading .btn-link,
+.o-query-filter.m-card .a-heading .btn-link,
+.o-query-filter.m-card--simple .a-heading .btn-link,
+.o-query-filter.gp-ui-card .a-heading .btn-link {
   color: #595959;
 }
 .o-query-filter .o-facets > .m-facet {

@@ -82,3 +82,38 @@ ul.nav.nav-tabs > li.active { background: transparent; }
     background-color: @color-info;
     border-color: @color-info;
 }
+
+
+
+
+
+
+/* Bootstrap 4 list group overrides */
+a.list-group-item.active,
+a.list-group-item.active:visited {
+    color: #fff;
+}
+
+/* bootstrap 4 doesn't bold labels */
+.form-group label {
+    font-weight: 500;
+    font-size: 1.125em;
+}
+
+
+
+/* ui bootstrap typeahead dropdown wrapping of long values */
+.uib-typeahead-match .u-break--all { white-space: pre-wrap; }
+
+/* ui-bootstrap for bs4 overrides for datepicker button colors */
+.uib-day button.btn-secondary:not(:disabled) {
+    background-color: #fff;
+    color: #333;
+
+    &.active,
+    &.active:focus {
+        background-color: #ddd;
+        border-color: blue;
+        box-shadow: none;
+    }
+}

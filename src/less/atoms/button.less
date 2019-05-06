@@ -236,7 +236,7 @@ button.btn {
 
     & > button, & > .btn {
         .t-fg--gray-md;
-        padding:        @sz-xlg @sz-lg;
+        padding:        0.375em 0.75em;
         border:         none;
         text-decoration: none;
         font-size:      inherit;
@@ -266,7 +266,8 @@ button.btn {
     }
 
 }
-header .pull-right .btn-account > .btn,
+header .btn-account > .btn,
+header .btn-account > button,
 .header__menu li > .btn-group.btn-account > .btn {
 
     & > .glyphicon,
@@ -276,8 +277,14 @@ header .pull-right .btn-account > .btn,
     & > .gpicons {
         vertical-align: top;
         font-size: 0.75em;
+        background-color: transparent;
     }
 }
+.btn-account .dropdown-menu .media-object .gpicons {
+    font-size:    4em;
+    margin-right: 0.25em;
+}
+
 
 
 

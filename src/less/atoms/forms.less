@@ -125,7 +125,8 @@ body .input-group-lg > .input-group-btn > .btn {
 
     & > input.form-control {
 
-        height:         2.25em;    //36px
+        height:         2.4em; /* bootstrap 4 tweak to keep input same height as prepend/append */
+
         padding-left:   2.5em;
         padding-right:  2.5em;
 
@@ -166,6 +167,8 @@ body .input-group-lg > .input-group-btn > .btn {
 
 .input-group .input-group-slick {
     display: table-cell;
+    flex: 1 1 auto; /* update for bootstrap 4 when input-group-slick within an input-group */
+    width: 1%;      /*  ----  */
 
     //ensure icons always render above the form control, even when focused
     & > .glyphicon,

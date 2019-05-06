@@ -6,13 +6,17 @@ article, .m-article {
 }
 article:last-child, .m-article:last-child {
     margin-bottom: 0;
-    /* padding-bottom: 0; */
     border-bottom: none;
+}
+.m-article:only-child {
+    margin-bottom: 2em;
+    border-bottom: 1px solid #f5f5f5;
 }
 .article__heading, .m-article__heading {
     font-size:       1.25em;
     font-weight:     700;
     text-transform:  uppercase;
+    margin-bottom:   0.5em;
 }
 .article__heading--front-page,
 .m-article__heading--front-page {
@@ -70,7 +74,7 @@ article img.m-article__icon.u-right,
     }
 
     &.is-righted {
-        justify-content: flex-end;    
+        justify-content: flex-end;
     }
 }
 

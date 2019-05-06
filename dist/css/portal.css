@@ -3438,7 +3438,7 @@ article img.m-article__icon.u-right,
 .m-facet.active {
   background: rgba(32, 121, 197, 0.25);
   border-left-color: #2079c5;
-  color: #fff;
+  color: #333;
 }
 .m-facet .badge {
   float: right;
@@ -5004,7 +5004,8 @@ nav.a-nav a:last-child {
 .o-query-filter.card,
 .o-query-filter.m-card,
 .o-query-filter.m-card--simple,
-.o-query-filter.gp-ui-card {
+.o-query-filter.gp-ui-card,
+.o-query-filter.m-article {
   background: transparent;
   box-shadow: none;
   border: none;
@@ -5015,26 +5016,32 @@ nav.a-nav a:last-child {
 .o-query-filter.m-card .card-title,
 .o-query-filter.m-card--simple .card-title,
 .o-query-filter.gp-ui-card .card-title,
+.o-query-filter.m-article .card-title,
 .o-query-filter.card .m-card__title,
 .o-query-filter.m-card .m-card__title,
 .o-query-filter.m-card--simple .m-card__title,
 .o-query-filter.gp-ui-card .m-card__title,
+.o-query-filter.m-article .m-card__title,
 .o-query-filter.card .m-card__label,
 .o-query-filter.m-card .m-card__label,
 .o-query-filter.m-card--simple .m-card__label,
 .o-query-filter.gp-ui-card .m-card__label,
+.o-query-filter.m-article .m-card__label,
 .o-query-filter.card .m-article__heading,
 .o-query-filter.m-card .m-article__heading,
 .o-query-filter.m-card--simple .m-article__heading,
 .o-query-filter.gp-ui-card .m-article__heading,
+.o-query-filter.m-article .m-article__heading,
 .o-query-filter.card .text--primary,
 .o-query-filter.m-card .text--primary,
 .o-query-filter.m-card--simple .text--primary,
 .o-query-filter.gp-ui-card .text--primary,
+.o-query-filter.m-article .text--primary,
 .o-query-filter.card .a-heading,
 .o-query-filter.m-card .a-heading,
 .o-query-filter.m-card--simple .a-heading,
-.o-query-filter.gp-ui-card .a-heading {
+.o-query-filter.gp-ui-card .a-heading,
+.o-query-filter.m-article .a-heading {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -5049,26 +5056,32 @@ nav.a-nav a:last-child {
 .o-query-filter.m-card .card-title .btn-link,
 .o-query-filter.m-card--simple .card-title .btn-link,
 .o-query-filter.gp-ui-card .card-title .btn-link,
+.o-query-filter.m-article .card-title .btn-link,
 .o-query-filter.card .m-card__title .btn-link,
 .o-query-filter.m-card .m-card__title .btn-link,
 .o-query-filter.m-card--simple .m-card__title .btn-link,
 .o-query-filter.gp-ui-card .m-card__title .btn-link,
+.o-query-filter.m-article .m-card__title .btn-link,
 .o-query-filter.card .m-card__label .btn-link,
 .o-query-filter.m-card .m-card__label .btn-link,
 .o-query-filter.m-card--simple .m-card__label .btn-link,
 .o-query-filter.gp-ui-card .m-card__label .btn-link,
+.o-query-filter.m-article .m-card__label .btn-link,
 .o-query-filter.card .m-article__heading .btn-link,
 .o-query-filter.m-card .m-article__heading .btn-link,
 .o-query-filter.m-card--simple .m-article__heading .btn-link,
 .o-query-filter.gp-ui-card .m-article__heading .btn-link,
+.o-query-filter.m-article .m-article__heading .btn-link,
 .o-query-filter.card .text--primary .btn-link,
 .o-query-filter.m-card .text--primary .btn-link,
 .o-query-filter.m-card--simple .text--primary .btn-link,
 .o-query-filter.gp-ui-card .text--primary .btn-link,
+.o-query-filter.m-article .text--primary .btn-link,
 .o-query-filter.card .a-heading .btn-link,
 .o-query-filter.m-card .a-heading .btn-link,
 .o-query-filter.m-card--simple .a-heading .btn-link,
-.o-query-filter.gp-ui-card .a-heading .btn-link {
+.o-query-filter.gp-ui-card .a-heading .btn-link,
+.o-query-filter.m-article .a-heading .btn-link {
   color: #595959;
 }
 .o-query-filter .o-facets > .m-facet {
@@ -5078,14 +5091,6 @@ nav.a-nav a:last-child {
   background-color: transparent;
   border-color: transparent;
   color: #747474;
-}
-.o-filter__recommended-terms .o-facets > .m-facet.active {
-  background: transparent;
-  color: #333;
-}
-.o-filter__recommended-terms .o-facets > .m-facet.active {
-  background: transparent;
-  color: #333;
 }
 body {
   height: 100%;

@@ -2957,7 +2957,7 @@ article:last-child,
   padding-top: 1em;
 }
 article img,
-.m-article img {
+.m-article img:not(.leaflet-tile) {
   max-width: 100%;
 }
 article img.article__icon,

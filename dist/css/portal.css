@@ -5168,12 +5168,12 @@ body {
 }
 @font-face {
   font-family: 'geoplatform-icons-font';
-  src: url('../font/geoplatform-icons-font.eot?86030939');
-  src: url('../font/geoplatform-icons-font.eot?86030939#iefix') format('embedded-opentype'),
-       url('../font/geoplatform-icons-font.woff2?86030939') format('woff2'),
-       url('../font/geoplatform-icons-font.woff?86030939') format('woff'),
-       url('../font/geoplatform-icons-font.ttf?86030939') format('truetype'),
-       url('../font/geoplatform-icons-font.svg?86030939#geoplatform-icons-font') format('svg');
+  src: url('../font/geoplatform-icons-font.eot');
+  src: url('../font/geoplatform-icons-font.eot#iefix') format('embedded-opentype'),
+       url('../font/geoplatform-icons-font.woff2') format('woff2'),
+       url('../font/geoplatform-icons-font.woff') format('woff'),
+       url('../font/geoplatform-icons-font.ttf') format('truetype'),
+       url('../font/geoplatform-icons-font.svg#geoplatform-icons-font') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -5240,6 +5240,7 @@ body {
 .icon-application:before { content: '\e80e'; } /* '' */
 .icon-rights:before, .icon-rightsstatement:before { content: '\e80f'; } /* '' */
 .icon-topic:before { content: '\f298'; } /* '' */
+.icon-imageproduct:before { content: '\f1c5'; } /* '' */
 
 
 
@@ -5260,6 +5261,7 @@ body {
 .icon-application.is-themed   { color: #bbb; }
 .icon-rights.is-themed, .icon-rightsstatement.is-themed { color: #bbb; }
 .icon-topic.is-themed         { color: #bbb; }
+.icon-imageproduct.is-themes { color: #bbb; }
 
 .l-body__side-column article {
   border-radius: 4px;

@@ -5166,6 +5166,12 @@ body {
     padding: 3em 8em 3em 3em;
   }
 }
+
+/*
+ * CSS and Font files generated using Fontello (http://fontello.com/)
+ */
+
+
 @font-face {
   font-family: 'geoplatform-icons-font';
   src: url('../font/geoplatform-icons-font.eot');
@@ -5240,7 +5246,7 @@ body {
 .icon-application:before { content: '\e80e'; } /* '' */
 .icon-rights:before, .icon-rightsstatement:before { content: '\e80f'; } /* '' */
 .icon-topic:before { content: '\f298'; } /* '' */
-.icon-imageproduct:before { content: '\f1c5'; } /* '' */
+.icon-product:before, .icon-imageproduct:before { content: '\f1c5'; } /* '' */
 
 
 
@@ -5261,7 +5267,7 @@ body {
 .icon-application.is-themed   { color: #bbb; }
 .icon-rights.is-themed, .icon-rightsstatement.is-themed { color: #bbb; }
 .icon-topic.is-themed         { color: #bbb; }
-.icon-imageproduct.is-themes { color: #bbb; }
+.icon-product.is-themed, .icon-imageproduct.is-themed { color: #bbb; }
 
 .l-body__side-column article {
   border-radius: 4px;

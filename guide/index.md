@@ -87,14 +87,14 @@ While it’s also possible to use a class to uniquely identify an element for st
 ## Topics
 ...
 
-1. [Branding|branding.md]
-1. [Typography|typography.md]
-1. [Iconography|iconography.md]
-1. [Colors|color.md]
-1. [Sizing & Spacing|sizing.md]
-1. [Buttons|button.md]
+1. [Branding](branding.md)
+1. [Typography](typography.md)
+1. [Iconography](iconography.md)
+1. [Colors](color.md)
+1. [Sizing & Spacing](sizing.md)
+1. [Buttons](button.md)
 1. Messages
-1. [Articles|article.md]
+1. [Articles](article.md)
 1. Cards
 1. Tiles
 1. Search Results

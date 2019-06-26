@@ -2,97 +2,80 @@
 
 This repo contains platform-wide style artifacts.
 
-### Overview
+### Requirements
 
-**Note:** Requires Twitter Bootstrap 3.x (and jQuery).
+This plugin installs locally the following dependencies in order to compile:
 
++ Bootstrap 4.x - needed for runtime usage
++ Gulp 4.x - needed for building
++ LessCSS 3.9.0 - needed for parsing `.less` stylesheets
+
+### Artifacts
 
 + `dist/css/platform.css` - the compiled platform style sheet
++ `dist/css/platform.min.css` - the minified platform style sheet
++ `dist/css/platform.less` - the compiled platform style sheet in Less
++ `dist/css/portal.css` - the compiled style sheet usable by GeoPlatform portal interfaces
++ `dist/css/portal.min.css` - the minified style sheet usable by GeoPlatform portal interfaces
 + `dist/js/geoplatform.style.js` - the compiled javascript helpers for the style sheet
 + `dist/js/geoplatform.style.min.js` - the compiled, minified javascript helpers for the style sheet
-+ `static/img` - static image files for use with the style sheet
-+ `static/examples` - examples of various style components
++ `src/icons` - stylesheets for platform-specific icons
++ `src/font` - font files for platform-specific icons
++ `guide` - markdown documentation of how to best comply to GeoPlatform styling requirements
 
 
-### Compiling
-Run `grunt` or `grunt default` to compile the source LESS stylesheets.
+### Contributing
+To contribute to this repository's source code, please follow standard GitHub procedures as well as
+the steps detailed below.  
 
-#### Committing
-**Note:** Be sure to run `grunt` *before* committing changes to ensure the pre-compiled `dist/css/platform.css` and `dist/js/geoplatform.style.js` files are up to date with your changes.
+#### Build Locally
+Run `gulp` to compile the stylesheets and Javascript artifacts mentioned above. This includes
+running JS Hint on the source to catch any errors. If issues are found, you must resolve them
+before continuing.
 
-1. Make changes to LESS files under src/less
-2. Run `grunt`
-3. Run `git status` and make sure to include any new source files that should be committed using `git add FILENAME`
-4. Run `git commit -a -m "<YOUR COMMIT MESSAGE>"
-5. Run `git pull origin master` to fetch remote changes and merge conflicts (be sure to run `grunt` again after resolving conflicts but before merging conflict resolutions)
-6. Run `git push origin master` to push your committed changes
+#### Pushing Changes to GitHub
 
-#### Pull from CDN
+**Note:** Do not proceed with this step until you have built locally and verified that no errors were encountered.
+
+If you are a contributor with editing access, follow these steps:
+
+1. Run `git checkout -b <branchName>` to ensure you are committing to a new branch (recommended that the branch is made off of "develop")
+1. Make changes and build locally (as described previously)
+1. Run `git status` and make sure any new files are being included in the commit
+1. Run `git commit -a -m "<YOUR COMMIT MESSAGE>"`
+1. Run `git push origin <branchName` to push your committed changes
+
+Your changes will be reviewed and merged if appropriate soon after.
+
+If you are a contributor with only read access, follow these steps:
+
+1. Create a pull request from the `develop` branch
+1. Make changes and build locally as described previously
+1. Run `git status` and make sure any new files are being included in the commit
+1. Submit the pull request
+
+Your changes will be reviewed and merged if appropriate soon after.
+
+
+### Using in an Application/Website
 
 Resources in this library can be pulled directly from the front end via a CDN.
 
 Example:
 ```html
-<link href="http://dyk46gk69472z.cloudfront.net/gp.style/1.8.1/css/platform.css"></link>
-<script src="http://dyk46gk69472z.cloudfront.net/gp.style/1.8.1/js/geoplatform.style.js"></script>
+<link href="http://dyk46gk69472z.cloudfront.net/geoplatform.style/_VERSION_/css/platform.min.css"></link>
+<script src="http://dyk46gk69472z.cloudfront.net/geoplatform.style/_VERSION_/js/geoplatform.style.js"></script>
+<script src="http://dyk46gk69472z.cloudfront.net/geoplatform.style/_VERSION_/src/font/geoplatform-icons-font.ttf"></script>
+<script src="http://dyk46gk69472z.cloudfront.net/geoplatform.style/_VERSION_/src/icons/geoplatform-icons-font.css"></script>
 ```
 
 
-#### As a Bower Dependency
+#### As an NPM Dependency
 
-The recommended way to use this project in another project is by adding it as a Bower dependency. Since this project is a private repository, this requires a few initial steps to make sure Bower can access the repository:
+The recommended way to use this project in another project is by adding it as an NPM dependency. However, as this
+library has not yet been published to NPM, it must be added as follows:
 
-1. Create a personal access token in the GitHub account that you use to access GeoPlatform projects.
-
-2. Create a `.netrc` file in your user's home directory which contains your GitHub username and the token you created in step 1. 
-
-```
-#.netrc file contents
-machine github.com
-  login GitHub_username
-  password token_value
-```
-
-3. Update your `.gitconfig` to use HTTPS instead of git:// when accessing repositories. Run the following command from your prompt.
-
-`git config --global url."https://github".insteadOf git://github`
-
-**Important:** copy/paste the command into your terminal to ensure it's entered accurately. There should be no spaces around either period in the command and should be one space after "insteadOf".
-
-4. Update the `bower.json` file in your downstream project to reference the style project.
-
-```json
-"dependencies" : {
-    
-    /* other dependencies...*/
-
-    "gp.style": "GeoPlatform/style#<version number>"
-},
-```
+1. Add `"geoplatform.style": "GeoPlatform/style#<version number>"` as a new dependency or devDependency of your application
+1. Run `npm install`
 
 Note: _version number_ should be that of the current release version of this project.  It is advised to __never__ reference any non-release tag or branch, such as "develop" or "master", when adding this project as a dependency in another.
-
-
-5. Ensure Bower is configured to run install before NPM by adding it as a preinstall step inside `package.json` in your project's home dir:
-
-```json
-"scripts": {
-    
-    "preinstall": "bower install",
-
-    /* other scripts */        
-}
-```
-
-6. Run `npm install` (which will invoke `bower install`).  Verify the style project was checked out into the `bower_components/gp.style` directory (or wherever you configured it).
-
-
-**Note:** The style project will be checked out into the configured bower component directory whenever you run `npm install` (if bower is set to install via npm) or `bower install`, but you may need to update the dependency if this project has been updated since you installed it. Do this by running `bower update gp.style`.
-
-
-
-#### As a Manual Dependency
-
-**Note:** The recommended approach is to use Bower (see above).  
-
-Clone the project and copy the `dist/css/platform.css` into your project.  It's not advisable to copy the LESS src files into your project as there are many of them and doing so requires a significant amount of effort to keep the copied files up to date with the repository.

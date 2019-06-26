@@ -236,19 +236,17 @@ button.btn {
 
     & > button, & > .btn {
         .t-fg--gray-md;
-        padding:        @sz-xlg @sz-lg;
+        padding:        0.375em 0.75em;
         border:         none;
         text-decoration: none;
         font-size:      inherit;
         background:     transparent;
         transition:     background .2s ease;
 
-        & > .glyphicon {
+        & > .glyphicon, & > .fas, & > .far, & > .gpicons {
             .t-fg--gray-md;
-            padding:            @sz-sm;
-            border-radius:      @sz-xlg;
-            .t-fg--white;
-            vertical-align: bottom;
+            padding: 0.25em;
+            vertical-align: baseline;
             transition:     background .3s ease;
         }
 
@@ -257,10 +255,6 @@ button.btn {
     &:hover > .btn {
         background-color:   lighten(@color-gray-xlt, 5%);
         text-decoration:    none;
-
-        & > .glyphicon, & > .fa, & > .far, & > .fas {
-            background-color: @color-accent;
-        }
     }
 
     .account-details {
@@ -268,21 +262,28 @@ button.btn {
         padding: 0 @sz-xlg;
 
         .media-heading { font-weight: 700; }
-        .glyphicon, .fa, .fas, .far { font-size: 6em; }
+        .glyphicon, .fa, .fas, .far, & > .gpicons { font-size: 6em; }
     }
 
 }
-header .pull-right .btn-account > .btn,
+header .btn-account > .btn,
+header .btn-account > button,
 .header__menu li > .btn-group.btn-account > .btn {
 
     & > .glyphicon,
     & > .fa,
     & > .far,
-    & > .fas {
+    & > .fas,
+    & > .gpicons {
         vertical-align: top;
-        font-size: 0.75em;
+        background-color: transparent;
     }
 }
+.btn-account .dropdown-menu .media-object .gpicons {
+    font-size:    4em;
+    margin-right: 0.25em;
+}
+
 
 
 

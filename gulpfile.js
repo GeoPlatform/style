@@ -17,11 +17,11 @@ var pkg         = require('./package.json'),
 
 const autoprefix = new autoprefixer({
     browsers: [
-        "iOS >= 7",
+        "iOS >= 10",
         "Chrome >= 30",
+        "Firefox >= 40",
         "Explorer >= 11",
-        "last 2 Edge versions",
-        "Firefox >= 20"
+        "last 2 Edge versions"
     ]
 });
 

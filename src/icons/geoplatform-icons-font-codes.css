@@ -11,7 +11,9 @@
 .icon-page:before { content: '\e809'; } /* '' */
 .icon-post:before { content: '\e80a'; } /* '' */
 .icon-service:before { content: '\e80b'; } /* '' */
-.icon-vcard:before { content: '\e80c'; } /* '' */
-.icon-attachment:before { content: '\e80d'; } /* '' */
+.icon-vcard:before, .icon-contact:before, .icon-person:before  { content: '\e80c'; } /* '' */
+.icon-attach:before, .icon-attachment:before, .icon-media:before { content: '\e80d'; } /* '' */
 .icon-application:before { content: '\e80e'; } /* '' */
+.icon-rights:before, .icon-rightsstatement:before { content: '\e80f'; } /* '' */
 .icon-topic:before { content: '\f298'; } /* '' */
+.icon-product:before, .icon-imageproduct:before { content: '\f1c5'; } /* '' */

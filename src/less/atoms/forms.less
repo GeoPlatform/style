@@ -68,7 +68,8 @@ body .input-group-lg > .input-group-btn > .btn {
     &.input-group-slick--lg {
 
         & > .glyphicon,
-        & > .fa, & > .far, & > .fas { top: 0.875em; }
+        & > .fa, & > .far, & > .fas,
+        & > .gpicons { top: 0.875em; }
 
         & > .form-control {
             font-size: @sz-lg;
@@ -81,7 +82,8 @@ body .input-group-lg > .input-group-btn > .btn {
         font-size: @sz-sm;
 
         & > .glyphicon,
-        & > .fa, & > .far, & > .fas { top: 0.575em; }
+        & > .fa, & > .far, & > .fas,
+        & > .gpicons { top: 0.575em; }
 
         & > .form-control {
             height: 2.125em;
@@ -110,7 +112,8 @@ body .input-group-lg > .input-group-btn > .btn {
     }
 
     & > .glyphicon,
-    & > .fa, & > .far, & > .fas {
+    & > .fa, & > .far, & > .fas,
+    & > .gpicons {
         position: absolute;
         top: @sz-sm;
         color: lighten(@color-gray-md, 5%);
@@ -122,7 +125,8 @@ body .input-group-lg > .input-group-btn > .btn {
 
     & > input.form-control {
 
-        height:         2.25em;    //36px
+        height:         2.4em; /* bootstrap 4 tweak to keep input same height as prepend/append */
+
         padding-left:   2.5em;
         padding-right:  2.5em;
 
@@ -163,18 +167,21 @@ body .input-group-lg > .input-group-btn > .btn {
 
 .input-group .input-group-slick {
     display: table-cell;
+    flex: 1 1 auto; /* update for bootstrap 4 when input-group-slick within an input-group */
+    width: 1%;      /*  ----  */
 
     //ensure icons always render above the form control, even when focused
     & > .glyphicon,
-    & > .fa, & > .far, & > .fas { z-index: 3000;  }
+    & > .fa, & > .far, & > .fas,
+    & > .gpicons { z-index: 3000;  }
 
     .input-group-btn .btn { padding: 0.375em 0.75em; }
 }
 .input-group .input-group-slick {
     position: relative;
     z-index: 2;
-    float: left;
-    width: 100%;
+    // float: left;
+    // width: 100%;
     margin-bottom: 0;
 }
 .input-group .input-group-slick:first-child > .form-control {

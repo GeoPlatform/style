@@ -20,7 +20,8 @@
     &.card,
     &.m-card,
     &.m-card--simple,
-    &.gp-ui-card {
+    &.gp-ui-card,
+    &.m-article {
         background: transparent;
         box-shadow: none;
         border:     none;
@@ -30,7 +31,9 @@
         .card-title,
         .m-card__title,
         .m-card__label,
-        .text--primary {
+        .m-article__heading,
+        .text--primary,
+        .a-heading {
             display:         flex;
             justify-content: flex-start;
             align-items:     center;
@@ -58,19 +61,4 @@
         color:            @color-gray-md;
     }
 
-}
-
-
-
-//override selected value styles when expanded for specific filters
-.o-filter__recommended-terms .o-facets > .m-facet.active {
-    background: transparent;
-    color: @color-gray-dk;
-}
-
-
-//override selected value styles when expanded for specific filters
-.o-filter__recommended-terms .o-facets > .m-facet.active {
-    background: transparent;
-    color: @color-gray-dk;
 }

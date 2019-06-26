@@ -15,5 +15,5 @@ fi
 
 # Dist file in the core of the CDN version
 aws s3 sync dist/ s3://geoplatform-cdn/geoplatform.style/$1/dist
-# aws s3 sync static/ s3://geoplatform-cdn/geoplatform.style/$1/static
-# aws s3 sync src/ s3://geoplatform-cdn/geoplatform.style/$1/src
+aws s3 sync src/font/ s3://geoplatform-cdn/geoplatform.style/$1/src/font
+aws s3 sync src/icons/ s3://geoplatform-cdn/geoplatform.style/$1/src/icons

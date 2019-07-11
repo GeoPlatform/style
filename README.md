@@ -63,10 +63,10 @@ Resources in this library can be pulled directly from the front end via a CDN.
 
 Example:
 ```html
-<link href="http://dyk46gk69472z.cloudfront.net/geoplatform.style/_VERSION_/css/platform.min.css"></link>
-<script src="http://dyk46gk69472z.cloudfront.net/geoplatform.style/_VERSION_/js/geoplatform.style.js"></script>
-<script src="http://dyk46gk69472z.cloudfront.net/geoplatform.style/_VERSION_/src/font/geoplatform-icons-font.ttf"></script>
-<script src="http://dyk46gk69472z.cloudfront.net/geoplatform.style/_VERSION_/src/icons/geoplatform-icons-font.css"></script>
+<link href="https://s3.amazonaws.com/geoplatform-cdn/geoplatform.style/_VERSION_/css/platform.min.css"></link>
+<script src="https://s3.amazonaws.com/geoplatform-cdn/geoplatform.style/_VERSION_/js/geoplatform.style.js"></script>
+<script src="https://s3.amazonaws.com/geoplatform-cdn/geoplatform.style/_VERSION_/src/font/geoplatform-icons-font.ttf"></script>
+<script src="https://s3.amazonaws.com/geoplatform-cdn/geoplatform.style/_VERSION_/src/icons/geoplatform-icons-font.css"></script>
 ```
 
 
@@ -75,7 +75,7 @@ Example:
 The recommended way to use this project in another project is by adding it as an NPM dependency. However, as this
 library has not yet been published to NPM, it must be added as follows:
 
-1. Add `"geoplatform.style": "GeoPlatform/style#<version number>"` as a new dependency or devDependency of your application
+1. Add `"@geoplatform/style": "git+https://github.com/GeoPlatform/style.git#<version number>"` as a new dependency or devDependency of your application
 1. Run `npm install`
 
 Note: _version number_ should be that of the current release version of this project.  It is advised to __never__ reference any non-release tag or branch, such as "develop" or "master", when adding this project as a dependency in another.

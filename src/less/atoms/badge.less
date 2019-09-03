@@ -23,7 +23,7 @@
 }
 .a-badge--light {
     .a-badge;
-    background-color: @color-gray-xlt;
+    background-color: lighten(@color-gray-xlt,10%);
     color: @color-gray-md;
 }
 .a-badge--info {
@@ -51,10 +51,20 @@
     background-color: @color-wild;
     color: #fff;
 }
+.a-badge--gray-xlt {
+    .a-badge;
+    background-color: @color-gray-xlt;
+    color: @color-gray-md;
+}
 .a-badge--gray-lt {
     .a-badge;
     color:            @color-gray-md;
-    background-color: fadeOut(@color-gray-xlt,10%);
+    background-color: @color-gray-lt;
+}
+.a-badge--gray-md {
+    .a-badge;
+    color: #fff;
+    background-color: @color-gray-md;
 }
 
 .a-badge--blue-lt {

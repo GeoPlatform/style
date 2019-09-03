@@ -2725,7 +2725,7 @@ body .input-group-lg > .input-group-btn > .btn {
   border-radius: 0.75em;
   padding: 0.25em 0.75em;
   margin: 0 0.25em 0.5em 0;
-  background-color: #ddd;
+  background-color: #f7f7f7;
   color: #747474;
 }
 .a-badge--light.a-badge--sm {
@@ -2791,6 +2791,18 @@ body .input-group-lg > .input-group-btn > .btn {
 .a-badge--wild.a-badge--sm {
   font-size: 0.875em;
 }
+.a-badge--gray-xlt {
+  display: inline-block;
+  font-size: 1em;
+  border-radius: 0.75em;
+  padding: 0.25em 0.75em;
+  margin: 0 0.25em 0.5em 0;
+  background-color: #ddd;
+  color: #747474;
+}
+.a-badge--gray-xlt.a-badge--sm {
+  font-size: 0.875em;
+}
 .a-badge--gray-lt {
   display: inline-block;
   font-size: 1em;
@@ -2798,9 +2810,21 @@ body .input-group-lg > .input-group-btn > .btn {
   padding: 0.25em 0.75em;
   margin: 0 0.25em 0.5em 0;
   color: #747474;
-  background-color: rgba(221, 221, 221, 0.9);
+  background-color: #bbb;
 }
 .a-badge--gray-lt.a-badge--sm {
+  font-size: 0.875em;
+}
+.a-badge--gray-md {
+  display: inline-block;
+  font-size: 1em;
+  border-radius: 0.75em;
+  padding: 0.25em 0.75em;
+  margin: 0 0.25em 0.5em 0;
+  color: #fff;
+  background-color: #747474;
+}
+.a-badge--gray-md.a-badge--sm {
   font-size: 0.875em;
 }
 .a-badge--blue-lt {

@@ -4108,6 +4108,10 @@ a.m-tile,
   border-bottom-width: 0;
   border-left-width: 0;
 }
+.m-results-item .m-results-item__footer .m-results-item__stats .btn.btn-link,
+.m-results-item .m-results-item__footer .m-results-item__actions .btn.btn-link {
+  color: #006bdd;
+}
 .m-results-item .m-results-item__footer .m-results-item__stats > *:not(.btn) {
   border-right: 1px solid #efefef;
   padding: 0.33em 0.5em;

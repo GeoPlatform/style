@@ -449,10 +449,10 @@ a:not(.btn), a:not(.btn):visited   { color: @color-active; }
   color: #ddd;
 }
 .t-bg--pink {
-  background-color: #e25284;
+  background-color: #d00048;
 }
 .t-fg--pink {
-  color: #e25284;
+  color: #d00048;
 }
 .t-bg--blue-dk {
   background-color: #102A46;
@@ -2134,8 +2134,8 @@ a.btn.btn-wild.active {
 }
 .btn.btn-pink,
 a.btn.btn-pink {
-  background-color: #ce668a;
-  border-color: #c8537b;
+  background-color: #bb154e;
+  border-color: #a41245;
 }
 .btn.btn-pink:hover,
 a.btn.btn-pink:hover,
@@ -2143,8 +2143,8 @@ a.btn.btn-pink:hover,
 a.btn.btn-pink:focus,
 .btn.btn-pink.active,
 a.btn.btn-pink.active {
-  background-color: #c8537b;
-  border-color: #c1406d;
+  background-color: #a41245;
+  border-color: #8d103b;
 }
 .btn.btn-white,
 a.btn.btn-white {
@@ -2229,11 +2229,11 @@ a.btn.btn-white.active {
 }
 .btn.btn-pink-outline {
   background-color: transparent;
-  border-color: #e25284;
-  color: #e25284;
+  border-color: #d00048;
+  color: #d00048;
 }
 .btn.btn-pink-outline:hover {
-  background-color: #e25284;
+  background-color: #d00048;
   color: #fff;
 }
 .btn.btn-white-outline {
@@ -2723,7 +2723,7 @@ body .input-group-lg > .input-group-btn > .btn {
   padding: 0.25em 0.75em;
   margin: 0 0.25em 0.5em 0;
   background-color: #f7f7f7;
-  color: #747474;
+  color: #444 !important;
 }
 .a-badge--light.a-badge--sm {
   font-size: 0.875em;
@@ -2970,10 +2970,6 @@ article:last-child,
   font-size: 1.125em;
   font-weight: 700em;
   text-transform: capitalize;
-}
-.article__desc,
-.m-article__desc {
-  text-align: justify;
 }
 .article__desc + .article__desc,
 .m-article__desc + .m-article__desc {
@@ -3884,7 +3880,10 @@ article img.m-article__icon.u-right,
 .m-page-breadcrumbs > li:not(:last-child):after {
   content: ">";
   padding: 0 0.5em;
-  color: #747474;
+  color: #444;
+}
+.m-page-breadcrumbs > li:not(:last-child):after > a {
+  color: #1e496f;
 }
 .m-page-breadcrumbs > li.is-active {
   background: transparent;
@@ -3893,7 +3892,7 @@ article img.m-article__icon.u-right,
 .m-page-breadcrumbs > li.is-active > a,
 .m-page-breadcrumbs > li.is-active:hover > a {
   background: transparent;
-  color: #747474;
+  color: #444;
   cursor: default;
   text-decoration: none;
 }

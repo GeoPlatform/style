@@ -15,7 +15,11 @@
     & > li:not(:last-child):after {
         content: ">";
         padding: 0 0.5em;
-        color: @color-gray-md;
+        color: #444; //508
+
+        & > a {
+            color: #1e496f; //508
+        }
     }
 
     & > li.is-active {
@@ -24,7 +28,7 @@
 
         & > a, &:hover > a {
             background: transparent;
-            color: @color-gray-md;
+            color: #444;    //508
             cursor: default;
             text-decoration: none;
         }

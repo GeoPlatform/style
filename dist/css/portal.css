@@ -3877,22 +3877,23 @@ article img.m-article__icon.u-right,
   display: inline-block;
   text-transform: uppercase;
 }
+.m-page-breadcrumbs > li > a:not(.btn),
+.m-page-breadcrumbs > li > a:not(.btn):visited {
+  color: #004d90;
+}
 .m-page-breadcrumbs > li:not(:last-child):after {
   content: ">";
   padding: 0 0.5em;
-  color: #444;
-}
-.m-page-breadcrumbs > li:not(:last-child):after > a {
-  color: #1e496f;
+  color: #777;
 }
 .m-page-breadcrumbs > li.is-active {
   background: transparent;
   border-color: transparent;
 }
-.m-page-breadcrumbs > li.is-active > a,
-.m-page-breadcrumbs > li.is-active:hover > a {
+.m-page-breadcrumbs > li.is-active > a:not(.btn),
+.m-page-breadcrumbs > li.is-active:hover > a:not(.btn) {
   background: transparent;
-  color: #444;
+  color: #555;
   cursor: default;
   text-decoration: none;
 }

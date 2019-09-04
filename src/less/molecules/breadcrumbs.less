@@ -10,25 +10,27 @@
         .u-text--sm;
         display: inline-block;
         text-transform: uppercase;
+
+
+        & > a:not(.btn),
+        & > a:not(.btn):visited {
+            color: #004d90; //508
+        }
     }
 
     & > li:not(:last-child):after {
         content: ">";
         padding: 0 0.5em;
-        color: #444; //508
-
-        & > a {
-            color: #1e496f; //508
-        }
+        color: #777;
     }
 
     & > li.is-active {
         background: transparent;
         border-color: transparent;
 
-        & > a, &:hover > a {
+        & > a:not(.btn), &:hover > a:not(.btn) {
             background: transparent;
-            color: #444;    //508
+            color: #555;    //508
             cursor: default;
             text-decoration: none;
         }

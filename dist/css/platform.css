@@ -5133,7 +5133,7 @@ nav.a-nav a:last-child {
 .o-query-filter .o-facets.is-collapsed > .m-facet.active {
   background-color: transparent;
   border-color: transparent;
-  color: #747474;
+  color: #555;
 }
 body {
   height: 100%;

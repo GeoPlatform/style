@@ -10,7 +10,7 @@ var pkg         = require('./package.json'),
     srcmaps     = require('gulp-sourcemaps'),
     less        = require('gulp-less'),
     autoprefixer= require('less-plugin-autoprefix'),
-    cssmin      = require('gulp-cssmin'),
+    cleanCSS    = require('gulp-clean-css'),
     livereload  = require('gulp-livereload'),
     util        = require('gulp-util');
 
@@ -49,7 +49,6 @@ function jsSrcTask() {
     .pipe( concat('geoplatform.style.js') )
     .pipe( babel({presets: ["es2015"]}) )
     .pipe( uglify() )
-    // .on('error', notify.onError("Error: <%= error.message %>"))
     .pipe( rename({extname: ".min.js"}) )
     .pipe( dest('dist/js/') );
 }
@@ -64,9 +63,8 @@ function lessPlatformTask() {
     return src( [ 'src/less/style.less' ], {base: "."} )
     .pipe( concat('platform.less') )
     .pipe( less({ plugins: [autoprefix], paths: ['./src/less'] }) )
-    // .on("error", notify.onError({message: 'LESS compile error: <%= error.message %>'}))
     .pipe( dest('dist/css/') )
-    .pipe( cssmin() )
+    .pipe( cleanCSS() )
     .pipe( rename({ suffix: '.min' }) )
     .pipe( dest('dist/css/') );
 }
@@ -76,9 +74,8 @@ function lessPortalTask() {
     return src( [ 'src/less/portal/style.less' ], {base: "."} )
     .pipe( concat('portal.less') )
     .pipe( less({ plugins: [autoprefix], paths: ['./src/less'] }) )
-    // .on("error", notify.onError({message: 'LESS compile error: <%= error.message %>'}))
     .pipe( dest('dist/css/') )
-    .pipe( cssmin() )
+    .pipe( cleanCSS() )
     .pipe( rename({ suffix: '.min' }) )
     .pipe( dest('dist/css/') );
 }

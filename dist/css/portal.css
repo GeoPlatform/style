@@ -1541,7 +1541,6 @@ h6.u-mg--xxlg {
 .url,
 .is-url {
   word-break: break-all;
-  font-style: italic;
 }
 .child-centered-horizontal {
   margin: 0 auto;
